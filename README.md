@@ -18,4 +18,8 @@ Copyright © 2017 by Tom Veal & <a href="https://iashchuk.com">Alexander Iashchu
 
 ## <a name="contact">Contact:</a>
 
-You can read, follow or drop me a line on my personal Twitter account - [@iAlexander13](https://twitter.com/iAlexander13).
+You can read, follow or drop me a line on my personal Twitter account - [@iAlexander13](https://twitter.com/iAlexander13).  
+If you find any issues on the project, you can open a ticket.  
+Pull requests are also welcome!
+
+[![iAlexander - Нотатки громадянина України](https://raw.githubusercontent.com/iAlexander/PlumberSheet/master/Footer.jpg)](https://twitter.com/iAlexander13)
