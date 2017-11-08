@@ -12,6 +12,7 @@
 		2A1CA1431FB36ED8001841FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A1CA1411FB36ED8001841FE /* Main.storyboard */; };
 		2A1CA1451FB36ED8001841FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A1CA1441FB36ED8001841FE /* Assets.xcassets */; };
 		2A1CA1481FB36ED8001841FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A1CA1461FB36ED8001841FE /* LaunchScreen.storyboard */; };
+		2A1CA16C1FB373A6001841FE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A1CA16B1FB373A6001841FE /* GoogleService-Info.plist */; };
 		C0FF634C427E1B989F9968C7 /* Pods_PlumberSheet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF03FFC4424EDE415403C656 /* Pods_PlumberSheet.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 		2A1CA1441FB36ED8001841FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A1CA1471FB36ED8001841FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A1CA1491FB36ED8001841FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A1CA16B1FB373A6001841FE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BFEBAE31C8A79CB4428B6633 /* Pods-PlumberSheet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlumberSheet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlumberSheet/Pods-PlumberSheet.debug.xcconfig"; sourceTree = "<group>"; };
 		CF03FFC4424EDE415403C656 /* Pods_PlumberSheet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlumberSheet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9FFADBBF0B8B5A10B2351A1 /* Pods-PlumberSheet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlumberSheet.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlumberSheet/Pods-PlumberSheet.release.xcconfig"; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				2A1CA1411FB36ED8001841FE /* Main.storyboard */,
 				2A1CA1441FB36ED8001841FE /* Assets.xcassets */,
 				2A1CA1461FB36ED8001841FE /* LaunchScreen.storyboard */,
+				2A1CA16B1FB373A6001841FE /* GoogleService-Info.plist */,
 				2A1CA1491FB36ED8001841FE /* Info.plist */,
 			);
 			path = PlumberSheet;
@@ -151,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A1CA1481FB36ED8001841FE /* LaunchScreen.storyboard in Resources */,
+				2A1CA16C1FB373A6001841FE /* GoogleService-Info.plist in Resources */,
 				2A1CA1451FB36ED8001841FE /* Assets.xcassets in Resources */,
 				2A1CA1431FB36ED8001841FE /* Main.storyboard in Resources */,
 			);
