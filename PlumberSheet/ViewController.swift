@@ -1,9 +1,10 @@
 //
+//  http://iashchuk.com
 //  ViewController.swift
-//  PlumberSheet
+//  PlumberSheet - Work sheet app for in-house plumber engineers
 //
-//  Created by Alexander Iashchuk on 8/11/17.
-//  Copyright © 2017 Alexander Iashchuk. All rights reserved.
+//  Created by Alexander Iashchuk on 3/11/17.
+//  Copyright © 2017 Alexander Iashchuk (iAlexander). All rights reserved.
 //
 
 import UIKit
