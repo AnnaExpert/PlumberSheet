@@ -15,6 +15,7 @@
 		2A1CA16C1FB373A6001841FE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A1CA16B1FB373A6001841FE /* GoogleService-Info.plist */; };
 		2A1CA16E1FB391A6001841FE /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1CA16D1FB391A6001841FE /* NavigationViewController.swift */; };
 		2A1CA1701FB39730001841FE /* NewSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1CA16F1FB39730001841FE /* NewSheetViewController.swift */; };
+		2A5A40EB1FB9EA5A0039C440 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2A5A40EA1FB9EA5A0039C440 /* Settings.bundle */; };
 		C84649F6E5F1F929706409A1 /* Pods_PlumberSheet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBD0153788BBBE0CC51B88C9 /* Pods_PlumberSheet.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		2A1CA16B1FB373A6001841FE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2A1CA16D1FB391A6001841FE /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		2A1CA16F1FB39730001841FE /* NewSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSheetViewController.swift; sourceTree = "<group>"; };
+		2A5A40EA1FB9EA5A0039C440 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		B6E043689BB9AD405204A55A /* Pods-PlumberSheet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlumberSheet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlumberSheet/Pods-PlumberSheet.debug.xcconfig"; sourceTree = "<group>"; };
 		EBC73FCE44002F6F14A12571 /* Pods-PlumberSheet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlumberSheet.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlumberSheet/Pods-PlumberSheet.release.xcconfig"; sourceTree = "<group>"; };
 		EBD0153788BBBE0CC51B88C9 /* Pods_PlumberSheet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlumberSheet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				2A1CA13C1FB36ED7001841FE /* PlumberSheet */,
+				2A5A40EA1FB9EA5A0039C440 /* Settings.bundle */,
 				2A1CA13B1FB36ED7001841FE /* Products */,
 				0EEDEBBA96FE730F43EA0153 /* Pods */,
 				AF3A7D931656DBAE8A840752 /* Frameworks */,
@@ -161,6 +164,7 @@
 			files = (
 				2A1CA1481FB36ED8001841FE /* LaunchScreen.storyboard in Resources */,
 				2A1CA16C1FB373A6001841FE /* GoogleService-Info.plist in Resources */,
+				2A5A40EB1FB9EA5A0039C440 /* Settings.bundle in Resources */,
 				2A1CA1451FB36ED8001841FE /* Assets.xcassets in Resources */,
 				2A1CA1431FB36ED8001841FE /* Main.storyboard in Resources */,
 			);
