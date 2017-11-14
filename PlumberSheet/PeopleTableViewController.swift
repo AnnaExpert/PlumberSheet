@@ -20,7 +20,7 @@ class PeopleTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadSampleData()        
-        title = "Suffolk Oil Solutions - Work Sheet iPad Prototype"
+        title = "Suffolk Oil Solutions - Boiler & Tank Specialists"
     }
 
 

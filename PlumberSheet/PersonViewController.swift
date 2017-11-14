@@ -36,6 +36,9 @@ class PersonViewController: UITableViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Page title
+        title = "Suffolk Oil Solutions - Create new work sheet"
+        
         // Set up the views if editing an existing person.
         if let person = person {
             nameTextField.text = person.name
