@@ -26,12 +26,6 @@ class PersonViewController: UITableViewController, UITextFieldDelegate {
         
     @IBOutlet weak var addressCustomerTextField: UITextField!
     
-    @IBOutlet weak var telephoneCustomerTextField: UITextField!
-    
-    @IBOutlet weak var mobileCustomerTextField: UITextField!
-    
-    @IBOutlet weak var emailCustomerTextField: UITextField!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -106,6 +100,24 @@ class PersonViewController: UITableViewController, UITextFieldDelegate {
     /**
         When the user hits the return or "Done" button on a text field, we want 
         the keyboard to go away.
+     
+     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+     NSEntityDescription *entity = [NSEntityDescription entityForName:@"<#Entity name#>" inManagedObjectContext:<#context#>];
+     [fetchRequest setEntity:entity];
+     // Specify criteria for filtering which objects to fetch
+     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"<#format string#>", <#arguments#>];
+     [fetchRequest setPredicate:predicate];
+     // Specify how the fetched objects should be sorted
+     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"<#key#>"
+     ascending:YES];
+     [fetchRequest setSortDescriptors:[NSArray arrayWithObjects:sortDescriptor, nil]];
+     
+     NSError *error = nil;
+     NSArray *fetchedObjects = [<#context#> executeFetchRequest:fetchRequest error:&error];
+     if (fetchedObjects == nil) {
+     <#Error handling code#>
+     }
+     
     */
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
