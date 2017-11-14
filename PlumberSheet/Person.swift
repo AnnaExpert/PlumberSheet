@@ -1,12 +1,11 @@
-/*
-    Copyright (C) 2016 Apple Inc. All Rights Reserved.
-    See LICENSE.txt for this sample’s licensing information
-    
-    Abstract:
-    A Person class contains the data to that is stored for each person displayed in the app.
-     
-    Customizations: Whenever you want to add new data about a Person, you will need to create new variables here to store that data. To learn more you can check out the the README file included in the app.
-*/
+//
+//  http://iashchuk.com
+//  Person.swift
+//  PlumberSheet - Work sheet app for in-house plumber engineers
+//
+//  Created by Alexander Iashchuk on 8/11/17.
+//  Copyright © 2017 Alexander Iashchuk (iAlexander). All rights reserved.
+//
 
 import UIKit
 

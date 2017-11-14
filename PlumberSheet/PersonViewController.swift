@@ -1,12 +1,11 @@
-/*
-    Copyright (C) 2016 Apple Inc. All Rights Reserved.
-    See LICENSE.txt for this sample’s licensing information
-    
-    Abstract:
-    A 'Table View Controller' subclass that displays the data for an existing Person or for creating a new Person in the app. This class is also responsible for creating a new person to update in the PeopleTableViewController when the done button is tapped.
-     
-    Customizations: Whenever you want to add new data about a Person, you will want to add in  appropriate interface elements in the Main.storyboard and have those interface elements updated in this class to display and edit the data. To learn more you  can check out the the README file included in the app.
-*/
+//
+//  http://iashchuk.com
+//  PersonViewController.swift
+//  PlumberSheet - Work sheet app for in-house plumber engineers
+//
+//  Created by Alexander Iashchuk on 7/11/17.
+//  Copyright © 2017 Alexander Iashchuk (iAlexander). All rights reserved.
+//
 
 import UIKit
 

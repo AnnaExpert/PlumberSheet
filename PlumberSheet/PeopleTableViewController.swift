@@ -1,12 +1,11 @@
-/*
-    Copyright (C) 2016 Apple Inc. All Rights Reserved.
-    See LICENSE.txt for this sample’s licensing information
-    
-    Abstract:
-    A 'Table View Controller' subclass that loads some sample people and displays the name and image for every person. This class is also responsible for passing data to the 'PersonViewController' for editing or creating a new person.
-     
-    Customizations: If you want to modify the initial people displayed in the app or enable deleting a person while the app is running, you will need to edit this file. To learn more you can check out the the README file included in the app.
-*/
+//
+//  http://iashchuk.com
+//  PeopleTableViewController.swift
+//  PlumberSheet - Work sheet app for in-house plumber engineers
+//
+//  Created by Alexander Iashchuk on 6/11/17.
+//  Copyright © 2017 Alexander Iashchuk (iAlexander). All rights reserved.
+//
 
 import UIKit
 
