@@ -17,7 +17,7 @@ class Person {
     
     var image: UIImage?
     
-    /// How much do they like dogs on a scale from 0 to 10.
+    /// What address do they have.
     var addressCustomer: String?
     
     // MARK: Initialization

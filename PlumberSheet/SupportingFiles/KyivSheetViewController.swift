@@ -25,11 +25,49 @@ class SheetViewController: UIViewController {
     
     /*
      // MARK: - Navigation
+     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+     NSEntityDescription *entity = [NSEntityDescription entityForName:@"<#Entity name#>" inManagedObjectContext:<#context#>];
+     [fetchRequest setEntity:entity];
+     // Specify criteria for filtering which objects to fetch
+     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"<#format string#>", <#arguments#>];
+     [fetchRequest setPredicate:predicate];
+     // Specify how the fetched objects should be sorted
+     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"<#key#>"
+     ascending:YES];
+     [fetchRequest setSortDescriptors:[NSArray arrayWithObjects:sortDescriptor, nil]];
      
+     NSError *error = nil;
+     NSArray *fetchedObjects = [<#context#> executeFetchRequest:fetchRequest error:&error];
+     if (fetchedObjects == nil) {
+     <#Error handling code#>
+     }- (void)awakeFromFetch
+     {
+     [super awakeFromFetch];
+     <#code to be executed after the receiver has been fetched#>
+     }
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
      // Get the new view controller using segue.destinationViewController.
      // Pass the selected object to the new view controller.
+     }- (void)awakeFromInsertNSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+     NSEntityDescription *entity = [NSEntityDescription entityForName:@"<#Entity name#>" inManagedObjectContext:<#context#>];
+     [fetchRequest setEntity:entity];
+     // Specify criteria for filtering which objects to fetch
+     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"<#format string#>", <#arguments#>];
+     [fetchRequest setPredicate:predicate];
+     // Specify how the fetched objects should be sorted
+     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"<#key#>"
+     ascending:YES];
+     [fetchRequest setSortDescriptors:[NSArray arrayWithObjects:sortDescriptor, nil]];
+     
+     NSError *error = nil;
+     NSArray *fetchedObjects = [<#context#> executeFetchRequest:fetchRequest error:&error];
+     if (fetchedObjects == nil) {
+     <#Error handling code#>
+     }
+     {
+     [super awakeFromInsert];
+     <#code to be executed when the receiver is first inserted into a managed object context#>
      }
      */
     
