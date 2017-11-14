@@ -19,13 +19,13 @@ class Person {
     var image: UIImage?
     
     /// How much do they like dogs on a scale from 0 to 10.
-    var dogPreference: Float?
+    var addressCustomer: String?
     
     // MARK: Initialization
     
-    init(name: String? = nil, image: UIImage? = nil, dogPreference: Float? = nil) {
+    init(name: String? = nil, image: UIImage? = nil, addressCustomer: String? = nil) {
         self.name = name
         self.image = image
-        self.dogPreference = dogPreference
+        self.addressCustomer = addressCustomer
     }
 }

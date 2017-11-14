@@ -25,8 +25,13 @@ class PersonViewController: UITableViewController, UITextFieldDelegate {
     
     @IBOutlet weak var imageButton: UIButton!
         
-    @IBOutlet weak var preferenceSlider: UISlider!
+    @IBOutlet weak var addressCustomerTextField: UITextField!
     
+    @IBOutlet weak var telephoneCustomerTextField: UITextField!
+    
+    @IBOutlet weak var mobileCustomerTextField: UITextField!
+    
+    @IBOutlet weak var emailCustomerTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,15 +40,7 @@ class PersonViewController: UITableViewController, UITextFieldDelegate {
         if let person = person {
             nameTextField.text = person.name
             imageButton.setImage(person.image, for: [])
-            
-            /*
-                If they have a dog preference value set, update the slider, 
-                otherwise it will use the default value set in the Main.storyboard 
-                file.
-            */
-            if let dogPreference = person.dogPreference {
-                preferenceSlider.value = dogPreference
-            }
+            addressCustomerTextField.text = person.addressCustomer
         }
     }
     
@@ -73,13 +70,13 @@ class PersonViewController: UITableViewController, UITextFieldDelegate {
         if let sender = sender as? UIBarButtonItem!, sender === doneButton {
             let name = nameTextField.text
             let image = imageButton.image(for: [])
-            let dogPreference = preferenceSlider.value
+            let addressCustomer = addressCustomerTextField.text
             
             /*
                 Create and set the person to be passed to PeopleTableViewController 
                 after the unwind segue.
             */
-            person = Person(name: name, image: image, dogPreference: dogPreference)
+            person = Person(name: name, image: image, addressCustomer: addressCustomer)
         }
     }
 

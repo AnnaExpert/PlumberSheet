@@ -31,15 +31,15 @@ class PeopleTableViewController: UITableViewController {
             own friends and family. In the README file there are instructions for
             how to add in your own images.
         */
-        let person1 = Person(name: "Byte",
+        let person1 = Person(name: "Sir Patrick McLoughlin ",
                         image: UIImage(named: "Sample1"),
-                dogPreference: 9.0)
-        let person2 = Person(name: "Blu",
+                addressCustomer: "2nd floor NW, Fry Building, 2 Marsham Street, London, SW1P 4DF")
+        let person2 = Person(name: "Philip Hammond",
                         image: UIImage(named: "Sample2"),
-                dogPreference: 6.0)
-        let person3 = Person(name: "Hopper",
+                addressCustomer: "1-13 St Giles High St, London, WC2H 8LG")
+        let person3 = Person(name: "Boris Johnson",
                         image: UIImage(named: "Sample3"),
-                dogPreference: 2.0)
+                addressCustomer: "21 Bloomsbury Street, London, United Kingdom, WC1B 3HF")
 
         people = [person1, person2, person3]
         tableView.reloadData()
