@@ -39,7 +39,6 @@
 		2A98C16C1FBB02EF00FEF1DB /* PeopleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleTableViewController.swift; sourceTree = "<group>"; };
 		2A98C16D1FBB02EF00FEF1DB /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		2A98C16E1FBB02EF00FEF1DB /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		2A98C1731FBB047100FEF1DB /* PlumberSheet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PlumberSheet.entitlements; sourceTree = "<group>"; };
 		B6E043689BB9AD405204A55A /* Pods-PlumberSheet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlumberSheet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlumberSheet/Pods-PlumberSheet.debug.xcconfig"; sourceTree = "<group>"; };
 		EBC73FCE44002F6F14A12571 /* Pods-PlumberSheet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlumberSheet.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlumberSheet/Pods-PlumberSheet.release.xcconfig"; sourceTree = "<group>"; };
 		EBD0153788BBBE0CC51B88C9 /* Pods_PlumberSheet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlumberSheet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,7 +69,6 @@
 			isa = PBXGroup;
 			children = (
 				2A1CA13C1FB36ED7001841FE /* PlumberSheet */,
-				2A5A40EA1FB9EA5A0039C440 /* Settings.bundle */,
 				2A1CA13B1FB36ED7001841FE /* Products */,
 				0EEDEBBA96FE730F43EA0153 /* Pods */,
 				AF3A7D931656DBAE8A840752 /* Frameworks */,
@@ -88,12 +86,7 @@
 		2A1CA13C1FB36ED7001841FE /* PlumberSheet */ = {
 			isa = PBXGroup;
 			children = (
-				2A98C1731FBB047100FEF1DB /* PlumberSheet.entitlements */,
 				2A1CA13D1FB36ED7001841FE /* AppDelegate.swift */,
-				2A1CA16D1FB391A6001841FE /* KyivNavigationViewController.swift */,
-				2A1CA13F1FB36ED8001841FE /* KyivSheetViewController.swift */,
-				2A1CA16F1FB39730001841FE /* KyivNewSheetViewController.swift */,
-				2A1CA1411FB36ED8001841FE /* KyivMain.storyboard */,
 				2A1CA1441FB36ED8001841FE /* Assets.xcassets */,
 				2A98C16E1FBB02EF00FEF1DB /* Main.storyboard */,
 				2A98C16C1FBB02EF00FEF1DB /* PeopleTableViewController.swift */,
@@ -102,8 +95,21 @@
 				2A1CA1461FB36ED8001841FE /* LaunchScreen.storyboard */,
 				2A1CA16B1FB373A6001841FE /* GoogleService-Info.plist */,
 				2A1CA1491FB36ED8001841FE /* Info.plist */,
+				2A6942D51FBB3B8100E519CA /* SupportingFiles */,
+				2A5A40EA1FB9EA5A0039C440 /* Settings.bundle */,
 			);
 			path = PlumberSheet;
+			sourceTree = "<group>";
+		};
+		2A6942D51FBB3B8100E519CA /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				2A1CA16D1FB391A6001841FE /* KyivNavigationViewController.swift */,
+				2A1CA13F1FB36ED8001841FE /* KyivSheetViewController.swift */,
+				2A1CA16F1FB39730001841FE /* KyivNewSheetViewController.swift */,
+				2A1CA1411FB36ED8001841FE /* KyivMain.storyboard */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 		AF3A7D931656DBAE8A840752 /* Frameworks */ = {
@@ -152,7 +158,7 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.iCloud = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -401,7 +407,6 @@
 			baseConfigurationReference = B6E043689BB9AD405204A55A /* Pods-PlumberSheet.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = PlumberSheet/PlumberSheet.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3NL9BUS2QV;
 				INFOPLIST_FILE = PlumberSheet/Info.plist;
@@ -419,7 +424,6 @@
 			baseConfigurationReference = EBC73FCE44002F6F14A12571 /* Pods-PlumberSheet.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = PlumberSheet/PlumberSheet.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3NL9BUS2QV;
 				INFOPLIST_FILE = PlumberSheet/Info.plist;
