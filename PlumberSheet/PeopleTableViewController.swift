@@ -116,6 +116,24 @@ class PeopleTableViewController: UITableViewController {
                 /*
                     Add a new person to the people array before animating in a 
                     new table row with the person's data.
+                 
+                 NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+                 NSEntityDescription *entity = [NSEntityDescription entityForName:@"<#Entity name#>" inManagedObjectContext:<#context#>];
+                 [fetchRequest setEntity:entity];
+                 // Specify criteria for filtering which objects to fetch
+                 NSPredicate *predicate = [NSPredicate predicateWithFormat:@"<#format string#>", <#arguments#>];
+                 [fetchRequest setPredicate:predicate];
+                 // Specify how the fetched objects should be sorted
+                 NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"<#key#>"
+                 ascending:YES];
+                 [fetchRequest setSortDescriptors:[NSArray arrayWithObjects:sortDescriptor, nil]];
+                 
+                 NSError *error = nil;
+                 NSArray *fetchedObjects = [<#context#> executeFetchRequest:fetchRequest error:&error];
+                 if (fetchedObjects == nil) {
+                 <#Error handling code#>
+                 }
+                 
                 */
                 let newIndexPath = IndexPath(row: people.count, section: 0)
                 people.append(person)
