@@ -1,0 +1,33 @@
+
+jobDate = ?
+engineerName = Mark Whittaker, Scott Chadwick, Ben Reeve, Other
+jobType = Install, Service, Commission, Breakdown, Maintenance, Landlord Check, Other
+customerName = 
+customerAddress = 
+customerBilling = bool
+customerBillingAddress = 
+customerPhone = 
+customerMobile = 
+customerEmail = 
+
+applianceMake = Grant, Worcester, Firebird, HRM	Warmflow, Potterton, Thermecon/GAH, Merlin, Other
+applianceModel = 
+burnerMake = 
+nozzleModel = 
+pumpPressure = 
+carbonDioxidePercentage = 
+flueGasTemperature = 
+efficiencyPercentage = 
+carbonDioxideParts = 
+oxygenPercentage = 
+
+jobDescription = 
+jobUsedParts = 
+jobNotes = 
+
+timeArrived = 
+timeLeft = 
+timeTravel = 
+
+engineerSignature = 
+customerSignature = 
