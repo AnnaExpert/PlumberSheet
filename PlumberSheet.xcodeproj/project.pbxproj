@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A0181F01FBC95FC00F57C4D /* AddressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A0181EF1FBC95FC00F57C4D /* AddressCell.xib */; };
 		2A1CA13E1FB36ED7001841FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1CA13D1FB36ED7001841FE /* AppDelegate.swift */; };
 		2A1CA1401FB36ED8001841FE /* KyivSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1CA13F1FB36ED8001841FE /* KyivSheetViewController.swift */; };
 		2A1CA1431FB36ED8001841FE /* KyivMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A1CA1411FB36ED8001841FE /* KyivMain.storyboard */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A0181EF1FBC95FC00F57C4D /* AddressCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressCell.xib; sourceTree = "<group>"; };
 		2A1CA13A1FB36ED7001841FE /* PlumberSheet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlumberSheet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A1CA13D1FB36ED7001841FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A1CA13F1FB36ED8001841FE /* KyivSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KyivSheetViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			children = (
 				2A1CA13D1FB36ED7001841FE /* AppDelegate.swift */,
 				2A1CA1441FB36ED8001841FE /* Assets.xcassets */,
+				2A0181EF1FBC95FC00F57C4D /* AddressCell.xib */,
 				2A98C16E1FBB02EF00FEF1DB /* Main.storyboard */,
 				2A98C16C1FBB02EF00FEF1DB /* PeopleTableViewController.swift */,
 				2A98C16D1FBB02EF00FEF1DB /* Person.swift */,
@@ -190,6 +193,7 @@
 				2A1CA1481FB36ED8001841FE /* LaunchScreen.storyboard in Resources */,
 				2A1CA16C1FB373A6001841FE /* GoogleService-Info.plist in Resources */,
 				2A5A40EB1FB9EA5A0039C440 /* Settings.bundle in Resources */,
+				2A0181F01FBC95FC00F57C4D /* AddressCell.xib in Resources */,
 				2A98C1721FBB02EF00FEF1DB /* Main.storyboard in Resources */,
 				2A1CA1451FB36ED8001841FE /* Assets.xcassets in Resources */,
 				2A1CA1431FB36ED8001841FE /* KyivMain.storyboard in Resources */,
