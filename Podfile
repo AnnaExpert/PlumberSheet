@@ -7,6 +7,7 @@ target 'PlumberSheet' do
 
   use_frameworks!
 
+  pod 'Eureka'
   pod 'Firebase/Core'
   pod 'Firebase/Crash'
   pod 'Firebase/Performance'
