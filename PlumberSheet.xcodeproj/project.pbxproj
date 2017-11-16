@@ -16,7 +16,6 @@
 		2A1CA16C1FB373A6001841FE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A1CA16B1FB373A6001841FE /* GoogleService-Info.plist */; };
 		2A1CA16E1FB391A6001841FE /* KyivNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1CA16D1FB391A6001841FE /* KyivNavigationViewController.swift */; };
 		2A1CA1701FB39730001841FE /* KyivNewSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1CA16F1FB39730001841FE /* KyivNewSheetViewController.swift */; };
-		2A5A40EB1FB9EA5A0039C440 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2A5A40EA1FB9EA5A0039C440 /* Settings.bundle */; };
 		2A98C16F1FBB02EF00FEF1DB /* PersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A98C16B1FBB02EF00FEF1DB /* PersonViewController.swift */; };
 		2A98C1701FBB02EF00FEF1DB /* PeopleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A98C16C1FBB02EF00FEF1DB /* PeopleTableViewController.swift */; };
 		2A98C1711FBB02EF00FEF1DB /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A98C16D1FBB02EF00FEF1DB /* Person.swift */; };
@@ -36,7 +35,6 @@
 		2A1CA16B1FB373A6001841FE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2A1CA16D1FB391A6001841FE /* KyivNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KyivNavigationViewController.swift; sourceTree = "<group>"; };
 		2A1CA16F1FB39730001841FE /* KyivNewSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KyivNewSheetViewController.swift; sourceTree = "<group>"; };
-		2A5A40EA1FB9EA5A0039C440 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		2A98C16B1FBB02EF00FEF1DB /* PersonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonViewController.swift; sourceTree = "<group>"; };
 		2A98C16C1FBB02EF00FEF1DB /* PeopleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleTableViewController.swift; sourceTree = "<group>"; };
 		2A98C16D1FBB02EF00FEF1DB /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
@@ -90,7 +88,6 @@
 				2A1CA16B1FB373A6001841FE /* GoogleService-Info.plist */,
 				2A1CA1491FB36ED8001841FE /* Info.plist */,
 				2A6942D51FBB3B8100E519CA /* SupportingFiles */,
-				2A5A40EA1FB9EA5A0039C440 /* Settings.bundle */,
 			);
 			path = PlumberSheet;
 			sourceTree = "<group>";
@@ -192,7 +189,6 @@
 			files = (
 				2A1CA1481FB36ED8001841FE /* LaunchScreen.storyboard in Resources */,
 				2A1CA16C1FB373A6001841FE /* GoogleService-Info.plist in Resources */,
-				2A5A40EB1FB9EA5A0039C440 /* Settings.bundle in Resources */,
 				2A0181F01FBC95FC00F57C4D /* AddressCell.xib in Resources */,
 				2A98C1721FBB02EF00FEF1DB /* Main.storyboard in Resources */,
 				2A1CA1451FB36ED8001841FE /* Assets.xcassets in Resources */,
