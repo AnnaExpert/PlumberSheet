@@ -12,7 +12,7 @@ import UIKit
 class PersonViewController: UITableViewController, UITextFieldDelegate {
     // MARK: Properties
     
-    /**
+    /*
         When editing an existing person, this value is passed by 
         PeopleTableViewController in 'prepareForSegue(segue: sender:)'.
     */
@@ -79,7 +79,7 @@ class PersonViewController: UITableViewController, UITextFieldDelegate {
 
     // MARK: UITextFieldDelegate
     
-    /**
+    /*
         When the user hits the return or "Done" button on a text field, we want 
         the keyboard to go away.
     */

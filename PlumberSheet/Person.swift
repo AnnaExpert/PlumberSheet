@@ -9,7 +9,7 @@
 
 import UIKit
 
-/// This class defines the data that is stored for each person.
+// This class defines the data that is stored for each person.
 class Person {    
     // MARK: Properties
 
@@ -17,7 +17,7 @@ class Person {
     
     var image: UIImage?
     
-    /// What address do they have.
+    // What address do they have.
     var addressCustomer: String?
     
     // MARK: Initialization

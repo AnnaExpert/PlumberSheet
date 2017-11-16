@@ -47,7 +47,7 @@ class PeopleTableViewController: UITableViewController {
     
     // MARK: Table View
     
-    /**
+    /*
         The table view calls this method to find out how many rows it should
         show in any one section.
     */
@@ -76,7 +76,7 @@ class PeopleTableViewController: UITableViewController {
     
     // MARK: Navigation
     
-    /**
+    /*
         This method is called whenever the user segues, or transitions, to a new 
         view controller. In this application, this happens when the user taps the 
         "Add" button or taps a table view cell to view a person's details.
@@ -94,10 +94,11 @@ class PeopleTableViewController: UITableViewController {
         }
     }
 
-    /**
+    /*
         This method is called when this view controller will reappear after the 
         "Done" button was tapped on the PersonViewController.
     */
+    
     @IBAction func unwindToPersonList(_ sender: UIStoryboardSegue) {
         if let sourceViewController = sender.source as? PersonViewController, let person = sourceViewController.person {
             /*
