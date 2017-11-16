@@ -1,7 +1,7 @@
-//  Eureka.h
+//  ImagePickerController.swift
 //  Eureka ( https://github.com/xmartlabs/Eureka )
 //
-//  Copyright (c) 2016 Xmartlabs ( http://xmartlabs.com )
+//  Copyright (c) 2016 Xmartlabs SRL ( http://xmartlabs.com )
 //
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -22,14 +22,31 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <UIKit/UIKit.h>
+import Foundation
+import Eureka
 
-//! Project version number for Eureka.
-FOUNDATION_EXPORT double EurekaVersionNumber;
-
-//! Project version string for Eureka.
-FOUNDATION_EXPORT const unsigned char EurekaVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import <Eureka/PublicHeader.h>
-
+/// Selector Controller used to pick an image
+open class ImagePickerController : UIImagePickerController, TypedRowControllerType, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    /// The row that pushed or presented this controller
+    public var row: RowOf<UIImage>!
+    
+    /// A closure to be called when the controller disappears.
+    public var onDismissCallback : ((UIViewController) -> ())?
+    
+    open override func viewDidLoad() {
+        super.viewDidLoad()
+        delegate = self
+    }
+    
+    open func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        (row as? ImageRow)?.imageURL = info[UIImagePickerControllerReferenceURL] as? URL
+        row.value = info[UIImagePickerControllerOriginalImage] as? UIImage
+        onDismissCallback?(self)
+    }
+    
+    open func imagePickerControllerDidCancel(_ picker: UIImagePickerController){
+        onDismissCallback?(self)
+    }
+}
 
