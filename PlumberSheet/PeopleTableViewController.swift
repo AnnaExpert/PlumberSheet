@@ -23,7 +23,7 @@ class PeopleTableViewController: UITableViewController {
     }
 
 
-    /// Load in and some initial sample data and update the table view's display.
+    // Load in and some initial sample data and update the table view's display.
     func loadSampleData() {
         /*
             You can modify the names and images here to populate this with your
@@ -57,7 +57,7 @@ class PeopleTableViewController: UITableViewController {
     }
     
     
-    /// The table view calls this method to set up each cell in the table for display.
+    // The table view calls this method to set up each cell in the table for display.
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
           // Ask the table view to create a cell for us to use to show a person.
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)

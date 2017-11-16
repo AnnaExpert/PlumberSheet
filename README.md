@@ -14,7 +14,7 @@
 
 ## <a name="copyright">Copyright:</a>
 
-Copyright © 2017 by Tom Veal & <a href="https://iashchuk.com">Alexander Iashchuk</a>.
+Copyright © 2017 by <a href="http://suffolkoilsolutions.co.uk">Tom Veal</a> & <a href="http://iashchuk.com">Alexander Iashchuk</a>.
 
 ## <a name="contact">Contact:</a>
 
