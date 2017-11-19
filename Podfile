@@ -1,12 +1,13 @@
-# PlumberSheet 1.0 remote repositories list
+# PlumberSheet beta remote repositories list
 # Copyright (c) 2017 Alexander Iashchuk (iAlexander), http://iashchuk.com
-source 'https://github.com/CocoaPods/Specs.git'
 
-platform :ios, '9.0'
+platform :ios, '9.3'
 
 target 'PlumberSheet' do
 
   use_frameworks!
+
+  # Pods for PlumberSheet
 
   pod 'Eureka'
   pod 'Firebase/Core'
