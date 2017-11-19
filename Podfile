@@ -1,7 +1,8 @@
 # PlumberSheet 1.0 remote repositories list
 # Copyright (c) 2017 Alexander Iashchuk (iAlexander), http://iashchuk.com
+source 'https://github.com/CocoaPods/Specs.git'
 
-platform :ios, '9.3'
+platform :ios, '9.0'
 
 target 'PlumberSheet' do
 
