@@ -7,8 +7,8 @@
 //  Copyright © 2017 Alexander Iashchuk (iAlexander). All rights reserved.
 //
 
-import UIKit
-import Firebase
+//import UIKit
+//import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
