@@ -222,16 +222,15 @@
         <scene sceneID="qOu-Pn-Qsg">
             <objects>
                 <tableViewController id="gaA-TV-0fo" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="hV0-BF-S8k">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="hV0-BF-S8k">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <connections>
-                            <outlet property="dataSource" destination="gaA-TV-0fo" id="VmQ-52-DnJ"/>
-                            <outlet property="delegate" destination="gaA-TV-0fo" id="cw0-yI-bNx"/>
-                        </connections>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </tableView>
                     <navigationItem key="navigationItem" title="Suffolk Oil Solutions" id="7ng-SO-CKR"/>
+                    <connections>
+                        <outlet property="view" destination="hV0-BF-S8k" id="hZ3-4C-8tN"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gS3-qg-mg5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
