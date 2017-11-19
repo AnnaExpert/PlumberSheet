@@ -26,7 +26,7 @@
                                 <rect key="frame" x="20" y="961" width="728" height="43"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <string key="text">App version: Beta
-Build version: 7</string>
+Build version: 9</string>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
