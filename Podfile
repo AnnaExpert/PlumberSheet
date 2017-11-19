@@ -10,6 +10,7 @@ target 'PlumberSheet' do
   pod 'Eureka'
   pod 'Firebase/Core'
   pod 'Firebase/Crash'
+  pod 'Firebase/Database'
   pod 'Firebase/Performance'
 
 end
