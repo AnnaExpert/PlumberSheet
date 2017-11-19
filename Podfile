@@ -7,7 +7,7 @@ target 'PlumberSheet' do
 
   use_frameworks!
 
-  # Pods for PlumberSheet
+  # Pods for PlumberSheet beta
 
   pod 'Eureka'
   pod 'Firebase/Core'

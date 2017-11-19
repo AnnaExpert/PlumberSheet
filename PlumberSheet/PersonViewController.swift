@@ -30,7 +30,7 @@ class PersonViewController: UITableViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         // Page title
-        title = "Suffolk Oil Solutions - Create new work sheet"
+        title = "Suffolk Oil Solutions - New work sheet"
         
         // Set up the views if editing an existing person.
         if let person = person {
