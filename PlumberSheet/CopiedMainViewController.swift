@@ -6,7 +6,7 @@
 //  Created by Alexander Iashchuk on 19/11/17.
 //  Copyright © 2017 Alexander Iashchuk (iAlexander). All rights reserved.
 //
-/**
+/*
 import UIKit
 import Eureka
 import CoreLocation

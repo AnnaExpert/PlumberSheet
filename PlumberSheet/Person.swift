@@ -6,7 +6,7 @@
 //  Created by Alexander Iashchuk on 8/11/17.
 //  Copyright © 2017 Alexander Iashchuk (iAlexander). All rights reserved.
 //
-
+/*
 import UIKit
 
 // This class defines the data that is stored for each person.
