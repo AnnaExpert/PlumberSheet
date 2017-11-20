@@ -50,9 +50,9 @@ class HeaderView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         let imageView = UIImageView(image: UIImage(named: "Header"))
-        imageView.frame = CGRect(x: 0, y: 0, width: 1024, height: 220)
+        imageView.frame = CGRect(x: 0, y: 0, width: 320, height: 130)
         imageView.autoresizingMask = .flexibleWidth
-        self.frame = CGRect(x: 0, y: 0, width: 1024, height: 220)
+        self.frame = CGRect(x: 0, y: 0, width: 320, height: 130)
         imageView.contentMode = .scaleAspectFit
         addSubview(imageView)
     }
