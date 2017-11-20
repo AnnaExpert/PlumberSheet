@@ -188,6 +188,11 @@ class MainViewController: FormViewController {
                 $0.options.append("2 hours")
                 $0.value = $0.options[11]
             }
+        
+            +++ Section("Signature:")
+            <<< ButtonRow("Customer signature") { (row: ButtonRow) -> Void in
+                row.title = "Complete form submssion and pass for signature"
+            }
     }
     
 }
