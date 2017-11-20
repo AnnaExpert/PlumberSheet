@@ -14,24 +14,135 @@ class MainViewController: FormViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         form +++ Section() {
-                $0.header = HeaderFooterView<HeaderView>(.class)
+            $0.header = HeaderFooterView<HeaderView>(.class)
             }
             
-            <<< TextRow(){ row in
-                row.title = "Text Row"
-                row.placeholder = "Enter text here"
-            }
-            <<< PhoneRow(){
-                $0.title = "Phone Row"
-                $0.placeholder = "And numbers here"
-            }
-            +++ Section("Section2")
+            +++ Section("General info:")
             <<< DateRow(){
-                $0.title = "Date Row"
-                $0.value = Date(timeIntervalSinceReferenceDate: 0)
-        }
+                $0.title = "Job Date"
+                $0.value = Date.init()
+            }
+            <<< PickerInputRow<String>(){
+                $0.title = "Engineer"
+                $0.options = ["Mark Whittaker", "Scott Chadwick", "Ben Reeve"]
+                $0.value = $0.options.first
+            }
+            <<< PickerInputRow<String>(){
+                $0.title = "Job Type"
+                $0.options = ["Install", "Service", "Commission", "Breakdown", "Maintenance", "Landlord Check"]
+                $0.value = $0.options.first
+            }
+            
+            +++ Section("Equipment info:")
+            <<< PickerInputRow<String>(){
+                $0.title = "Appliance make"
+                $0.options = ["Grant", "Worcester", "Firebird", "HRM", "Warmflow", "Potterton", "Thermecon/GAH", "Merlin", "Other"]
+                $0.value = $0.options.first
+            }
+            <<< TextRow() {
+                $0.title = "Appliance model"
+                $0.placeholder = "Model..."
+            }
+            <<< TextRow() {
+                $0.title = "Burner make"
+                $0.placeholder = "Burner..."
+            }
+            <<< TextRow() {
+                $0.title = "Noozle"
+                $0.placeholder = "0.65/80/EN"
+            }
+            <<< SegmentedRow<String>("segments"){
+                $0.title = "Pump pressure"
+                $0.options = ["PSI", "BAR"]
+                $0.value = "PSI"
+            }
+            <<< SliderRow() {
+                $0.hidden = "$segments != 'PSI'"
+                $0.title = "PSI"
+                $0.value = 150
+                $0.minimumValue = 80
+                $0.maximumValue = 250
+                $0.steps = 170
+            }
+            <<< SliderRow() {
+                $0.hidden = "$segments != 'BAR'"
+                $0.title = "BAR"
+                $0.value = 10
+                $0.minimumValue = 5
+                $0.maximumValue = 20
+                $0.steps = 150
+            }
+            <<< SliderRow() {
+                $0.title = "Carbon dioxide"
+                $0.value = 10
+                $0.minimumValue = 5
+                $0.maximumValue = 15
+                $0.steps = 100
+            }
+            <<< SliderRow() {
+                $0.title = "Flue gas temperature"
+                $0.value = 200
+                $0.minimumValue = 20
+                $0.maximumValue = 500
+                $0.steps = 96
+            }
+            <<< SliderRow() {
+                $0.title = "Efficiency"
+                $0.value = 90
+                $0.minimumValue = 75
+                $0.maximumValue = 100
+                $0.steps = 250
+            }
+            <<< SliderRow() {
+                $0.title = "Carbon dioxide parts"
+                $0.value = 100
+                $0.minimumValue = 0
+                $0.maximumValue = 200
+                $0.steps = 200
+            }
+            <<< SliderRow() {
+                $0.title = "Oxygen"
+                $0.value = 5
+                $0.minimumValue = 0
+                $0.maximumValue = 10
+                $0.steps = 100
+                $0.displayValueFor = { (rowValue: Float?) in
+                    return rowValue.map { "\($0)%" }
+                }
+            }
+            
+            +++ Section("Description:")
+            <<< TextAreaRow() {
+                $0.placeholder = "Description of work carried out:"
+                $0.textAreaHeight = .dynamic(initialTextViewHeight: 66)
+            }
+            <<< TextAreaRow() {
+                $0.placeholder = "Parts used:"
+                $0.textAreaHeight = .dynamic(initialTextViewHeight: 44)
+            }
+            <<< TextAreaRow() {
+                $0.placeholder = "Notes for office:"
+                $0.textAreaHeight = .dynamic(initialTextViewHeight: 44)
+            }
+            
+            +++ Section("Time:")
+            <<< TimeRow(){
+                $0.title = "Arrive"
+                $0.value = Date.init()
+            }
+            <<< TimeRow(){
+                $0.title = "Leave"
+                $0.value = Date.init()
+            }
+            <<< PickerInputRow<String>(){
+                $0.title = "Travel"
+                $0.options = []
+                for i in 1...24{
+                    $0.options.append("\(i*5) minutes")
+                }
+                $0.value = $0.options[11]
+            }
     }
     
 }
