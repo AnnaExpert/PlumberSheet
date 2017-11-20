@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A0713B31FC2550500807098 /* Header.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A0713B21FC2550500807098 /* Header.xib */; };
 		2A1CA13E1FB36ED7001841FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1CA13D1FB36ED7001841FE /* AppDelegate.swift */; };
 		2A1CA1451FB36ED8001841FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A1CA1441FB36ED8001841FE /* Assets.xcassets */; };
 		2A1CA16C1FB373A6001841FE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A1CA16B1FB373A6001841FE /* GoogleService-Info.plist */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A0713B21FC2550500807098 /* Header.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Header.xib; sourceTree = "<group>"; };
 		2A1CA13A1FB36ED7001841FE /* PlumberSheet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlumberSheet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A1CA13D1FB36ED7001841FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A1CA1441FB36ED8001841FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				2A1CA13D1FB36ED7001841FE /* AppDelegate.swift */,
 				2AD3DCF41FC2473600DD012D /* MainViewController.swift */,
 				2A98C16E1FBB02EF00FEF1DB /* Main.storyboard */,
+				2A0713B21FC2550500807098 /* Header.xib */,
 				2A1CA1441FB36ED8001841FE /* Assets.xcassets */,
 				2AD3DCF21FC246DF00DD012D /* LaunchScreen.storyboard */,
 				2A1CA16B1FB373A6001841FE /* GoogleService-Info.plist */,
@@ -158,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A1CA16C1FB373A6001841FE /* GoogleService-Info.plist in Resources */,
+				2A0713B31FC2550500807098 /* Header.xib in Resources */,
 				2AD3DCF31FC246DF00DD012D /* LaunchScreen.storyboard in Resources */,
 				2A98C1721FBB02EF00FEF1DB /* Main.storyboard in Resources */,
 				2A1CA1451FB36ED8001841FE /* Assets.xcassets in Resources */,

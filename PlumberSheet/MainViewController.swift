@@ -14,7 +14,11 @@ class MainViewController: FormViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        form +++ Section("Section1")
+        
+        form +++ Section() {
+                $0.header = HeaderFooterView<HeaderView>(.class)
+            }
+            
             <<< TextRow(){ row in
                 row.title = "Text Row"
                 row.placeholder = "Enter text here"
@@ -29,4 +33,32 @@ class MainViewController: FormViewController {
                 $0.value = Date(timeIntervalSinceReferenceDate: 0)
         }
     }
+    
 }
+
+class HeaderViewNib: UIView {
+    
+    @IBOutlet weak var imageView: UIImageView!
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+}
+
+class HeaderView: UIView {
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        let imageView = UIImageView(image: UIImage(named: "Header"))
+        imageView.frame = CGRect(x: 0, y: 0, width: 1024, height: 220)
+        imageView.autoresizingMask = .flexibleWidth
+        self.frame = CGRect(x: 0, y: 0, width: 1024, height: 220)
+        imageView.contentMode = .scaleAspectFit
+        addSubview(imageView)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
