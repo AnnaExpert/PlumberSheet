@@ -34,6 +34,28 @@ class MainViewController: FormViewController {
                 $0.value = $0.options.first
             }
             
+            +++ Section("Customer info:")
+            <<< NameRow(){
+                $0.title = "Full name"
+                $0.placeholder = "Customer name"
+            }
+            <<< TextAreaRow() {
+                $0.placeholder = "Customer address"
+                $0.textAreaHeight = .dynamic(initialTextViewHeight: 66)
+            }
+            <<< PhoneRow() {
+                $0.title = "Phone"
+                $0.placeholder = "+44 989 8983 5100"
+            }
+            <<< PhoneRow() {
+                $0.title = "Mobile"
+                $0.placeholder = "+44 989 8983 5100"
+            }
+            <<< EmailRow() {
+                $0.title = "Customer email"
+                $0.placeholder = "customer@email.com"
+            }
+            
             +++ Section("Equipment info:")
             <<< PickerInputRow<String>(){
                 $0.title = "Appliance make"
@@ -54,24 +76,30 @@ class MainViewController: FormViewController {
             }
             <<< SegmentedRow<String>("segments"){
                 $0.title = "Pump pressure"
-                $0.options = ["PSI", "BAR"]
-                $0.value = "PSI"
+                $0.options = ["Psi", "Bar"]
+                $0.value = "Psi"
             }
             <<< SliderRow() {
-                $0.hidden = "$segments != 'PSI'"
-                $0.title = "PSI"
+                $0.hidden = "$segments != 'Psi'"
+                $0.title = "Psi"
                 $0.value = 150
                 $0.minimumValue = 80
                 $0.maximumValue = 250
                 $0.steps = 170
+                $0.displayValueFor = { (rowValue: Float?) in
+                    return rowValue.map { "\($0) psi" }
+                }
             }
             <<< SliderRow() {
-                $0.hidden = "$segments != 'BAR'"
-                $0.title = "BAR"
+                $0.hidden = "$segments != 'Bar'"
+                $0.title = "Bar"
                 $0.value = 10
                 $0.minimumValue = 5
                 $0.maximumValue = 20
                 $0.steps = 150
+                $0.displayValueFor = { (rowValue: Float?) in
+                    return rowValue.map { "\($0) bar" }
+                }
             }
             <<< SliderRow() {
                 $0.title = "Carbon dioxide"
@@ -79,6 +107,9 @@ class MainViewController: FormViewController {
                 $0.minimumValue = 5
                 $0.maximumValue = 15
                 $0.steps = 100
+                $0.displayValueFor = { (rowValue: Float?) in
+                    return rowValue.map { "\($0)%" }
+                }
             }
             <<< SliderRow() {
                 $0.title = "Flue gas temperature"
@@ -86,6 +117,9 @@ class MainViewController: FormViewController {
                 $0.minimumValue = 20
                 $0.maximumValue = 500
                 $0.steps = 96
+                $0.displayValueFor = { (rowValue: Float?) in
+                    return rowValue.map { "\($0)°C" }
+                }
             }
             <<< SliderRow() {
                 $0.title = "Efficiency"
@@ -93,6 +127,9 @@ class MainViewController: FormViewController {
                 $0.minimumValue = 75
                 $0.maximumValue = 100
                 $0.steps = 250
+                $0.displayValueFor = { (rowValue: Float?) in
+                    return rowValue.map { "\($0)%" }
+                }
             }
             <<< SliderRow() {
                 $0.title = "Carbon dioxide parts"
@@ -100,6 +137,9 @@ class MainViewController: FormViewController {
                 $0.minimumValue = 0
                 $0.maximumValue = 200
                 $0.steps = 200
+                $0.displayValueFor = { (rowValue: Float?) in
+                    return rowValue.map { "\($0) PPM" }
+                }
             }
             <<< SliderRow() {
                 $0.title = "Oxygen"
@@ -138,9 +178,14 @@ class MainViewController: FormViewController {
             <<< PickerInputRow<String>(){
                 $0.title = "Travel"
                 $0.options = []
-                for i in 1...24{
+                for i in 1...11{
                     $0.options.append("\(i*5) minutes")
                 }
+                $0.options.append("1 hour")
+                for i in 1...11{
+                    $0.options.append("1 hour \(i*5) minutes")
+                }
+                $0.options.append("2 hours")
                 $0.value = $0.options[11]
             }
     }
