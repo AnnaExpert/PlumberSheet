@@ -49,13 +49,10 @@
                             <outlet property="delegate" destination="8my-nL-ha9" id="CNh-Ah-z9c"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Plumber Sheet - Suffolk Oil Solutions" id="rW4-Ry-SEK">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="compose" id="9S1-ki-Aq6">
-                            <connections>
-                                <segue destination="EcM-ve-neA" kind="presentation" id="CNV-Ns-tyJ"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Plumber Sheet - Suffolk Oil Solutions" id="rW4-Ry-SEK"/>
+                    <connections>
+                        <segue destination="EcM-ve-neA" kind="showDetail" identifier="" id="Poo-7a-p3T"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="18w-XZ-doj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -90,7 +87,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <navigationItem key="navigationItem" title="New work sheet" id="W2X-r0-B46"/>
+                    <navigationItem key="navigationItem" title="New work sheet" id="W2X-r0-B46">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="5MG-Bn-1si"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LPL-XA-6R5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
