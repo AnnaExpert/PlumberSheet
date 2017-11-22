@@ -20,10 +20,12 @@ class MainViewController: FormViewController {
             
             +++ Section("General info:")
             <<< DateRow(){
+                $0.tag = "jobDate"
                 $0.title = "Job Date"
                 $0.value = Date.init()
             }
             <<< PickerInputRow<String>(){
+                $0.tag = "engineerName"
                 $0.title = "Engineer"
                 $0.options = ["Mark Whittaker", "Scott Chadwick", "Ben Reeve"]
                 $0.value = $0.options.first
@@ -188,13 +190,12 @@ class MainViewController: FormViewController {
                 $0.options.append("2 hours")
                 $0.value = $0.options[11]
             }
-        
+            
             +++ Section("Signature:")
             <<< ButtonRow("Customer signature") { (row: ButtonRow) -> Void in
                 row.title = "Complete form submssion and pass for signature"
-            }
+        }
     }
-    
 }
 
 class HeaderViewNib: UIView {
