@@ -1,9 +1,10 @@
 //
+//  http://iashchuk.com
 //  JobTableViewController.swift
-//  PlumberSheet
+//  PlumberSheet - Work sheet app for in-house plumber engineers
 //
-//  Created by Alexander Iashchuk on 29/11/17.
-//  Copyright © 2017 Alexander Iashchuk. All rights reserved.
+//  Created by Alexander Iashchuk on 3/11/17.
+//  Copyright © 2017 Alexander Iashchuk (iAlexander). All rights reserved.
 //
 
 import UIKit
@@ -22,15 +23,14 @@ class JobTableViewController: UITableViewController {
         let photo2 = UIImage(named: "Header")
         let photo3 = UIImage(named: "Header")
         
-        guard let job1 = WorkSheet(name: "Caprese Salad", photo: photo1, rating: 4) else {
+        guard let job1 = WorkSheet(name: "Lord Duncan of Springbank", photo: photo1, rating: 4) else {
             fatalError("Unable to instantiate meal1")
         }
-        
-        guard let job2 = WorkSheet(name: "Chicken and Potatoes", photo: photo2, rating: 5) else {
+        guard let job2 = WorkSheet(name: "Baroness Evans of Bowes Park", photo: photo2, rating: 5) else {
             fatalError("Unable to instantiate meal2")
         }
         
-        guard let job3 = WorkSheet(name: "Pasta with Meatballs", photo: photo3, rating: 3) else {
+        guard let job3 = WorkSheet(name: "Sir Patrick McLoughlin", photo: photo3, rating: 3) else {
             fatalError("Unable to instantiate meal2")
         }
         
@@ -80,8 +80,8 @@ class JobTableViewController: UITableViewController {
 
         // Configure the cell...
         cell.nameLabel.text = job.name
-        cell.dateLabel.text = job.name
-        cell.addressLabel.text = "6th Floor East, Portland House, Bressenden Place, London, SW1E 5BH"
+        cell.dateLabel.text = "Webnesday"
+        cell.addressLabel.text = "6th Floor East, Portland House, Bressenden Place, London, SW1E 5BH, Portland House, Bressenden Place, London, SW1E 5BH"
         cell.emailStatusImageView.image = job.photo
 
         return cell
