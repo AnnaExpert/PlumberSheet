@@ -31,7 +31,7 @@ class NewWorkViewController: FormViewController {
                 $0.value = $0.options.first
             }
             <<< PickerInputRow<String>(){
-//                $0.tag = "jobType"
+                $0.tag = "jobType"
                 $0.title = "Job Type"
                 $0.options = ["Install", "Service", "Commission", "Breakdown", "Maintenance", "Landlord Check"]
                 $0.value = $0.options.first
