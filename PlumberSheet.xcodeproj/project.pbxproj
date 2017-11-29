@@ -12,9 +12,10 @@
 		2A1CA16C1FB373A6001841FE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A1CA16B1FB373A6001841FE /* GoogleService-Info.plist */; };
 		2A6E492B1FCF05A600C9BC5B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6E492A1FCF05A600C9BC5B /* ViewController.swift */; };
 		2A6E492D1FCF06CE00C9BC5B /* WorkSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6E492C1FCF06CE00C9BC5B /* WorkSheet.swift */; };
+		2A6E492F1FCF0D6900C9BC5B /* JobTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6E492E1FCF0D6900C9BC5B /* JobTableViewCell.swift */; };
 		2A98C1721FBB02EF00FEF1DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A98C16E1FBB02EF00FEF1DB /* Main.storyboard */; };
 		2AD3DCF31FC246DF00DD012D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AD3DCF21FC246DF00DD012D /* LaunchScreen.storyboard */; };
-		2AD3DCF51FC2473600DD012D /* NewWorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD3DCF41FC2473600DD012D /* NewWorkViewController.swift */; };
+		2AD3DCF51FC2473600DD012D /* NewWorkSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD3DCF41FC2473600DD012D /* NewWorkSheetViewController.swift */; };
 		5A87A47154B7D8964A0DB6EC /* Pods_PlumberSheet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA1462D41E3E3B7B000A308 /* Pods_PlumberSheet.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,9 +27,10 @@
 		2A1CA16B1FB373A6001841FE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2A6E492A1FCF05A600C9BC5B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2A6E492C1FCF06CE00C9BC5B /* WorkSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkSheet.swift; sourceTree = "<group>"; };
+		2A6E492E1FCF0D6900C9BC5B /* JobTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTableViewCell.swift; sourceTree = "<group>"; };
 		2A98C16E1FBB02EF00FEF1DB /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2AD3DCF21FC246DF00DD012D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		2AD3DCF41FC2473600DD012D /* NewWorkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWorkViewController.swift; sourceTree = "<group>"; };
+		2AD3DCF41FC2473600DD012D /* NewWorkSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWorkSheetViewController.swift; sourceTree = "<group>"; };
 		41D76DEEEE6430AAE6DEEDAA /* Pods-PlumberSheet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlumberSheet.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlumberSheet/Pods-PlumberSheet.release.xcconfig"; sourceTree = "<group>"; };
 		6AD4DB9474EE95E14C39B359 /* Pods-PlumberSheet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlumberSheet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlumberSheet/Pods-PlumberSheet.debug.xcconfig"; sourceTree = "<group>"; };
 		8FA1462D41E3E3B7B000A308 /* Pods_PlumberSheet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlumberSheet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,12 +70,13 @@
 			isa = PBXGroup;
 			children = (
 				2A1CA13D1FB36ED7001841FE /* AppDelegate.swift */,
-				2A6E492A1FCF05A600C9BC5B /* ViewController.swift */,
-				2AD3DCF41FC2473600DD012D /* NewWorkViewController.swift */,
+				2A6E492E1FCF0D6900C9BC5B /* JobTableViewCell.swift */,
+				2AD3DCF41FC2473600DD012D /* NewWorkSheetViewController.swift */,
 				2A6E492C1FCF06CE00C9BC5B /* WorkSheet.swift */,
 				2A98C16E1FBB02EF00FEF1DB /* Main.storyboard */,
 				2AD3DCF21FC246DF00DD012D /* LaunchScreen.storyboard */,
 				2A1CA1441FB36ED8001841FE /* Assets.xcassets */,
+				2A6E492A1FCF05A600C9BC5B /* ViewController.swift */,
 				2A1CA16B1FB373A6001841FE /* GoogleService-Info.plist */,
 				2A1CA1491FB36ED8001841FE /* Info.plist */,
 			);
@@ -244,7 +247,8 @@
 				2A6E492B1FCF05A600C9BC5B /* ViewController.swift in Sources */,
 				2A1CA13E1FB36ED7001841FE /* AppDelegate.swift in Sources */,
 				2A6E492D1FCF06CE00C9BC5B /* WorkSheet.swift in Sources */,
-				2AD3DCF51FC2473600DD012D /* NewWorkViewController.swift in Sources */,
+				2AD3DCF51FC2473600DD012D /* NewWorkSheetViewController.swift in Sources */,
+				2A6E492F1FCF0D6900C9BC5B /* JobTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

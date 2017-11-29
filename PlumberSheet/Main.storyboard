@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="u0y-NW-mmn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gmg-Wh-OtN">
     <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
@@ -40,7 +40,7 @@
         <!--New work sheet-->
         <scene sceneID="sNp-fc-8G3">
             <objects>
-                <viewController id="gmg-Wh-OtN" customClass="NewWorkViewController" customModule="PlumberSheet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gmg-Wh-OtN" customClass="NewWorkSheetViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6r7-qc-Os5"/>
                         <viewControllerLayoutGuide type="bottom" id="BcU-ri-a9I"/>
