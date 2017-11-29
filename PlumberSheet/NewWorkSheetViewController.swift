@@ -156,8 +156,7 @@ class NewWorkSheetViewController: FormViewController {
                 $0.title = "Pump pressure"
                 $0.options = ["Psi", "Bar"]
             }
-            <<< SliderRow() {
-                $0.tag = "PumpPressurePsi"
+            <<< SliderRow("PumpPressurePsi") {
                 $0.hidden = "$PumpPressureMetric != 'Psi'"
                 $0.title = "Psi"
                 $0.minimumValue = 80
@@ -167,12 +166,11 @@ class NewWorkSheetViewController: FormViewController {
                     if rowValue != nil {
                             return rowValue.map { "\($0) psi" }
                         } else {
-                            return "Move slider to select value..."
+                            return "Move slider to select value (psi)"
                     }
                 }
             }
-            <<< SliderRow() {
-                $0.tag = "PumpPressureBar"
+            <<< SliderRow("PumpPressureBar") {
                 $0.hidden = "$PumpPressureMetric != 'Bar'"
                 $0.title = "Bar"
                 $0.minimumValue = 5
@@ -182,58 +180,73 @@ class NewWorkSheetViewController: FormViewController {
                     if rowValue != nil {
                         return rowValue.map { "\($0) bar" }
                     } else {
-                        return "Move slider to select value..."
+                        return "Move slider to select value (bar)"
                     }
                 }
             }
             <<< SliderRow("CarbonDioxidePercentage") {
                 $0.title = "Carbon dioxide"
-                $0.value = 0
                 $0.minimumValue = 5
                 $0.maximumValue = 15
                 $0.steps = 100
                 $0.displayValueFor = { (rowValue: Float?) in
-                    return rowValue.map { "\($0)%" }
+                    if rowValue != nil {
+                        return rowValue.map { "\($0)%" }
+                    } else {
+                        return "Move slider to select value (%)"
+                    }
                 }
             }
             <<< SliderRow("FlueGasTemperature") {
                 $0.title = "Flue gas temperature"
-                $0.value = 0
                 $0.minimumValue = 20
                 $0.maximumValue = 500
                 $0.steps = 96
                 $0.displayValueFor = { (rowValue: Float?) in
-                    return rowValue.map { "\($0)°C" }
+                    if rowValue != nil {
+                        return rowValue.map { "\($0)°C" }
+                    } else {
+                        return "Move slider to select value (°C)"
+                    }
                 }
             }
             <<< SliderRow("EfficiencyPercentage") {
                 $0.title = "Efficiency"
-                $0.value = 0
                 $0.minimumValue = 75
                 $0.maximumValue = 100
                 $0.steps = 250
                 $0.displayValueFor = { (rowValue: Float?) in
-                    return rowValue.map { "\($0)%" }
+                    if rowValue != nil {
+                        return rowValue.map { "\($0)%" }
+                    } else {
+                        return "Move slider to select value (%)"
+                    }
                 }
             }
             <<< SliderRow("CarbonDioxideParts") {
                 $0.title = "Carbon dioxide parts"
-                $0.value = 0
                 $0.minimumValue = 0
                 $0.maximumValue = 200
                 $0.steps = 200
                 $0.displayValueFor = { (rowValue: Float?) in
-                    return rowValue.map { "\($0) PPM" }
+                    if rowValue != nil {
+                        return rowValue.map { "\($0) PPM" }
+                    } else {
+                        return "Move slider to select value (PPM)"
+                    }
                 }
             }
             <<< SliderRow("OxygenPercentage") {
                 $0.title = "Oxygen"
-                $0.value = 0
                 $0.minimumValue = 0
                 $0.maximumValue = 10
                 $0.steps = 100
                 $0.displayValueFor = { (rowValue: Float?) in
-                    return rowValue.map { "\($0)%" }
+                    if rowValue != nil {
+                        return rowValue.map { "\($0)%" }
+                    } else {
+                        return "Move slider to select value (%)"
+                    }
                 }
             }
             
