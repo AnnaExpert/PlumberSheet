@@ -1,7 +1,7 @@
 [![Language](https://img.shields.io/badge/Swift-4.0-orange.svg?style=flat)](#)
 [![Platform](https://img.shields.io/badge/iOS-9.3-lightgray.svg?style=flat)](#)
 [![Devices](https://img.shields.io/badge/Devices-iPad-green.svg?style=flat)](#)
-[![Version](https://img.shields.io/badge/App_Version-Beta-blue.svg?style=flat)](#)
+[![Version](https://img.shields.io/badge/App_Version-0.6.9-blue.svg?style=flat)](#)
 
 ## PlumberSheet - Work sheet app for in-house plumber engineers
 1. [Description](#description)
