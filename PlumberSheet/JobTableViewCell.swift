@@ -9,7 +9,13 @@
 import UIKit
 
 class JobTableViewCell: UITableViewCell {
-
+    
+    //MARK: Cell Properties
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var emailStatusImageView: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
