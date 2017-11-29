@@ -91,14 +91,23 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" title="New work sheet" id="W2X-r0-B46">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="E9W-nW-VPA"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="z4j-Zs-Jyg"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="E9W-nW-VPA">
+                            <connections>
+                                <action selector="cancel:" destination="gmg-Wh-OtN" id="sft-Ff-KL4"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="z4j-Zs-Jyg">
+                            <connections>
+                                <segue destination="zac-ni-vQl" kind="unwind" unwindAction="unwindToJobListWithSender:" id="TNr-qt-q1C"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="saveButton" destination="z4j-Zs-Jyg" id="FSX-25-3wE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LPL-XA-6R5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="zac-ni-vQl" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3163" y="-4127"/>
         </scene>

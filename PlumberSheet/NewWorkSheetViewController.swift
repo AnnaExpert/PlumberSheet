@@ -11,6 +11,10 @@ import UIKit
 import Eureka
 import os.log
 
+//// !!!IMPORTANT - CHECK xSaveButtonLogic.PNG!!!
+//// Disable the Save button while editing.
+//saveButton.isEnabled = false
+
 class NewWorkSheetViewController: FormViewController {
     
     /*
@@ -24,6 +28,10 @@ class NewWorkSheetViewController: FormViewController {
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
     //MARK: Navigation
+    
+    @IBAction func cancel(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
     
     // This method lets you configure a view controller before it's presented.
     
