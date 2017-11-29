@@ -49,13 +49,13 @@ class NewWorkSheetViewController: FormViewController {
             return
         }
         
-//        let row: TextRow? = form.rowBy(tag: "CustomerName")
-//        let value = row?.value
-//        print(value!)
+        
         let valuesDictionary = form.values()
-        print(valuesDictionary)
-//        let photo = UIImage(named: "Header")
-//        let rating = 5
+        let name = valuesDictionary["EngineerName"] as! String
+        print(name)
+        let lame = valuesDictionary["EngineerName"] as? String
+        print(lame!)
+        
         
         // Set the work sheet to be passed to JobTableViewController after the unwind segue.
 //        workSheet = WorkSheet(
@@ -103,12 +103,12 @@ class NewWorkSheetViewController: FormViewController {
             <<< PickerInputRow<String>("EngineerName"){
                 $0.title = "Engineer"
                 $0.options = ["Mark Whittaker", "Scott Chadwick", "Ben Reeve"]
-                $0.value = "Choose engineer..."
+                $0.noValueDisplayText = "Choose engineer..."
             }
             <<< PickerInputRow<String>("JobType"){
                 $0.title = "Job Type"
                 $0.options = ["Install", "Service", "Commission", "Breakdown", "Maintenance", "Landlord Check"]
-                $0.value = "Choose job type..."
+                $0.noValueDisplayText = "Choose job type..."
             }
             
             +++ Section("Customer info:")
@@ -137,7 +137,7 @@ class NewWorkSheetViewController: FormViewController {
             <<< PickerInputRow<String>("ApplianceMake"){
                 $0.title = "Appliance make"
                 $0.options = ["Grant", "Worcester", "Firebird", "HRM", "Warmflow", "Potterton", "Thermecon/GAH", "Merlin"]
-                $0.value = "Choose manufacturer..."
+                $0.noValueDisplayText = "Choose manufacturer..."
             }
             <<< TextRow("ApplianceModel") {
                 $0.title = "Appliance model"
@@ -247,7 +247,8 @@ class NewWorkSheetViewController: FormViewController {
             +++ Section("Time:")
             <<< TimeRow("TimeArrived"){
                 $0.title = "Arrive"
-                $0.value = Date.init()
+//                $0.value = Date.init()
+                $0.noValueDisplayText = "Choose time..."
             }
             <<< TimeRow("TimeLeft"){
                 $0.title = "Leave"
@@ -265,7 +266,6 @@ class NewWorkSheetViewController: FormViewController {
                 }
                 $0.options.append("2 hours")
                 $0.noValueDisplayText = "Choose time..."
-//                $0.value = "Choose time..."
             }
             
             +++ Section("Signature:")
