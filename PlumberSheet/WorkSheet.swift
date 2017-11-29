@@ -13,39 +13,42 @@ class WorkSheet {
     
     //MARK: Job Time Properties
     
-    var jobDate: Date
-    var timeArrived: Date
-    var timeLeft: Date
+//    var jobDate: Date
+//    var timeArrived: Date
+//    var timeLeft: Date
+    var jobDate: String
+    var timeArrived: String
+    var timeLeft: String
     var timeTravel: String
 
     //MARK: Customer Properties
 
     var customerName: String
     var customerAddress: String
-    var customerBillingAddress: String?
-    var customerPhone: String?
-    var customerMobile: String?
+    var customerBillingAddress: String
+    var customerPhone: String
+    var customerMobile: String
     var customerEmail: String
 
     //MARK: Job Properties
 
     var engineerName: String
     var jobType: String
-    var applianceModel: String?
-    var applianceMake: String?
-    var burnerMake: String?
-    var nozzleModel: String?
-    var pumpPressureMetric: String?
-    var pumpPressurePsi: Float?
-    var pumpPressureBar: Float?
-    var carbonDioxidePercentage: Float?
-    var flueGasTemperature: Float?
-    var efficiencyPercentage: Float?
-    var carbonDioxideParts: Float?
-    var oxygenPercentage: Float?
-    var jobDescription: String?
-    var jobUsedParts: String?
-    var jobNotes: String?
+    var applianceModel: String
+    var applianceMake: String
+    var burnerMake: String
+    var nozzleModel: String
+    var pumpPressureMetric: String
+    var pumpPressurePsi: Float
+    var pumpPressureBar: Float
+    var carbonDioxidePercentage: Float
+    var flueGasTemperature: Float
+    var efficiencyPercentage: Float
+    var carbonDioxideParts: Float
+    var oxygenPercentage: Float
+    var jobDescription: String
+    var jobUsedParts: String
+    var jobNotes: String
 
     //MARK: Signature properties
     var engineerSignature: UIImage
@@ -65,38 +68,40 @@ class WorkSheet {
         
         //        name: String, photo: UIImage?, rating: Int
         
-        // Required data
-        jobDate: Date,
-        timeArrived: Date,
-        timeLeft: Date,
+        // Work sheet data
+        
+//        jobDate: Date,
+//        timeArrived: Date,
+//        timeLeft: Date,
+        jobDate: String,
+        timeArrived: String,
+        timeLeft: String,
         timeTravel: String,
         customerName: String,
         customerAddress: String,
         customerEmail: String,
         engineerName: String,
         jobType: String,
+        customerBillingAddress: String,
+        customerPhone: String,
+        customerMobile: String,
+        applianceModel: String,
+        applianceMake: String,
+        burnerMake: String,
+        nozzleModel: String,
+        pumpPressureMetric: String,
+        pumpPressurePsi: Float,
+        pumpPressureBar: Float,
+        carbonDioxidePercentage: Float,
+        flueGasTemperature: Float,
+        efficiencyPercentage: Float,
+        carbonDioxideParts: Float,
+        oxygenPercentage: Float,
+        jobDescription: String,
+        jobUsedParts: String,
+        jobNotes: String,
         engineerSignature: UIImage,
-        customerSignature: UIImage,
-        
-        // Optional data
-        customerBillingAddress: String?,
-        customerPhone: String?,
-        customerMobile: String?,
-        applianceModel: String?,
-        applianceMake: String?,
-        burnerMake: String?,
-        nozzleModel: String?,
-        pumpPressureMetric: String?,
-        pumpPressurePsi: Float?,
-        pumpPressureBar: Float?,
-        carbonDioxidePercentage: Float?,
-        flueGasTemperature: Float?,
-        efficiencyPercentage: Float?,
-        carbonDioxideParts: Float?,
-        oxygenPercentage: Float?,
-        jobDescription: String?,
-        jobUsedParts: String?,
-        jobNotes: String?) {
+        customerSignature: UIImage) {
     
         // The following fields must not be empty
         guard !customerName.isEmpty else {
