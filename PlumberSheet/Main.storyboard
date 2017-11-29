@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Job Table View Controller-->
+        <!--Suffolk Oil Solutions - Work Sheet iPad Prototype-->
         <scene sceneID="wCj-Gw-vz2">
             <objects>
                 <tableViewController id="u0y-NW-mmn" customClass="JobTableViewController" customModule="PlumberSheet" customModuleProvider="target" sceneMemberID="viewController">
@@ -65,7 +65,9 @@
                             <outlet property="delegate" destination="u0y-NW-mmn" id="LQC-Yj-O8J"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Isu-C8-gb7"/>
+                    <navigationItem key="navigationItem" title="Suffolk Oil Solutions - Work Sheet iPad Prototype" id="Isu-C8-gb7">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="2Bm-sY-pEr"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sYs-JD-Ygw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
