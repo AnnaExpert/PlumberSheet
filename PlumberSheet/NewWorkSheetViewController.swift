@@ -160,15 +160,14 @@ class NewWorkSheetViewController: FormViewController {
                 $0.tag = "PumpPressurePsi"
                 $0.hidden = "$PumpPressureMetric != 'Psi'"
                 $0.title = "Psi"
-//                $0.value = 0
                 $0.minimumValue = 80
                 $0.maximumValue = 250
                 $0.steps = 170
                 $0.displayValueFor = { (rowValue: Float?) in
                     if rowValue != nil {
-                        return rowValue.map { "\($0) psi" }
+                            return rowValue.map { "\($0) psi" }
                         } else {
-                        return "Select value"
+                            return "Move slider to select value..."
                     }
                 }
             }
@@ -176,12 +175,15 @@ class NewWorkSheetViewController: FormViewController {
                 $0.tag = "PumpPressureBar"
                 $0.hidden = "$PumpPressureMetric != 'Bar'"
                 $0.title = "Bar"
-                $0.value = 0
                 $0.minimumValue = 5
                 $0.maximumValue = 20
                 $0.steps = 150
                 $0.displayValueFor = { (rowValue: Float?) in
-                    return rowValue.map { "\($0) bar" }
+                    if rowValue != nil {
+                        return rowValue.map { "\($0) bar" }
+                    } else {
+                        return "Move slider to select value..."
+                    }
                 }
             }
             <<< SliderRow("CarbonDioxidePercentage") {
