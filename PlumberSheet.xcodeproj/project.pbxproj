@@ -13,8 +13,9 @@
 		2A1CA1451FB36ED8001841FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A1CA1441FB36ED8001841FE /* Assets.xcassets */; };
 		2A1CA16C1FB373A6001841FE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A1CA16B1FB373A6001841FE /* GoogleService-Info.plist */; };
 		2A98C1721FBB02EF00FEF1DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A98C16E1FBB02EF00FEF1DB /* Main.storyboard */; };
+		2AB7A92B1FCE305500EE7273 /* NewWorkViewController copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB7A92A1FCE305500EE7273 /* NewWorkViewController copy.swift */; };
 		2AD3DCF31FC246DF00DD012D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AD3DCF21FC246DF00DD012D /* LaunchScreen.storyboard */; };
-		2AD3DCF51FC2473600DD012D /* NewWorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD3DCF41FC2473600DD012D /* NewWorkViewController.swift */; };
+		2AD3DCF51FC2473600DD012D /* SavedWorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD3DCF41FC2473600DD012D /* SavedWorkViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,8 +26,9 @@
 		2A1CA1491FB36ED8001841FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A1CA16B1FB373A6001841FE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2A98C16E1FBB02EF00FEF1DB /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		2AB7A92A1FCE305500EE7273 /* NewWorkViewController copy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewWorkViewController copy.swift"; sourceTree = "<group>"; };
 		2AD3DCF21FC246DF00DD012D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		2AD3DCF41FC2473600DD012D /* NewWorkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWorkViewController.swift; sourceTree = "<group>"; };
+		2AD3DCF41FC2473600DD012D /* SavedWorkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedWorkViewController.swift; sourceTree = "<group>"; };
 		516CE416B4D60B2A2166AEAD /* Pods-PlumberSheet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlumberSheet.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlumberSheet/Pods-PlumberSheet.release.xcconfig"; sourceTree = "<group>"; };
 		5BF37377D9C80DDC3800C04D /* Pods-PlumberSheet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlumberSheet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlumberSheet/Pods-PlumberSheet.debug.xcconfig"; sourceTree = "<group>"; };
 		DB34BCCBDBBB3238C1FB32E4 /* Pods_PlumberSheet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlumberSheet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,7 +68,8 @@
 			isa = PBXGroup;
 			children = (
 				2A1CA13D1FB36ED7001841FE /* AppDelegate.swift */,
-				2AD3DCF41FC2473600DD012D /* NewWorkViewController.swift */,
+				2AD3DCF41FC2473600DD012D /* SavedWorkViewController.swift */,
+				2AB7A92A1FCE305500EE7273 /* NewWorkViewController copy.swift */,
 				2A98C16E1FBB02EF00FEF1DB /* Main.storyboard */,
 				2A0713B21FC2550500807098 /* Header.xib */,
 				2A1CA1441FB36ED8001841FE /* Assets.xcassets */,
@@ -240,7 +243,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A1CA13E1FB36ED7001841FE /* AppDelegate.swift in Sources */,
-				2AD3DCF51FC2473600DD012D /* NewWorkViewController.swift in Sources */,
+				2AB7A92B1FCE305500EE7273 /* NewWorkViewController copy.swift in Sources */,
+				2AD3DCF51FC2473600DD012D /* SavedWorkViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
