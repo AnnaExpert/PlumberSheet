@@ -66,7 +66,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Suffolk Oil Solutions - Work Sheet iPad Prototype" id="Isu-C8-gb7">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="2Bm-sY-pEr"/>
+                        <barButtonItem key="rightBarButtonItem" title="Create new work sheet" id="2Bm-sY-pEr">
+                            <connections>
+                                <segue destination="5f1-fi-B9w" kind="presentation" identifier="AddItem" id="okH-3X-oYp"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sYs-JD-Ygw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -87,12 +91,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" title="New work sheet" id="W2X-r0-B46">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="5MG-Bn-1si"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="E9W-nW-VPA"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="z4j-Zs-Jyg"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="saveButton" destination="z4j-Zs-Jyg" id="FSX-25-3wE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LPL-XA-6R5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2298.4375" y="-3259.5703125"/>
+            <point key="canvasLocation" x="3163" y="-4127"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xRh-yp-VUb">
@@ -111,6 +119,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vKs-3Y-usp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="888" y="-4127"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="iqc-Tk-Ivh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5f1-fi-B9w" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6zd-ec-8f2">
+                        <rect key="frame" x="0.0" y="20" width="1024" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gmg-Wh-OtN" kind="relationship" relationship="rootViewController" id="uo7-kE-bQQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wiT-de-6g1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2426.953125" y="-4127.34375"/>
         </scene>
     </scenes>
     <resources>

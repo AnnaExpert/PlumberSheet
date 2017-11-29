@@ -9,8 +9,45 @@
 
 import UIKit
 import Eureka
+import os.log
 
 class NewWorkSheetViewController: FormViewController {
+    
+    /*
+     This value is either passed by `JobTableViewController` in `prepare(for:sender:)`
+     or constructed as part of adding a new work sheet.
+     */
+    var workSheet: WorkSheet?
+    
+    //MARK: Save Work Sheet Button
+    
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+    
+    //MARK: Navigation
+    
+    // This method lets you configure a view controller before it's presented.
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        super.prepare(for: segue, sender: sender)
+        
+        // Configure the destination view controller only when the save button is pressed.
+        guard let button = sender as? UIBarButtonItem, button === saveButton else {
+            if #available(iOS 10.0, *) {
+                os_log("The save button was not pressed, cancelling", log: OSLog.default, type: .debug)
+            } else {
+                // Fallback on earlier versions
+            }
+            return
+        }
+        
+        let name = "Alexander Iashchuk"
+        let photo = UIImage(named: "Header")
+        let rating = 5
+        
+        // Set the work sheet to be passed to JobTableViewController after the unwind segue.
+        workSheet = WorkSheet(name: name, photo: photo, rating: rating)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

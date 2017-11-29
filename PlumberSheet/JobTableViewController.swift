@@ -36,6 +36,20 @@ class JobTableViewController: UITableViewController {
         
         jobs += [job1, job2, job3]
     }
+    
+    //MARK: Actions
+    
+    @IBAction func unwindToJobList(sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.source as? NewWorkSheetViewController, let workSheet = sourceViewController.workSheet {
+            
+            // Add a new work sheet.
+            let newIndexPath = IndexPath(row: jobs.count, section: 0)
+            
+            jobs.append(workSheet)
+            tableView.insertRows(at: [newIndexPath], with: .automatic)
+            
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
