@@ -1,6 +1,6 @@
 //
 //  http://iashchuk.com
-//  NewWorkViewController.swift
+//  NewWorkSheetViewController.swift
 //  PlumberSheet - Work sheet app for in-house plumber engineers
 //
 //  Created by Alexander Iashchuk on 20/11/17.
@@ -10,7 +10,7 @@
 import UIKit
 import Eureka
 
-class NewWorkViewController: FormViewController {
+class NewWorkSheetViewController: FormViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
