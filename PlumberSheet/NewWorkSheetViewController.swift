@@ -96,53 +96,53 @@ class NewWorkSheetViewController: FormViewController {
             }
             
             +++ Section("General info:")
-            <<< DateRow(){
-                $0.tag = "JobDate"
+            <<< DateRow("JobDate"){
+//                $0.tag = "JobDate"
                 $0.title = "Job Date"
                 $0.value = Date.init()
             }
-            <<< PickerInputRow<String>(){
-                $0.tag = "EngineerName"
+            <<< PickerInputRow<String>("EngineerName"){
+//                $0.tag = "EngineerName"
                 $0.title = "Engineer"
                 $0.options = ["Mark Whittaker", "Scott Chadwick", "Ben Reeve"]
-                $0.value = "Other"
+                $0.value = "Choose engineer name..."
 //                $0.value = $0.options.first
             }
-            <<< PickerInputRow<String>(){
-                $0.tag = "JobType"
+            <<< PickerInputRow<String>("JobType"){
+//                $0.tag = "JobType"
                 $0.title = "Job Type"
                 $0.options = ["Install", "Service", "Commission", "Breakdown", "Maintenance", "Landlord Check"]
-                $0.value = "Other"
+                $0.value = "Choose job type..."
 //                $0.value = $0.options.first
             }
             
             +++ Section("Customer info:")
-            <<< TextRow(){
-                $0.tag = "CustomerName"
+            <<< TextRow("CustomerName"){
+//                $0.tag = "CustomerName"
                 $0.title = "Full name"
                 $0.placeholder = "Customer name..."
                 $0.value = ""
             }
-            <<< TextAreaRow() {
-                $0.tag = "CustomerAddress"
+            <<< TextAreaRow("CustomerAddress") {
+//                $0.tag = "CustomerAddress"
                 $0.placeholder = "Customer address..."
                 $0.textAreaHeight = .dynamic(initialTextViewHeight: 66)
                 $0.value = ""
             }
-            <<< TextRow() {
-                $0.tag = "CustomerPhone"
+            <<< TextRow("CustomerPhone") {
+//                $0.tag = "CustomerPhone"
                 $0.title = "Phone"
                 $0.placeholder = "+44 077 7595 3555..."
                 $0.value = ""
             }
-            <<< TextRow() {
-                $0.tag = "CustomerMobile"
+            <<< TextRow("CustomerMobile") {
+//                $0.tag = "CustomerMobile"
                 $0.title = "Mobile"
                 $0.placeholder = "+44 014 4082 0267..."
                 $0.value = ""
             }
-            <<< EmailRow() {
-                $0.tag = "CustomerEmail"
+            <<< EmailRow("CustomerEmail") {
+//                $0.tag = "CustomerEmail"
                 $0.title = "Customer email"
                 $0.placeholder = "customer@email.com..."
             }
@@ -179,7 +179,7 @@ class NewWorkSheetViewController: FormViewController {
                 $0.tag = "PumpPressurePsi"
                 $0.hidden = "$PumpPressureMetric != 'Psi'"
                 $0.title = "Psi"
-                $0.value = 150
+                $0.value = 0
                 $0.minimumValue = 80
                 $0.maximumValue = 250
                 $0.steps = 170
@@ -191,7 +191,7 @@ class NewWorkSheetViewController: FormViewController {
                 $0.tag = "PumpPressureBar"
                 $0.hidden = "$PumpPressureMetric != 'Bar'"
                 $0.title = "Bar"
-                $0.value = 10
+                $0.value = 0
                 $0.minimumValue = 5
                 $0.maximumValue = 20
                 $0.steps = 150
@@ -199,10 +199,10 @@ class NewWorkSheetViewController: FormViewController {
                     return rowValue.map { "\($0) bar" }
                 }
             }
-            <<< SliderRow() {
-                $0.tag = "CarbonDioxidePercentage"
+            <<< SliderRow("CarbonDioxidePercentage") {
+//                $0.tag = "CarbonDioxidePercentage"
                 $0.title = "Carbon dioxide"
-                $0.value = 10
+                $0.value = 0
                 $0.minimumValue = 5
                 $0.maximumValue = 15
                 $0.steps = 100
@@ -210,10 +210,9 @@ class NewWorkSheetViewController: FormViewController {
                     return rowValue.map { "\($0)%" }
                 }
             }
-            <<< SliderRow() {
-//                $0.tag = "
+            <<< SliderRow("FlueGasTemperature") {
                 $0.title = "Flue gas temperature"
-                $0.value = 200
+                $0.value = 0
                 $0.minimumValue = 20
                 $0.maximumValue = 500
                 $0.steps = 96
@@ -221,10 +220,9 @@ class NewWorkSheetViewController: FormViewController {
                     return rowValue.map { "\($0)°C" }
                 }
             }
-            <<< SliderRow() {
-//                $0.tag = "
+            <<< SliderRow("EfficiencyPercentage") {
                 $0.title = "Efficiency"
-                $0.value = 90
+                $0.value = 0
                 $0.minimumValue = 75
                 $0.maximumValue = 100
                 $0.steps = 250
@@ -232,10 +230,9 @@ class NewWorkSheetViewController: FormViewController {
                     return rowValue.map { "\($0)%" }
                 }
             }
-            <<< SliderRow() {
-//                $0.tag = "
+            <<< SliderRow("CarbonDioxideParts") {
                 $0.title = "Carbon dioxide parts"
-                $0.value = 100
+                $0.value = 0
                 $0.minimumValue = 0
                 $0.maximumValue = 200
                 $0.steps = 200
@@ -243,10 +240,9 @@ class NewWorkSheetViewController: FormViewController {
                     return rowValue.map { "\($0) PPM" }
                 }
             }
-            <<< SliderRow() {
-//                $0.tag = "
+            <<< SliderRow("OxygenPercentage") {
                 $0.title = "Oxygen"
-                $0.value = 5
+                $0.value = 0
                 $0.minimumValue = 0
                 $0.maximumValue = 10
                 $0.steps = 100
@@ -256,35 +252,29 @@ class NewWorkSheetViewController: FormViewController {
             }
             
             +++ Section("Description:")
-            <<< TextAreaRow() {
-//                $0.tag = "
+            <<< TextAreaRow("JobDescription") {
                 $0.placeholder = "Description of work carried out..."
                 $0.textAreaHeight = .dynamic(initialTextViewHeight: 66)
             }
-            <<< TextAreaRow() {
-//                $0.tag = "
+            <<< TextAreaRow("JobUsedParts") {
                 $0.placeholder = "Parts used..."
                 $0.textAreaHeight = .dynamic(initialTextViewHeight: 44)
             }
-            <<< TextAreaRow() {
-//                $0.tag = "
+            <<< TextAreaRow("JobNotes") {
                 $0.placeholder = "Notes for office..."
                 $0.textAreaHeight = .dynamic(initialTextViewHeight: 44)
             }
             
             +++ Section("Time:")
-            <<< TimeRow(){
-//                $0.tag = "
+            <<< TimeRow("TimeArrived"){
                 $0.title = "Arrive"
                 $0.value = Date.init()
             }
-            <<< TimeRow(){
-//                $0.tag = "
+            <<< TimeRow("TimeLeft"){
                 $0.title = "Leave"
                 $0.value = Date.init()
             }
-            <<< PickerInputRow<String>(){
-//                $0.tag = "
+            <<< PickerInputRow<String>("TimeTravel"){
                 $0.title = "Travel"
                 $0.options = []
                 for i in 1...11{
@@ -299,8 +289,8 @@ class NewWorkSheetViewController: FormViewController {
             }
             
             +++ Section("Signature:")
-            <<< ButtonRow("Customer signature") { (row: ButtonRow) -> Void in
-                row.title = "Customer signature will be here"
+            <<< ButtonRow() { (row: ButtonRow) -> Void in
+                row.title = "... customer signature will be here soon ..."
         }
     }
     
