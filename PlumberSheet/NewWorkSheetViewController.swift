@@ -121,21 +121,25 @@ class NewWorkSheetViewController: FormViewController {
                 $0.tag = "CustomerName"
                 $0.title = "Full name"
                 $0.placeholder = "Customer name..."
+                $0.value = ""
             }
             <<< TextAreaRow() {
                 $0.tag = "CustomerAddress"
                 $0.placeholder = "Customer address..."
                 $0.textAreaHeight = .dynamic(initialTextViewHeight: 66)
+                $0.value = ""
             }
             <<< TextRow() {
                 $0.tag = "CustomerPhone"
                 $0.title = "Phone"
                 $0.placeholder = "+44 077 7595 3555..."
+                $0.value = ""
             }
             <<< TextRow() {
                 $0.tag = "CustomerMobile"
                 $0.title = "Mobile"
                 $0.placeholder = "+44 014 4082 0267..."
+                $0.value = ""
             }
             <<< EmailRow() {
                 $0.tag = "CustomerEmail"
@@ -148,7 +152,7 @@ class NewWorkSheetViewController: FormViewController {
                 $0.tag = "ApplianceMake"
                 $0.title = "Appliance make"
                 $0.options = ["Grant", "Worcester", "Firebird", "HRM", "Warmflow", "Potterton", "Thermecon/GAH", "Merlin"]
-                $0.value = "Other"
+//                $0.value = "Other"
 //                $0.value = $0.options.first
             }
             <<< TextRow() {
@@ -167,13 +171,13 @@ class NewWorkSheetViewController: FormViewController {
                 $0.placeholder = "Nozzle..."
             }
             <<< SegmentedRow<String>("segments"){
-                $0.tag = "PumpPressureType"
+                $0.tag = "PumpPressureValue"
                 $0.title = "Pump pressure"
                 $0.options = ["Psi", "Bar"]
-                $0.value = "Psi"
+//                $0.value = "Psi"
             }
             <<< SliderRow() {
-                $0.tag = "PumpPressure"
+                $0.tag = "PumpPressurePsi"
                 $0.hidden = "$segments != 'Psi'"
                 $0.title = "Psi"
                 $0.value = 150
@@ -185,7 +189,7 @@ class NewWorkSheetViewController: FormViewController {
                 }
             }
             <<< SliderRow() {
-                $0.tag = "PumpPressure"
+                $0.tag = "PumpPressureBar"
                 $0.hidden = "$segments != 'Bar'"
                 $0.title = "Bar"
                 $0.value = 10
