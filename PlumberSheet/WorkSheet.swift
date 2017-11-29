@@ -22,7 +22,6 @@ class WorkSheet {
 
     var customerName: String
     var customerAddress: String
-    var customerBilling: Bool
     var customerBillingAddress: String?
     var customerPhone: String?
     var customerMobile: String?
@@ -32,19 +31,21 @@ class WorkSheet {
 
     var engineerName: String
     var jobType: String
-    var applianceModel: String
-    var applianceMake: String
-    var burnerMake: String
-    var nozzleModel: String
-    var pumpPressure: Float
-    var carbonDioxidePercentage: Float
-    var flueGasTemperature: Float
-    var efficiencyPercentage: Float
-    var carbonDioxideParts: Float
-    var oxygenPercentage: Float
-    var jobDescription: String
-    var jobUsedParts: String
-    var jobNotes: String
+    var applianceModel: String?
+    var applianceMake: String?
+    var burnerMake: String?
+    var nozzleModel: String?
+    var pumpPressureMetric: String?
+    var pumpPressurePsi: Float?
+    var pumpPressureBar: Float?
+    var carbonDioxidePercentage: Float?
+    var flueGasTemperature: Float?
+    var efficiencyPercentage: Float?
+    var carbonDioxideParts: Float?
+    var oxygenPercentage: Float?
+    var jobDescription: String?
+    var jobUsedParts: String?
+    var jobNotes: String?
 
     //MARK: Signature properties
     var engineerSignature: UIImage
@@ -64,34 +65,38 @@ class WorkSheet {
         
         //        name: String, photo: UIImage?, rating: Int
         
+        // Required data
         jobDate: Date,
         timeArrived: Date,
         timeLeft: Date,
         timeTravel: String,
         customerName: String,
         customerAddress: String,
-        customerBilling: Bool,
-        customerBillingAddress: String?,
-        customerPhone: String?,
-        customerMobile: String?,
         customerEmail: String,
         engineerName: String,
         jobType: String,
-        applianceModel: String,
-        applianceMake: String,
-        burnerMake: String,
-        nozzleModel: String,
-        pumpPressure: Float,
-        carbonDioxidePercentage: Float,
-        flueGasTemperature: Float,
-        efficiencyPercentage: Float,
-        carbonDioxideParts: Float,
-        oxygenPercentage: Float,
-        jobDescription: String,
-        jobUsedParts: String,
-        jobNotes: String,
         engineerSignature: UIImage,
-        customerSignature: UIImage) {
+        customerSignature: UIImage,
+        
+        // Optional data
+        customerBillingAddress: String?,
+        customerPhone: String?,
+        customerMobile: String?,
+        applianceModel: String?,
+        applianceMake: String?,
+        burnerMake: String?,
+        nozzleModel: String?,
+        pumpPressureMetric: String?,
+        pumpPressurePsi: Float?,
+        pumpPressureBar: Float?,
+        carbonDioxidePercentage: Float?,
+        flueGasTemperature: Float?,
+        efficiencyPercentage: Float?,
+        carbonDioxideParts: Float?,
+        oxygenPercentage: Float?,
+        jobDescription: String?,
+        jobUsedParts: String?,
+        jobNotes: String?) {
     
         // The following fields must not be empty
         guard !customerName.isEmpty else {
@@ -121,7 +126,6 @@ class WorkSheet {
         self.timeTravel = timeTravel
         self.customerName = customerName
         self.customerAddress = customerAddress
-        self.customerBilling = customerBilling
         self.customerBillingAddress = customerBillingAddress
         self.customerPhone = customerPhone
         self.customerMobile = customerMobile
@@ -132,7 +136,9 @@ class WorkSheet {
         self.applianceMake = applianceMake
         self.burnerMake = burnerMake
         self.nozzleModel = nozzleModel
-        self.pumpPressure = pumpPressure
+        self.pumpPressureMetric = pumpPressureMetric
+        self.pumpPressurePsi = pumpPressurePsi
+        self.pumpPressureBar = pumpPressureBar
         self.carbonDioxidePercentage = carbonDioxidePercentage
         self.flueGasTemperature = flueGasTemperature
         self.efficiencyPercentage = efficiencyPercentage

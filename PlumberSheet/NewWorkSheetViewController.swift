@@ -50,11 +50,12 @@ class NewWorkSheetViewController: FormViewController {
         }
         
         
-        let valuesDictionary = form.values()
-        let name = valuesDictionary["EngineerName"] as! String
-        print(name)
-        let lame = valuesDictionary["EngineerName"] as? String
-        print(lame!)
+        let formValuesDictionary = form.values()
+        print(formValuesDictionary)
+//        let name = formValuesDictionary["EngineerName"] as! String
+//        print(name)
+//        let lame = formValuesDictionary["EngineerName"] as? String
+//        print(lame!)
         
         
         // Set the work sheet to be passed to JobTableViewController after the unwind segue.
@@ -159,12 +160,16 @@ class NewWorkSheetViewController: FormViewController {
                 $0.tag = "PumpPressurePsi"
                 $0.hidden = "$PumpPressureMetric != 'Psi'"
                 $0.title = "Psi"
-                $0.value = 0
+//                $0.value = 0
                 $0.minimumValue = 80
                 $0.maximumValue = 250
                 $0.steps = 170
                 $0.displayValueFor = { (rowValue: Float?) in
-                    return rowValue.map { "\($0) psi" }
+                    if rowValue != nil {
+                        return rowValue.map { "\($0) psi" }
+                        } else {
+                        return "Select value"
+                    }
                 }
             }
             <<< SliderRow() {
