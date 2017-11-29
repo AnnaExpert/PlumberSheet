@@ -148,37 +148,36 @@ class NewWorkSheetViewController: FormViewController {
             }
             
             +++ Section("Equipment info:")
-            <<< PickerInputRow<String>(){
-                $0.tag = "ApplianceMake"
+            <<< PickerInputRow<String>("ApplianceMake"){
+//                $0.tag = "ApplianceMake"
                 $0.title = "Appliance make"
                 $0.options = ["Grant", "Worcester", "Firebird", "HRM", "Warmflow", "Potterton", "Thermecon/GAH", "Merlin"]
 //                $0.value = "Other"
 //                $0.value = $0.options.first
             }
-            <<< TextRow() {
-                $0.tag = "ApplianceModel"
+            <<< TextRow("ApplianceModel") {
+//                $0.tag = "ApplianceModel"
                 $0.title = "Appliance model"
                 $0.placeholder = "Model..."
             }
-            <<< TextRow() {
-                $0.tag = "BurnerMake"
+            <<< TextRow("BurnerMake") {
+//                $0.tag = "BurnerMake"
                 $0.title = "Burner make"
                 $0.placeholder = "Burner..."
             }
-            <<< TextRow() {
-                $0.tag = "NozzleModel"
+            <<< TextRow("NozzleModel") {
+//                $0.tag = "NozzleModel"
                 $0.title = "Nozzle"
                 $0.placeholder = "Nozzle..."
             }
-            <<< SegmentedRow<String>("segments"){
-                $0.tag = "PumpPressureValue"
+            <<< SegmentedRow<String>("PumpPressureMetric"){
                 $0.title = "Pump pressure"
                 $0.options = ["Psi", "Bar"]
 //                $0.value = "Psi"
             }
             <<< SliderRow() {
                 $0.tag = "PumpPressurePsi"
-                $0.hidden = "$segments != 'Psi'"
+                $0.hidden = "$PumpPressureMetric != 'Psi'"
                 $0.title = "Psi"
                 $0.value = 150
                 $0.minimumValue = 80
@@ -190,7 +189,7 @@ class NewWorkSheetViewController: FormViewController {
             }
             <<< SliderRow() {
                 $0.tag = "PumpPressureBar"
-                $0.hidden = "$segments != 'Bar'"
+                $0.hidden = "$PumpPressureMetric != 'Bar'"
                 $0.title = "Bar"
                 $0.value = 10
                 $0.minimumValue = 5
