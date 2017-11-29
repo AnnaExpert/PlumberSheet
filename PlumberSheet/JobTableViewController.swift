@@ -16,6 +16,8 @@ class JobTableViewController: UITableViewController {
     var jobs = [WorkSheet]()
     
     //MARK: Private Methods
+    
+    let photo1 = UIImage(named: "Header")
     /*
     private func loadSampleJobs() {
         
@@ -183,7 +185,7 @@ class JobTableViewController: UITableViewController {
         cell.nameLabel.text = job.customerName
         cell.dateLabel.text = job.timeTravel
         cell.addressLabel.text = job.customerAddress
-        cell.emailStatusImageView.image = photo1
+        cell.emailStatusImageView.image = self.photo1
 
         return cell
     }

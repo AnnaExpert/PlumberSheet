@@ -49,12 +49,44 @@ class NewWorkSheetViewController: FormViewController {
             return
         }
         
-        let name = "Alexander Iashchuk"
-        let photo = UIImage(named: "Header")
-        let rating = 5
+        let row: NameRow? = form.rowBy(tag: "CustomerName")
+        let value = row?.value
+        print(value!)
+        let valuesDictionary = form.values()
+        print(valuesDictionary)
+//        let photo = UIImage(named: "Header")
+//        let rating = 5
         
         // Set the work sheet to be passed to JobTableViewController after the unwind segue.
-//        workSheet = WorkSheet(name: name, photo: photo, rating: rating)
+//        workSheet = WorkSheet(
+//        jobDate: <#T##Date#>,
+//        timeArrived: <#T##Date#>,
+//        timeLeft: <#T##Date#>,
+//        timeTravel: <#T##String#>,
+//        customerName: <#T##String#>,
+//        customerAddress: <#T##String#>,
+//        customerBilling: <#T##Bool#>,
+//        customerBillingAddress: <#T##String?#>,
+//        customerPhone: <#T##String?#>,
+//        customerMobile: <#T##String?#>,
+//        customerEmail: <#T##String#>,
+//        engineerName: <#T##String#>,
+//        jobType: <#T##String#>,
+//        applianceModel: <#T##String#>,
+//        applianceMake: <#T##String#>,
+//        burnerMake: <#T##String#>,
+//        nozzleModel: <#T##String#>,
+//        pumpPressure: <#T##Float#>,
+//        carbonDioxidePercentage: <#T##Float#>,
+//        flueGasTemperature: <#T##Float#>,
+//        efficiencyPercentage: <#T##Float#>,
+//        carbonDioxideParts: <#T##Float#>,
+//        oxygenPercentage: <#T##Float#>,
+//        jobDescription: <#T##String#>,
+//        jobUsedParts: <#T##String#>,
+//        jobNotes: <#T##String#>,
+//        engineerSignature: <#T##UIImage#>,
+//        customerSignature: <#T##UIImage#>)
     }
     
     override func viewDidLoad() {
@@ -65,19 +97,19 @@ class NewWorkSheetViewController: FormViewController {
             
             +++ Section("General info:")
             <<< DateRow(){
-                $0.tag = "jobDate"
+//                $0.tag = "jobDate"
                 $0.title = "Job Date"
                 $0.value = Date.init()
             }
             <<< PickerInputRow<String>(){
-                $0.tag = "engineerName"
+//                $0.tag = "EngineerName"
                 $0.title = "Engineer"
                 $0.options = ["Mark Whittaker", "Scott Chadwick", "Ben Reeve"]
                 $0.value = "Other"
 //                $0.value = $0.options.first
             }
             <<< PickerInputRow<String>(){
-                $0.tag = "jobType"
+//                $0.tag = "jobType"
                 $0.title = "Job Type"
                 $0.options = ["Install", "Service", "Commission", "Breakdown", "Maintenance", "Landlord Check"]
                 $0.value = "Other"
@@ -86,7 +118,7 @@ class NewWorkSheetViewController: FormViewController {
             
             +++ Section("Customer info:")
             <<< NameRow(){
-//                $0.tag = "
+                $0.tag = "CustomerName"
                 $0.title = "Full name"
                 $0.placeholder = "Customer name..."
             }
