@@ -80,7 +80,7 @@ class JobTableViewController: UITableViewController {
 
         // Configure the cell...
         cell.nameLabel.text = job.name
-        cell.dateLabel.text = "Webnesday"
+        cell.dateLabel.text = "Wednesday"
         cell.addressLabel.text = "6th Floor East, Portland House, Bressenden Place, London, SW1E 5BH, Portland House, Bressenden Place, London, SW1E 5BH"
         cell.emailStatusImageView.image = job.photo
 
