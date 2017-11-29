@@ -16,27 +16,114 @@ class JobTableViewController: UITableViewController {
     var jobs = [WorkSheet]()
     
     //MARK: Private Methods
-    
+    /*
     private func loadSampleJobs() {
         
         let photo1 = UIImage(named: "Header")
         let photo2 = UIImage(named: "Header")
         let photo3 = UIImage(named: "Header")
         
-        guard let job1 = WorkSheet(name: "Lord Duncan of Springbank", photo: photo1, rating: 4) else {
-            fatalError("Unable to instantiate meal1")
+        guard let job1 = WorkSheet(
+            jobDate: <#T##Date#>,
+            timeArrived: <#T##Date#>,
+            timeLeft: <#T##Date#>,
+            timeTravel: <#T##String#>,
+            customerName: <#T##String#>,
+            customerAddress: <#T##String#>,
+            customerBilling: <#T##Bool#>,
+            customerBillingAddress: <#T##String?#>,
+            customerPhone: <#T##String?#>,
+            customerMobile: <#T##String?#>,
+            customerEmail: <#T##String#>,
+            engineerName: <#T##String#>,
+            jobType: <#T##String#>,
+            applianceModel: <#T##String#>,
+            applianceMake: <#T##String#>,
+            burnerMake: <#T##String#>,
+            nozzleModel: <#T##String#>,
+            pumpPressure: <#T##Float#>,
+            carbonDioxidePercentage: <#T##Float#>,
+            flueGasTemperature: <#T##Float#>,
+            efficiencyPercentage: <#T##Float#>,
+            carbonDioxideParts: <#T##Float#>,
+            oxygenPercentage: <#T##Float#>,
+            jobDescription: <#T##String#>,
+            jobUsedParts: <#T##String#>,
+            jobNotes: <#T##String#>,
+            engineerSignature: <#T##UIImage#>,
+            customerSignature: <#T##UIImage#>)
+            else {
+            fatalError("Unable to instantiate job1")
         }
-        guard let job2 = WorkSheet(name: "Baroness Evans of Bowes Park", photo: photo2, rating: 5) else {
-            fatalError("Unable to instantiate meal2")
+        guard let job2 = WorkSheet(
+            jobDate: <#T##Date#>,
+            timeArrived: <#T##Date#>,
+            timeLeft: <#T##Date#>,
+            timeTravel: <#T##String#>,
+            customerName: <#T##String#>,
+            customerAddress: <#T##String#>,
+            customerBilling: <#T##Bool#>,
+            customerBillingAddress: <#T##String?#>,
+            customerPhone: <#T##String?#>,
+            customerMobile: <#T##String?#>,
+            customerEmail: <#T##String#>,
+            engineerName: <#T##String#>,
+            jobType: <#T##String#>,
+            applianceModel: <#T##String#>,
+            applianceMake: <#T##String#>,
+            burnerMake: <#T##String#>,
+            nozzleModel: <#T##String#>,
+            pumpPressure: <#T##Float#>,
+            carbonDioxidePercentage: <#T##Float#>,
+            flueGasTemperature: <#T##Float#>,
+            efficiencyPercentage: <#T##Float#>,
+            carbonDioxideParts: <#T##Float#>,
+            oxygenPercentage: <#T##Float#>,
+            jobDescription: <#T##String#>,
+            jobUsedParts: <#T##String#>,
+            jobNotes: <#T##String#>,
+            engineerSignature: <#T##UIImage#>,
+            customerSignature: <#T##UIImage#>)
+            else {
+            fatalError("Unable to instantiate job2")
         }
         
-        guard let job3 = WorkSheet(name: "Sir Patrick McLoughlin", photo: photo3, rating: 3) else {
-            fatalError("Unable to instantiate meal2")
+        guard let job3 = WorkSheet(
+            jobDate: <#T##Date#>,
+            timeArrived: <#T##Date#>,
+            timeLeft: <#T##Date#>,
+            timeTravel: <#T##String#>,
+            customerName: <#T##String#>,
+            customerAddress: <#T##String#>,
+            customerBilling: <#T##Bool#>,
+            customerBillingAddress: <#T##String?#>,
+            customerPhone: <#T##String?#>,
+            customerMobile: <#T##String?#>,
+            customerEmail: <#T##String#>,
+            engineerName: <#T##String#>,
+            jobType: <#T##String#>,
+            applianceModel: <#T##String#>,
+            applianceMake: <#T##String#>,
+            burnerMake: <#T##String#>,
+            nozzleModel: <#T##String#>,
+            pumpPressure: <#T##Float#>,
+            carbonDioxidePercentage: <#T##Float#>,
+            flueGasTemperature: <#T##Float#>,
+            efficiencyPercentage: <#T##Float#>,
+            carbonDioxideParts: <#T##Float#>,
+            oxygenPercentage: <#T##Float#>,
+            jobDescription: <#T##String#>,
+            jobUsedParts: <#T##String#>,
+            jobNotes: <#T##String#>,
+            engineerSignature: <#T##UIImage#>,
+            customerSignature: <#T##UIImage#>)
+            else {
+            fatalError("Unable to instantiate job3")
         }
         
         jobs += [job1, job2, job3]
     }
-    
+    */
     //MARK: Actions
     
     @IBAction func unwindToJobList(sender: UIStoryboardSegue) {
@@ -55,7 +142,7 @@ class JobTableViewController: UITableViewController {
         super.viewDidLoad()
         
         // Load the sample data.
-        loadSampleJobs()
+//        loadSampleJobs()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -93,10 +180,10 @@ class JobTableViewController: UITableViewController {
         let job = jobs[indexPath.row]
 
         // Configure the cell...
-        cell.nameLabel.text = job.name
-        cell.dateLabel.text = "Wednesday"
-        cell.addressLabel.text = "6th Floor East, Portland House, Bressenden Place, London, SW1E 5BH, Portland House, Bressenden Place, London, SW1E 5BH"
-        cell.emailStatusImageView.image = job.photo
+        cell.nameLabel.text = job.customerName
+        cell.dateLabel.text = job.timeTravel
+        cell.addressLabel.text = job.customerAddress
+        cell.emailStatusImageView.image = photo1
 
         return cell
     }

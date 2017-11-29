@@ -50,6 +50,10 @@ class WorkSheet {
     var engineerSignature: UIImage
     var customerSignature: UIImage
     
+    //MARK: Email properties
+    var emaiSenderProcess: Bool
+    var emailSenderSuccess: Bool
+    
 //    var name: String
 //    var photo: UIImage?
 //    var rating: Int
@@ -87,8 +91,7 @@ class WorkSheet {
         jobUsedParts: String,
         jobNotes: String,
         engineerSignature: UIImage,
-        customerSignature: UIImage
-        ) {
+        customerSignature: UIImage) {
     
         // The following fields must not be empty
         guard !customerName.isEmpty else {
@@ -140,6 +143,8 @@ class WorkSheet {
         self.jobNotes = jobNotes
         self.engineerSignature = engineerSignature
         self.customerSignature = customerSignature
+        self.emaiSenderProcess = true
+        self.emailSenderSuccess = false
         
     }
     

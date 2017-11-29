@@ -54,7 +54,7 @@ class NewWorkSheetViewController: FormViewController {
         let rating = 5
         
         // Set the work sheet to be passed to JobTableViewController after the unwind segue.
-        workSheet = WorkSheet(name: name, photo: photo, rating: rating)
+//        workSheet = WorkSheet(name: name, photo: photo, rating: rating)
     }
     
     override func viewDidLoad() {
@@ -73,48 +73,51 @@ class NewWorkSheetViewController: FormViewController {
                 $0.tag = "engineerName"
                 $0.title = "Engineer"
                 $0.options = ["Mark Whittaker", "Scott Chadwick", "Ben Reeve"]
-                $0.value = $0.options.first
+                $0.value = "Other"
+//                $0.value = $0.options.first
             }
             <<< PickerInputRow<String>(){
                 $0.tag = "jobType"
                 $0.title = "Job Type"
                 $0.options = ["Install", "Service", "Commission", "Breakdown", "Maintenance", "Landlord Check"]
-                $0.value = $0.options.first
+                $0.value = "Other"
+//                $0.value = $0.options.first
             }
             
             +++ Section("Customer info:")
             <<< NameRow(){
 //                $0.tag = "
                 $0.title = "Full name"
-                $0.placeholder = "Customer name"
+                $0.placeholder = "Customer name..."
             }
             <<< TextAreaRow() {
 //                $0.tag = "
-                $0.placeholder = "Customer address"
+                $0.placeholder = "Customer address..."
                 $0.textAreaHeight = .dynamic(initialTextViewHeight: 66)
             }
             <<< PhoneRow() {
 //                $0.tag = "
                 $0.title = "Phone"
-                $0.placeholder = "+44 989 8983 5100"
+                $0.placeholder = "+44 077 7595 3555..."
             }
             <<< PhoneRow() {
 //                $0.tag = "
                 $0.title = "Mobile"
-                $0.placeholder = "+44 989 8983 5100"
+                $0.placeholder = "+44 014 4082 0267..."
             }
             <<< EmailRow() {
 //                $0.tag = "
                 $0.title = "Customer email"
-                $0.placeholder = "customer@email.com"
+                $0.placeholder = "customer@email.com..."
             }
             
             +++ Section("Equipment info:")
             <<< PickerInputRow<String>(){
 //                $0.tag = "
                 $0.title = "Appliance make"
-                $0.options = ["Grant", "Worcester", "Firebird", "HRM", "Warmflow", "Potterton", "Thermecon/GAH", "Merlin", "Other"]
-                $0.value = $0.options.first
+                $0.options = ["Grant", "Worcester", "Firebird", "HRM", "Warmflow", "Potterton", "Thermecon/GAH", "Merlin"]
+                $0.value = "Other"
+//                $0.value = $0.options.first
             }
             <<< TextRow() {
 //                $0.tag = "
@@ -128,8 +131,8 @@ class NewWorkSheetViewController: FormViewController {
             }
             <<< TextRow() {
 //                $0.tag = "
-                $0.title = "Noozle"
-                $0.placeholder = "0.65/80/EN"
+                $0.title = "Nozzle"
+                $0.placeholder = "Nozzle..."
             }
             <<< SegmentedRow<String>("segments"){
 //                $0.tag = "
@@ -220,17 +223,17 @@ class NewWorkSheetViewController: FormViewController {
             +++ Section("Description:")
             <<< TextAreaRow() {
 //                $0.tag = "
-                $0.placeholder = "Description of work carried out:"
+                $0.placeholder = "Description of work carried out..."
                 $0.textAreaHeight = .dynamic(initialTextViewHeight: 66)
             }
             <<< TextAreaRow() {
 //                $0.tag = "
-                $0.placeholder = "Parts used:"
+                $0.placeholder = "Parts used..."
                 $0.textAreaHeight = .dynamic(initialTextViewHeight: 44)
             }
             <<< TextAreaRow() {
 //                $0.tag = "
-                $0.placeholder = "Notes for office:"
+                $0.placeholder = "Notes for office..."
                 $0.textAreaHeight = .dynamic(initialTextViewHeight: 44)
             }
             
@@ -257,12 +260,12 @@ class NewWorkSheetViewController: FormViewController {
                     $0.options.append("1 hour \(i*5) minutes")
                 }
                 $0.options.append("2 hours")
-                $0.value = $0.options[11]
+                $0.value = "Time..."
             }
             
             +++ Section("Signature:")
             <<< ButtonRow("Customer signature") { (row: ButtonRow) -> Void in
-                row.title = "Complete form submssion and pass for signature"
+                row.title = "Customer signature will be here"
         }
     }
     
