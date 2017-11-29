@@ -97,83 +97,63 @@ class NewWorkSheetViewController: FormViewController {
             
             +++ Section("General info:")
             <<< DateRow("JobDate"){
-//                $0.tag = "JobDate"
                 $0.title = "Job Date"
                 $0.value = Date.init()
             }
             <<< PickerInputRow<String>("EngineerName"){
-//                $0.tag = "EngineerName"
                 $0.title = "Engineer"
                 $0.options = ["Mark Whittaker", "Scott Chadwick", "Ben Reeve"]
-                $0.value = "Choose engineer name..."
-//                $0.value = $0.options.first
+                $0.value = "Choose engineer..."
             }
             <<< PickerInputRow<String>("JobType"){
-//                $0.tag = "JobType"
                 $0.title = "Job Type"
                 $0.options = ["Install", "Service", "Commission", "Breakdown", "Maintenance", "Landlord Check"]
                 $0.value = "Choose job type..."
-//                $0.value = $0.options.first
             }
             
             +++ Section("Customer info:")
             <<< TextRow("CustomerName"){
-//                $0.tag = "CustomerName"
                 $0.title = "Full name"
-                $0.placeholder = "Customer name..."
-                $0.value = ""
+                $0.placeholder = "Customer name"
             }
             <<< TextAreaRow("CustomerAddress") {
-//                $0.tag = "CustomerAddress"
-                $0.placeholder = "Customer address..."
+                $0.placeholder = "Customer address"
                 $0.textAreaHeight = .dynamic(initialTextViewHeight: 66)
-                $0.value = ""
             }
             <<< TextRow("CustomerPhone") {
-//                $0.tag = "CustomerPhone"
                 $0.title = "Phone"
-                $0.placeholder = "+44 077 7595 3555..."
-                $0.value = ""
+                $0.placeholder = "+44 077 7595 3555"
             }
             <<< TextRow("CustomerMobile") {
-//                $0.tag = "CustomerMobile"
                 $0.title = "Mobile"
-                $0.placeholder = "+44 014 4082 0267..."
-                $0.value = ""
+                $0.placeholder = "+44 014 4082 0267"
             }
             <<< EmailRow("CustomerEmail") {
-//                $0.tag = "CustomerEmail"
                 $0.title = "Customer email"
-                $0.placeholder = "customer@email.com..."
+                $0.placeholder = "customer@email.com"
             }
             
             +++ Section("Equipment info:")
             <<< PickerInputRow<String>("ApplianceMake"){
-//                $0.tag = "ApplianceMake"
                 $0.title = "Appliance make"
                 $0.options = ["Grant", "Worcester", "Firebird", "HRM", "Warmflow", "Potterton", "Thermecon/GAH", "Merlin"]
-//                $0.value = "Other"
-//                $0.value = $0.options.first
+                $0.value = "Choose manufacturer..."
             }
             <<< TextRow("ApplianceModel") {
-//                $0.tag = "ApplianceModel"
                 $0.title = "Appliance model"
-                $0.placeholder = "Model..."
+                $0.placeholder = "Model name or number"
             }
             <<< TextRow("BurnerMake") {
-//                $0.tag = "BurnerMake"
                 $0.title = "Burner make"
-                $0.placeholder = "Burner..."
+                $0.placeholder = "Burner manufacturer"
             }
             <<< TextRow("NozzleModel") {
-//                $0.tag = "NozzleModel"
                 $0.title = "Nozzle"
-                $0.placeholder = "Nozzle..."
+                $0.placeholder = "0.69/13/IA"
             }
             <<< SegmentedRow<String>("PumpPressureMetric"){
                 $0.title = "Pump pressure"
                 $0.options = ["Psi", "Bar"]
-//                $0.value = "Psi"
             }
             <<< SliderRow() {
                 $0.tag = "PumpPressurePsi"
@@ -200,7 +180,6 @@ class NewWorkSheetViewController: FormViewController {
                 }
             }
             <<< SliderRow("CarbonDioxidePercentage") {
-//                $0.tag = "CarbonDioxidePercentage"
                 $0.title = "Carbon dioxide"
                 $0.value = 0
                 $0.minimumValue = 5
@@ -285,7 +264,8 @@ class NewWorkSheetViewController: FormViewController {
                     $0.options.append("1 hour \(i*5) minutes")
                 }
                 $0.options.append("2 hours")
-                $0.value = "Time..."
+                $0.noValueDisplayText = "Choose time..."
+//                $0.value = "Choose time..."
             }
             
             +++ Section("Signature:")
