@@ -49,9 +49,9 @@ class NewWorkSheetViewController: FormViewController {
             return
         }
         
-        let row: NameRow? = form.rowBy(tag: "CustomerName")
-        let value = row?.value
-        print(value!)
+//        let row: TextRow? = form.rowBy(tag: "CustomerName")
+//        let value = row?.value
+//        print(value!)
         let valuesDictionary = form.values()
         print(valuesDictionary)
 //        let photo = UIImage(named: "Header")
@@ -97,19 +97,19 @@ class NewWorkSheetViewController: FormViewController {
             
             +++ Section("General info:")
             <<< DateRow(){
-//                $0.tag = "jobDate"
+                $0.tag = "JobDate"
                 $0.title = "Job Date"
                 $0.value = Date.init()
             }
             <<< PickerInputRow<String>(){
-//                $0.tag = "EngineerName"
+                $0.tag = "EngineerName"
                 $0.title = "Engineer"
                 $0.options = ["Mark Whittaker", "Scott Chadwick", "Ben Reeve"]
                 $0.value = "Other"
 //                $0.value = $0.options.first
             }
             <<< PickerInputRow<String>(){
-//                $0.tag = "jobType"
+                $0.tag = "JobType"
                 $0.title = "Job Type"
                 $0.options = ["Install", "Service", "Commission", "Breakdown", "Maintenance", "Landlord Check"]
                 $0.value = "Other"
@@ -117,63 +117,63 @@ class NewWorkSheetViewController: FormViewController {
             }
             
             +++ Section("Customer info:")
-            <<< NameRow(){
+            <<< TextRow(){
                 $0.tag = "CustomerName"
                 $0.title = "Full name"
                 $0.placeholder = "Customer name..."
             }
             <<< TextAreaRow() {
-//                $0.tag = "
+                $0.tag = "CustomerAddress"
                 $0.placeholder = "Customer address..."
                 $0.textAreaHeight = .dynamic(initialTextViewHeight: 66)
             }
-            <<< PhoneRow() {
-//                $0.tag = "
+            <<< TextRow() {
+                $0.tag = "CustomerPhone"
                 $0.title = "Phone"
                 $0.placeholder = "+44 077 7595 3555..."
             }
-            <<< PhoneRow() {
-//                $0.tag = "
+            <<< TextRow() {
+                $0.tag = "CustomerMobile"
                 $0.title = "Mobile"
                 $0.placeholder = "+44 014 4082 0267..."
             }
             <<< EmailRow() {
-//                $0.tag = "
+                $0.tag = "CustomerEmail"
                 $0.title = "Customer email"
                 $0.placeholder = "customer@email.com..."
             }
             
             +++ Section("Equipment info:")
             <<< PickerInputRow<String>(){
-//                $0.tag = "
+                $0.tag = "ApplianceMake"
                 $0.title = "Appliance make"
                 $0.options = ["Grant", "Worcester", "Firebird", "HRM", "Warmflow", "Potterton", "Thermecon/GAH", "Merlin"]
                 $0.value = "Other"
 //                $0.value = $0.options.first
             }
             <<< TextRow() {
-//                $0.tag = "
+                $0.tag = "ApplianceModel"
                 $0.title = "Appliance model"
                 $0.placeholder = "Model..."
             }
             <<< TextRow() {
-//                $0.tag = "
+                $0.tag = "BurnerMake"
                 $0.title = "Burner make"
                 $0.placeholder = "Burner..."
             }
             <<< TextRow() {
-//                $0.tag = "
+                $0.tag = "NozzleModel"
                 $0.title = "Nozzle"
                 $0.placeholder = "Nozzle..."
             }
             <<< SegmentedRow<String>("segments"){
-//                $0.tag = "
+                $0.tag = "PumpPressureType"
                 $0.title = "Pump pressure"
                 $0.options = ["Psi", "Bar"]
                 $0.value = "Psi"
             }
             <<< SliderRow() {
-//                $0.tag = "
+                $0.tag = "PumpPressure"
                 $0.hidden = "$segments != 'Psi'"
                 $0.title = "Psi"
                 $0.value = 150
@@ -185,7 +185,7 @@ class NewWorkSheetViewController: FormViewController {
                 }
             }
             <<< SliderRow() {
-//                $0.tag = "
+                $0.tag = "PumpPressure"
                 $0.hidden = "$segments != 'Bar'"
                 $0.title = "Bar"
                 $0.value = 10
@@ -197,7 +197,7 @@ class NewWorkSheetViewController: FormViewController {
                 }
             }
             <<< SliderRow() {
-//                $0.tag = "
+                $0.tag = "CarbonDioxidePercentage"
                 $0.title = "Carbon dioxide"
                 $0.value = 10
                 $0.minimumValue = 5
