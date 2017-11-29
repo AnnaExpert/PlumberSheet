@@ -11,6 +11,7 @@
 		2A1CA1451FB36ED8001841FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A1CA1441FB36ED8001841FE /* Assets.xcassets */; };
 		2A1CA16C1FB373A6001841FE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A1CA16B1FB373A6001841FE /* GoogleService-Info.plist */; };
 		2A6E492B1FCF05A600C9BC5B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6E492A1FCF05A600C9BC5B /* ViewController.swift */; };
+		2A6E492D1FCF06CE00C9BC5B /* WorkSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6E492C1FCF06CE00C9BC5B /* WorkSheet.swift */; };
 		2A98C1721FBB02EF00FEF1DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A98C16E1FBB02EF00FEF1DB /* Main.storyboard */; };
 		2AD3DCF31FC246DF00DD012D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AD3DCF21FC246DF00DD012D /* LaunchScreen.storyboard */; };
 		2AD3DCF51FC2473600DD012D /* NewWorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD3DCF41FC2473600DD012D /* NewWorkViewController.swift */; };
@@ -24,6 +25,7 @@
 		2A1CA1491FB36ED8001841FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A1CA16B1FB373A6001841FE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2A6E492A1FCF05A600C9BC5B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2A6E492C1FCF06CE00C9BC5B /* WorkSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkSheet.swift; sourceTree = "<group>"; };
 		2A98C16E1FBB02EF00FEF1DB /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2AD3DCF21FC246DF00DD012D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2AD3DCF41FC2473600DD012D /* NewWorkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWorkViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				2A1CA13D1FB36ED7001841FE /* AppDelegate.swift */,
 				2A6E492A1FCF05A600C9BC5B /* ViewController.swift */,
 				2AD3DCF41FC2473600DD012D /* NewWorkViewController.swift */,
+				2A6E492C1FCF06CE00C9BC5B /* WorkSheet.swift */,
 				2A98C16E1FBB02EF00FEF1DB /* Main.storyboard */,
 				2AD3DCF21FC246DF00DD012D /* LaunchScreen.storyboard */,
 				2A1CA1441FB36ED8001841FE /* Assets.xcassets */,
@@ -240,6 +243,7 @@
 			files = (
 				2A6E492B1FCF05A600C9BC5B /* ViewController.swift in Sources */,
 				2A1CA13E1FB36ED7001841FE /* AppDelegate.swift in Sources */,
+				2A6E492D1FCF06CE00C9BC5B /* WorkSheet.swift in Sources */,
 				2AD3DCF51FC2473600DD012D /* NewWorkViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
