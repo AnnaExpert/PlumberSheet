@@ -35,7 +35,7 @@ class WorkSheetViewController: UIViewController {
 
 }
 
-class WorkSheetTableViewController: UITableViewController {
+class WorkSheetTableView: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -118,5 +118,45 @@ class WorkSheetTableViewController: UITableViewController {
      // Pass the selected object to the new view controller.
      }
      */
+    
+}
+
+class ShortTableViewCell: UITableViewCell {
+    
+    //MARK: Cell Properties
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var valueLabel: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        
+        // Configure the view for the selected state
+    }
+    
+}
+
+class LongTableViewCell: UITableViewCell {
+    
+    //MARK: Cell Properties
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var valueLabel: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        
+        // Configure the view for the selected state
+    }
     
 }
