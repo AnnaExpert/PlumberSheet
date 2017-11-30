@@ -10,6 +10,7 @@ target 'PlumberSheet' do
   # Pods for PlumberSheet beta
 
   pod 'Eureka'
+  pod 'SwiftMandrill'
   pod 'Firebase/Core'
   pod 'Firebase/Crash'
   pod 'Firebase/Database'
