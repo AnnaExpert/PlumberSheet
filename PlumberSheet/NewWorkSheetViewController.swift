@@ -11,10 +11,6 @@ import UIKit
 import Eureka
 import os.log
 
-//// !!!IMPORTANT - CHECK xSaveButtonLogic.PNG!!!
-//// Disable the Save button while editing.
-//saveButton.isEnabled = false
-
 class NewWorkSheetViewController: FormViewController {
     
     /*
@@ -26,6 +22,16 @@ class NewWorkSheetViewController: FormViewController {
     //MARK: Save Work Sheet Button
     
     @IBOutlet weak var saveButton: UIBarButtonItem!
+    
+    private func updateSaveButtonState() {
+        
+        // Disable the Save button if the text field is empty.
+        
+        let value1 = form.values()["CustomerName"] as? String ?? ""
+        let value2 = form.values()["CustomerAddress"] as? String ?? ""
+        let value3 = form.values()["CustomerEmail"] as? String ?? ""
+        saveButton.isEnabled = !value1.isEmpty && !value2.isEmpty && !value3.isEmpty
+    }
     
     //MARK: Navigation
     
@@ -142,10 +148,16 @@ class NewWorkSheetViewController: FormViewController {
             <<< TextRow("CustomerName"){
                 $0.title = "Full name"
                 $0.placeholder = "Customer name"
+//                if $0.wasChanged {
+//                    updateSaveButtonState()
+//                }
             }
             <<< TextAreaRow("CustomerAddress") {
                 $0.placeholder = "Customer address"
                 $0.textAreaHeight = .dynamic(initialTextViewHeight: 66)
+//                if $0.wasChanged {
+//                    updateSaveButtonState()
+//                }
             }
             <<< TextRow("CustomerPhone") {
                 $0.title = "Phone"
@@ -158,6 +170,9 @@ class NewWorkSheetViewController: FormViewController {
             <<< EmailRow("CustomerEmail") {
                 $0.title = "Customer email"
                 $0.placeholder = "customer@email.com"
+//                if $0.wasChanged {
+//                    updateSaveButtonState()
+//                }
             }
             
             +++ Section("Equipment info:")
