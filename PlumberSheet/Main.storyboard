@@ -57,7 +57,7 @@
                                     <outlet property="dateLabel" destination="ovF-31-U83" id="XTc-8k-dYV"/>
                                     <outlet property="emailStatusImageView" destination="LHh-bp-sc1" id="JZb-m6-Zlr"/>
                                     <outlet property="nameLabel" destination="w7v-Cv-9l1" id="0ab-R5-DA0"/>
-                                    <segue destination="GTW-RO-rvB" kind="show" id="cdD-0W-yvi"/>
+                                    <segue destination="GTW-RO-rvB" kind="presentation" identifier="ShowItem" modalTransitionStyle="flipHorizontal" id="cdD-0W-yvi"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -148,7 +148,7 @@
             </objects>
             <point key="canvasLocation" x="1212" y="-4210"/>
         </scene>
-        <!--Work Sheet-->
+        <!--Work Sheet View Controller-->
         <scene sceneID="m4C-qq-Ka4">
             <objects>
                 <viewController id="LMI-3h-etM" customClass="WorkSheetViewController" customModule="PlumberSheet" customModuleProvider="target" sceneMemberID="viewController">
@@ -161,9 +161,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Work Sheet" id="Aoj-pD-brp"/>
+                    <navigationItem key="navigationItem" id="yXv-Vc-VUo">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="Laz-mf-DDy">
+                            <connections>
+                                <segue destination="Zu6-Q0-Zch" kind="unwind" unwindAction="unwindToJobListWithSender:" id="h7H-SI-yBA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GJI-cF-6K8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Zu6-Q0-Zch" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1212" y="-3447"/>
         </scene>
