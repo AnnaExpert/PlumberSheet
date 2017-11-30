@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2A0987E91FCFA68E00A8518A /* WorkSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0987E81FCFA68E00A8518A /* WorkSheetViewController.swift */; };
-		2A0987F11FCFBDED00A8518A /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0987F01FCFBDED00A8518A /* test.swift */; };
+		2A0987F31FCFBED800A8518A /* newTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0987F21FCFBED800A8518A /* newTableViewController.swift */; };
 		2A1CA13E1FB36ED7001841FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1CA13D1FB36ED7001841FE /* AppDelegate.swift */; };
 		2A1CA1451FB36ED8001841FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A1CA1441FB36ED8001841FE /* Assets.xcassets */; };
 		2A1CA16C1FB373A6001841FE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A1CA16B1FB373A6001841FE /* GoogleService-Info.plist */; };
@@ -23,7 +23,7 @@
 
 /* Begin PBXFileReference section */
 		2A0987E81FCFA68E00A8518A /* WorkSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkSheetViewController.swift; sourceTree = "<group>"; };
-		2A0987F01FCFBDED00A8518A /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
+		2A0987F21FCFBED800A8518A /* newTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newTableViewController.swift; sourceTree = "<group>"; };
 		2A1CA13A1FB36ED7001841FE /* PlumberSheet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlumberSheet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A1CA13D1FB36ED7001841FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A1CA1441FB36ED8001841FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 				2A6E492E1FCF0D6900C9BC5B /* JobTableViewCell.swift */,
 				2AD3DCF41FC2473600DD012D /* NewWorkSheetViewController.swift */,
 				2A0987E81FCFA68E00A8518A /* WorkSheetViewController.swift */,
-				2A0987F01FCFBDED00A8518A /* test.swift */,
+				2A0987F21FCFBED800A8518A /* newTableViewController.swift */,
 				2A6E492C1FCF06CE00C9BC5B /* WorkSheet.swift */,
 				2A98C16E1FBB02EF00FEF1DB /* Main.storyboard */,
 				2AD3DCF21FC246DF00DD012D /* LaunchScreen.storyboard */,
@@ -250,13 +250,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A0987F31FCFBED800A8518A /* newTableViewController.swift in Sources */,
 				2A1CA13E1FB36ED7001841FE /* AppDelegate.swift in Sources */,
 				2A6E492D1FCF06CE00C9BC5B /* WorkSheet.swift in Sources */,
 				2AD3DCF51FC2473600DD012D /* NewWorkSheetViewController.swift in Sources */,
 				2A6E492F1FCF0D6900C9BC5B /* JobTableViewCell.swift in Sources */,
 				2A6E49311FCF12F100C9BC5B /* JobTableViewController.swift in Sources */,
 				2A0987E91FCFA68E00A8518A /* WorkSheetViewController.swift in Sources */,
-				2A0987F11FCFBDED00A8518A /* test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
