@@ -13,10 +13,6 @@ import os.log
 
 class NewWorkSheetViewController: FormViewController {
     
-    /*
-     This value is either passed by `JobTableViewController` in `prepare(for:sender:)`
-     or constructed as part of adding a new work sheet.
-     */
     var workSheet: WorkSheet?
     
     //MARK: Save Work Sheet Button
@@ -158,12 +154,12 @@ class NewWorkSheetViewController: FormViewController {
                 $0.placeholder = "Customer name"
                 $0.add(rule: RuleRequired())
                 $0.validationOptions = .validatesOnChangeAfterBlurred
-                } .onChange {_ in
-                    self.updateSaveButtonState()
                 } .cellUpdate { cell, row in
                     if !row.isValid {
                         cell.titleLabel?.textColor = .red
                         cell.titleLabel?.text = "Full name required"
+                    } else {
+                        self.updateSaveButtonState()
                     }
             }
             <<< TextAreaRow("CustomerAddress") {
@@ -171,12 +167,12 @@ class NewWorkSheetViewController: FormViewController {
                 $0.textAreaHeight = .dynamic(initialTextViewHeight: 66)
                 $0.add(rule: RuleRequired())
                 $0.validationOptions = .validatesOnChangeAfterBlurred
-                } .onChange {_ in
-                    self.updateSaveButtonState()
                 } .cellUpdate { cell, row in
                     if !row.isValid {
                         cell.placeholderLabel?.textColor = .red
                         cell.placeholderLabel?.text = "Job address required"
+                    } else {
+                        self.updateSaveButtonState()
                     }
             }
             <<< TextAreaRow("CustomerBillingAddress"){
@@ -195,11 +191,11 @@ class NewWorkSheetViewController: FormViewController {
                 $0.add(rule: RuleRequired())
                 $0.add(rule: RuleEmail())
                 $0.validationOptions = .validatesOnChangeAfterBlurred
-                } .onChange {_ in
-                    self.updateSaveButtonState()
                 } .cellUpdate { cell, row in
                     if !row.isValid {
                         cell.titleLabel?.textColor = .red
+                    } else {
+                        self.updateSaveButtonState()
                     }
             }
             <<< PhoneRow("CustomerPhone") {

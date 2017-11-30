@@ -57,6 +57,7 @@
                                     <outlet property="dateLabel" destination="ovF-31-U83" id="XTc-8k-dYV"/>
                                     <outlet property="emailStatusImageView" destination="LHh-bp-sc1" id="JZb-m6-Zlr"/>
                                     <outlet property="nameLabel" destination="w7v-Cv-9l1" id="0ab-R5-DA0"/>
+                                    <segue destination="U3w-uf-PK1" kind="presentation" id="K9u-px-UuP"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -146,6 +147,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wiT-de-6g1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1212" y="-4210"/>
+        </scene>
+        <!--Work Sheet-->
+        <scene sceneID="m4C-qq-Ka4">
+            <objects>
+                <viewController id="LMI-3h-etM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ljG-5D-suy"/>
+                        <viewControllerLayoutGuide type="bottom" id="971-Oh-475"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vuc-8w-JYc">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Work Sheet" id="Aoj-pD-brp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GJI-cF-6K8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1335.9375" y="-3446.875"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8dR-U2-8rY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="U3w-uf-PK1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KBa-wF-0F7">
+                        <rect key="frame" x="0.0" y="20" width="1024" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="LMI-3h-etM" kind="relationship" relationship="rootViewController" id="1KI-o3-zC6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hhS-OI-I19" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="463" y="-3447"/>
         </scene>
     </scenes>
     <resources>
