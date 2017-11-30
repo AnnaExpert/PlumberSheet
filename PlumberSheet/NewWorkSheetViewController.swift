@@ -115,7 +115,9 @@ class NewWorkSheetViewController: FormViewController {
                               jobUsedParts: formjobUsedParts,
                               jobNotes: formjobNotes,
                               engineerSignature: UIImage(named: "Header")!,
-                              customerSignature: UIImage(named: "Header")!)
+                              customerSignature: UIImage(named: "Header")!,
+                              emaiSenderProcess: nil,
+                              emailSenderSuccess: nil)
     }
     
     override func viewDidLoad() {
