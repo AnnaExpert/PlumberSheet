@@ -15,7 +15,7 @@ class JobTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
-    @IBOutlet weak var emailStatusImageView: UIImageView!
+    @IBOutlet weak var emailStatusLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

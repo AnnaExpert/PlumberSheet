@@ -98,12 +98,20 @@ class JobTableViewController: UITableViewController {
         }
         // Fetches the appropriate job for the data source layout.
         let job = jobs[indexPath.row]
+        
 
         // Configure the cell...
         cell.nameLabel.text = job.customerName
         cell.dateLabel.text = job.jobDate
         cell.addressLabel.text = job.customerAddress
-        cell.emailStatusImageView.image = job.customerSignature
+        if job.emaiSenderProcess {
+            cell.emailStatusLabel.text = "⚠️"
+        }
+        if job.emailSenderSuccess {
+            cell.emailStatusLabel.text = "✅"
+        } else {
+            cell.emailStatusLabel.text = "❌"
+        }
 
         return cell
     }

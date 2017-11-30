@@ -11,9 +11,13 @@ import UIKit
 import Eureka
 import os.log
 
-class WorkSheetViewController: FormViewController{
+class WorkSheetViewController: FormViewController {
     
     public var job: WorkSheet?
+    
+    func cancel() {
+        dismiss(animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -240,9 +244,9 @@ class WorkSheetViewController: FormViewController{
                     row.value = row.options.first
             }
             
-            +++ Section("Signatures:")
+            +++ Section()
             <<< ButtonRow() { (row: ButtonRow) -> Void in
-                row.title = "... customer signature will be here soon ..."
+                row.title = "Return back"
         }
     }
     
