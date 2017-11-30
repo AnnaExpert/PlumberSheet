@@ -90,9 +90,7 @@ class WorkSheet: NSObject, NSCoding {
     //MARK: Initialization
     
     init?(
-        
         // Initializing work sheet object
-        
         jobDate: String,
         timeArrived: String,
         timeLeft: String,
@@ -125,8 +123,7 @@ class WorkSheet: NSObject, NSCoding {
         emaiSenderProcess: Bool?,
         emailSenderSuccess: Bool?) {
         
-        // Initialize stored properties.
-        
+        // Initializing stored properties
         self.jobDate = jobDate
         self.timeArrived = timeArrived
         self.timeLeft = timeLeft
@@ -158,10 +155,9 @@ class WorkSheet: NSObject, NSCoding {
         self.customerSignature = customerSignature
         self.emaiSenderProcess = emaiSenderProcess ?? true
         self.emailSenderSuccess = emailSenderSuccess ?? false
-        
     }
     
-    //MARK: NSCoding
+    //MARK: NSCoding function
     
     func encode(with aCoder: NSCoder) {
         aCoder.encode(jobDate, forKey: PropertyKey.jobDate)
@@ -198,7 +194,6 @@ class WorkSheet: NSObject, NSCoding {
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
-        
         let jobDate = aDecoder.decodeObject(forKey: PropertyKey.jobDate) as! String
         let timeArrived = aDecoder.decodeObject(forKey: PropertyKey.timeArrived) as! String
         let timeLeft = aDecoder.decodeObject(forKey: PropertyKey.timeLeft) as! String
@@ -233,7 +228,6 @@ class WorkSheet: NSObject, NSCoding {
         
         // Must call designated initializer.
         self.init(jobDate: jobDate, timeArrived: timeArrived, timeLeft: timeLeft, timeTravel: timeTravel, customerName: customerName, customerAddress: customerAddress, customerEmail: customerEmail, engineerName: engineerName, jobType: jobType, customerBillingAddress: customerBillingAddress, customerPhone: customerPhone, customerMobile: customerMobile, applianceModel: applianceModel, applianceMake: applianceMake, burnerMake: burnerMake, nozzleModel: nozzleModel, pumpPressureMetric: pumpPressureMetric, pumpPressurePsi: pumpPressurePsi, pumpPressureBar: pumpPressureBar, carbonDioxidePercentage: carbonDioxidePercentage, flueGasTemperature: flueGasTemperature, efficiencyPercentage: efficiencyPercentage, carbonDioxideParts: carbonDioxideParts, oxygenPercentage: oxygenPercentage, jobDescription: jobDescription, jobUsedParts: jobUsedParts, jobNotes: jobNotes, engineerSignature: engineerSignature, customerSignature: customerSignature, emaiSenderProcess: emaiSenderProcess, emailSenderSuccess: emailSenderSuccess)
-        
     }
     
 }

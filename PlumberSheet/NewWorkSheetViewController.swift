@@ -35,8 +35,6 @@ class NewWorkSheetViewController: FormViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    // This method lets you configure a view controller before it's presented.
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         super.prepare(for: segue, sender: sender)
@@ -87,37 +85,37 @@ class NewWorkSheetViewController: FormViewController {
         
         // Set the work sheet to be passed to JobTableViewController after the unwind segue.
         workSheet = WorkSheet(
-                              jobDate: formjobDate,
-                              timeArrived: formtimeArrived,
-                              timeLeft: formtimeLeft,
-                              timeTravel: formtimeTravel,
-                              customerName: formcustomerName,
-                              customerAddress: formcustomerAddress,
-                              customerEmail: formcustomerEmail,
-                              engineerName: formengineerName,
-                              jobType: formjobType,
-                              customerBillingAddress: formcustomerBillingAddress,
-                              customerPhone: formcustomerPhone,
-                              customerMobile: formcustomerMobile,
-                              applianceModel: formapplianceModel,
-                              applianceMake: formapplianceMake,
-                              burnerMake: formburnerMake,
-                              nozzleModel: formnozzleModel,
-                              pumpPressureMetric: formpumpPressureMetric,
-                              pumpPressurePsi: formpumpPressurePsi,
-                              pumpPressureBar: formpumpPressureBar,
-                              carbonDioxidePercentage: formcarbonDioxidePercentage,
-                              flueGasTemperature: formflueGasTemperature,
-                              efficiencyPercentage: formefficiencyPercentage,
-                              carbonDioxideParts: formcarbonDioxideParts,
-                              oxygenPercentage: formoxygenPercentage,
-                              jobDescription: formjobDescription,
-                              jobUsedParts: formjobUsedParts,
-                              jobNotes: formjobNotes,
-                              engineerSignature: UIImage(named: "Header")!,
-                              customerSignature: UIImage(named: "Header")!,
-                              emaiSenderProcess: nil,
-                              emailSenderSuccess: nil)
+            jobDate: formjobDate,
+            timeArrived: formtimeArrived,
+            timeLeft: formtimeLeft,
+            timeTravel: formtimeTravel,
+            customerName: formcustomerName,
+            customerAddress: formcustomerAddress,
+            customerEmail: formcustomerEmail,
+            engineerName: formengineerName,
+            jobType: formjobType,
+            customerBillingAddress: formcustomerBillingAddress,
+            customerPhone: formcustomerPhone,
+            customerMobile: formcustomerMobile,
+            applianceModel: formapplianceModel,
+            applianceMake: formapplianceMake,
+            burnerMake: formburnerMake,
+            nozzleModel: formnozzleModel,
+            pumpPressureMetric: formpumpPressureMetric,
+            pumpPressurePsi: formpumpPressurePsi,
+            pumpPressureBar: formpumpPressureBar,
+            carbonDioxidePercentage: formcarbonDioxidePercentage,
+            flueGasTemperature: formflueGasTemperature,
+            efficiencyPercentage: formefficiencyPercentage,
+            carbonDioxideParts: formcarbonDioxideParts,
+            oxygenPercentage: formoxygenPercentage,
+            jobDescription: formjobDescription,
+            jobUsedParts: formjobUsedParts,
+            jobNotes: formjobNotes,
+            engineerSignature: UIImage(named: "Header")!,
+            customerSignature: UIImage(named: "Header")!,
+            emaiSenderProcess: nil,
+            emailSenderSuccess: nil)
     }
     
     override func viewDidLoad() {
@@ -396,7 +394,7 @@ class HeaderViewNib: UIView {
 }
 
 class HeaderView: UIView {
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         let imageView = UIImageView(image: UIImage(named: "Header"))
@@ -406,7 +404,7 @@ class HeaderView: UIView {
         imageView.contentMode = .scaleAspectFit
         addSubview(imageView)
     }
-
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

@@ -52,7 +52,7 @@ class JobTableViewController: UITableViewController {
             saveJobs()
         }
     }
-        // MARK: Email sender code
+    // MARK: Email sender code
     
     private lazy var smtpSession: MCOSMTPSession = self.configureSession()
     
@@ -64,35 +64,8 @@ class JobTableViewController: UITableViewController {
         session.port = 25
         session.authType = .SASLCRAMMD5
         session.connectionType = .startTLS
-        //        Use it to debug, if needed:
-//        session.connectionLogger = {(connectionID, type, data) in
-//            if data != nil {
-//                if let string = NSString(data: data!, encoding: String.Encoding.unicode){
-//                    print("Connectionlogger: \(string)")
-//                }
-//            }
-//
-//        }
-        
         return session
     }
-    
-//    func sendText(text: String, withCompletionHandler completionHandler:((_ error: NSError?) -> Void)?) {
-//
-//        let messageBuilder = MCOMessageBuilder()
-//        messageBuilder.header.from = MCOAddress(displayName: "John Appleseed", mailbox: "john.appleseed@apple.com")
-//        messageBuilder.header.subject = "Subject"
-//
-//        messageBuilder.header.to =  [MCOAddress(displayName: "FAQ", mailbox: "faq@apple.com")]
-//        messageBuilder.textBody = text
-//        let sendOperation = self.smtpSession.sendOperation(with: messageBuilder.data())
-//
-//        sendOperation?.start { (error) in
-//            if let completionHandler = completionHandler {
-//                completionHandler(error as NSError?)
-//            }
-//        }
-//    }
     
     func sendText(text: String, recipient: String, email: String) {
         
@@ -108,77 +81,32 @@ class JobTableViewController: UITableViewController {
         }
     }
     
-//        func emailSender() {
-//
-//
-//
-//        var smtpSession = MCOSMTPSession()
-//        smtpSession.hostname = "smtp.gmail.com"
-//        smtpSession.username = "matt@gmail.com"
-//        smtpSession.password = "xxxxxxxxxxxxxxxx"
-//        smtpSession.port = 465
-//        smtpSession.authType = MCOAuthType.saslPlain
-//        smtpSession.connectionType = MCOConnectionType.TLS
-//        smtpSession.connectionLogger = {(connectionID, type, data) in
-//            if data != nil {
-//                if let string = NSString(data: data!, encoding: String.Encoding.utf8.rawValue){
-//                    NSLog("Connectionlogger: \(string)")
-//                }
-//            }
-//        }
-//
-//        var builder = MCOMessageBuilder()
-//        builder.header.to = [MCOAddress(displayName: "Rool", mailbox: "itsrool@gmail.com")]
-//        builder.header.from = MCOAddress(displayName: "Matt R", mailbox: "matt@gmail.com")
-//        builder.header.subject = "My message"
-//        builder.htmlBody = "Yo Rool, this is a test message!"
-//
-//        let rfc822Data = builder.data()
-//        let sendOperation = smtpSession.sendOperation(with: rfc822Data)
-//        sendOperation?.start { (error) -> Void in
-//            if (error != nil) {
-//                NSLog("Error sending email: \(String(describing: error))")
-//            } else {
-//                NSLog("Successfully sent email!")
-//            }
-//        }
-//    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        tableView.delegate = self
-//        tableView.dataSource = self
         
         // Load any saved jobs
         if let savedJobs = loadJobs() {
             jobs += savedJobs
         }
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return jobs.count
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         // Table view cells are reused and should be dequeued using a cell identifier.
@@ -190,7 +118,7 @@ class JobTableViewController: UITableViewController {
         // Fetches the appropriate job for the data source layout.
         let job = jobs[indexPath.row]
         
-
+        
         // Configure the cell...
         cell.nameLabel.text = job.customerName
         cell.dateLabel.text = job.jobDate
@@ -203,16 +131,16 @@ class JobTableViewController: UITableViewController {
         } else {
             cell.emailStatusLabel.text = "❌"
         }
-
+        
         return cell
     }
-
+    
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-
+    
     // MARK: - Swipe buttons: Swipe to edit buttons configuration
     
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
@@ -236,8 +164,6 @@ class JobTableViewController: UITableViewController {
         return [delete, resend]
     }
     
-    
-    
     // MARK: - Navigation
     
     // MARK: - Segues: Prepare the data before the segue
@@ -250,115 +176,5 @@ class JobTableViewController: UITableViewController {
             }
         }
     }
-    
-    /*
-     let photo1 = UIImage(named: "Header")
-     private func loadSampleJobs() {
-     
-     let photo1 = UIImage(named: "Header")
-     let photo2 = UIImage(named: "Header")
-     let photo3 = UIImage(named: "Header")
-     
-     guard let job1 = WorkSheet(
-     jobDate: <#T##Date#>,
-     timeArrived: <#T##Date#>,
-     timeLeft: <#T##Date#>,
-     timeTravel: <#T##String#>,
-     customerName: <#T##String#>,
-     customerAddress: <#T##String#>,
-     customerBilling: <#T##Bool#>,
-     customerBillingAddress: <#T##String?#>,
-     customerPhone: <#T##String?#>,
-     customerMobile: <#T##String?#>,
-     customerEmail: <#T##String#>,
-     engineerName: <#T##String#>,
-     jobType: <#T##String#>,
-     applianceModel: <#T##String#>,
-     applianceMake: <#T##String#>,
-     burnerMake: <#T##String#>,
-     nozzleModel: <#T##String#>,
-     pumpPressure: <#T##Float#>,
-     carbonDioxidePercentage: <#T##Float#>,
-     flueGasTemperature: <#T##Float#>,
-     efficiencyPercentage: <#T##Float#>,
-     carbonDioxideParts: <#T##Float#>,
-     oxygenPercentage: <#T##Float#>,
-     jobDescription: <#T##String#>,
-     jobUsedParts: <#T##String#>,
-     jobNotes: <#T##String#>,
-     engineerSignature: <#T##UIImage#>,
-     customerSignature: <#T##UIImage#>)
-     else {
-     fatalError("Unable to instantiate job1")
-     }
-     guard let job2 = WorkSheet(
-     jobDate: <#T##Date#>,
-     timeArrived: <#T##Date#>,
-     timeLeft: <#T##Date#>,
-     timeTravel: <#T##String#>,
-     customerName: <#T##String#>,
-     customerAddress: <#T##String#>,
-     customerBilling: <#T##Bool#>,
-     customerBillingAddress: <#T##String?#>,
-     customerPhone: <#T##String?#>,
-     customerMobile: <#T##String?#>,
-     customerEmail: <#T##String#>,
-     engineerName: <#T##String#>,
-     jobType: <#T##String#>,
-     applianceModel: <#T##String#>,
-     applianceMake: <#T##String#>,
-     burnerMake: <#T##String#>,
-     nozzleModel: <#T##String#>,
-     pumpPressure: <#T##Float#>,
-     carbonDioxidePercentage: <#T##Float#>,
-     flueGasTemperature: <#T##Float#>,
-     efficiencyPercentage: <#T##Float#>,
-     carbonDioxideParts: <#T##Float#>,
-     oxygenPercentage: <#T##Float#>,
-     jobDescription: <#T##String#>,
-     jobUsedParts: <#T##String#>,
-     jobNotes: <#T##String#>,
-     engineerSignature: <#T##UIImage#>,
-     customerSignature: <#T##UIImage#>)
-     else {
-     fatalError("Unable to instantiate job2")
-     }
-     
-     guard let job3 = WorkSheet(
-     jobDate: <#T##Date#>,
-     timeArrived: <#T##Date#>,
-     timeLeft: <#T##Date#>,
-     timeTravel: <#T##String#>,
-     customerName: <#T##String#>,
-     customerAddress: <#T##String#>,
-     customerBilling: <#T##Bool#>,
-     customerBillingAddress: <#T##String?#>,
-     customerPhone: <#T##String?#>,
-     customerMobile: <#T##String?#>,
-     customerEmail: <#T##String#>,
-     engineerName: <#T##String#>,
-     jobType: <#T##String#>,
-     applianceModel: <#T##String#>,
-     applianceMake: <#T##String#>,
-     burnerMake: <#T##String#>,
-     nozzleModel: <#T##String#>,
-     pumpPressure: <#T##Float#>,
-     carbonDioxidePercentage: <#T##Float#>,
-     flueGasTemperature: <#T##Float#>,
-     efficiencyPercentage: <#T##Float#>,
-     carbonDioxideParts: <#T##Float#>,
-     oxygenPercentage: <#T##Float#>,
-     jobDescription: <#T##String#>,
-     jobUsedParts: <#T##String#>,
-     jobNotes: <#T##String#>,
-     engineerSignature: <#T##UIImage#>,
-     customerSignature: <#T##UIImage#>)
-     else {
-     fatalError("Unable to instantiate job3")
-     }
-     
-     jobs += [job1, job2, job3]
-     }
-     */
     
 }
