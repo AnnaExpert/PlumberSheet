@@ -13,12 +13,13 @@ import os.log
 
 class WorkSheetViewController: FormViewController{
     
-    var job: WorkSheet?
+    public var job: WorkSheet?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Set up views if editing an existing Meal.
+        // Set up views if editing an existing Work Sheet.
+        self.title = job?.customerName
         
         form +++ Section() {
             $0.header = HeaderFooterView<HeaderView>(.class)
@@ -239,7 +240,7 @@ class WorkSheetViewController: FormViewController{
                     row.value = row.options.first
             }
             
-            +++ Section("Signature:")
+            +++ Section("Signatures:")
             <<< ButtonRow() { (row: ButtonRow) -> Void in
                 row.title = "... customer signature will be here soon ..."
         }

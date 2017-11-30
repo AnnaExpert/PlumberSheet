@@ -156,9 +156,9 @@ class JobTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowItem" {
-            let destination = segue.destination as! WorkSheetViewController
+            let destination = segue.destination as? WorkSheetViewController
             if let pathIndex = tableView.indexPathForSelectedRow?.row {
-                destination.job = jobs[pathIndex]
+                destination?.job = jobs[pathIndex]
             }
         }
     }
