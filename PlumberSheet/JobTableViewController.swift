@@ -52,6 +52,97 @@ class JobTableViewController: UITableViewController {
             saveJobs()
         }
     }
+        // MARK: Email sender code
+    
+    private lazy var smtpSession: MCOSMTPSession = self.configureSession()
+    
+    func configureSession() -> MCOSMTPSession {
+        let session = MCOSMTPSession()
+        session.hostname = "mail.adm.tools"
+        session.username = "robot@iashchuk.com"
+        session.password = "1p76L9mHOYnp"
+        session.port = 25
+        session.authType = .SASLCRAMMD5
+        session.connectionType = .startTLS
+        //        Use it to debug, if needed:
+//        session.connectionLogger = {(connectionID, type, data) in
+//            if data != nil {
+//                if let string = NSString(data: data!, encoding: String.Encoding.unicode){
+//                    print("Connectionlogger: \(string)")
+//                }
+//            }
+//
+//        }
+        
+        return session
+    }
+    
+//    func sendText(text: String, withCompletionHandler completionHandler:((_ error: NSError?) -> Void)?) {
+//
+//        let messageBuilder = MCOMessageBuilder()
+//        messageBuilder.header.from = MCOAddress(displayName: "John Appleseed", mailbox: "john.appleseed@apple.com")
+//        messageBuilder.header.subject = "Subject"
+//
+//        messageBuilder.header.to =  [MCOAddress(displayName: "FAQ", mailbox: "faq@apple.com")]
+//        messageBuilder.textBody = text
+//        let sendOperation = self.smtpSession.sendOperation(with: messageBuilder.data())
+//
+//        sendOperation?.start { (error) in
+//            if let completionHandler = completionHandler {
+//                completionHandler(error as NSError?)
+//            }
+//        }
+//    }
+    
+    func sendText(text: String, recipient: String, email: String) {
+        
+        let messageBuilder = MCOMessageBuilder()
+        messageBuilder.header.from = MCOAddress(displayName: "iRoboPlumber", mailbox: "robot@iashchuk.com")
+        messageBuilder.header.subject = "Suffolk Oil Solutions - Work Sheet"
+        
+        messageBuilder.header.to =  [MCOAddress(displayName: recipient, mailbox: email)]
+        messageBuilder.textBody = text
+        let sendOperation = self.smtpSession.sendOperation(with: messageBuilder.data())
+        
+        sendOperation?.start { (error) in
+        }
+    }
+    
+//        func emailSender() {
+//
+//
+//
+//        var smtpSession = MCOSMTPSession()
+//        smtpSession.hostname = "smtp.gmail.com"
+//        smtpSession.username = "matt@gmail.com"
+//        smtpSession.password = "xxxxxxxxxxxxxxxx"
+//        smtpSession.port = 465
+//        smtpSession.authType = MCOAuthType.saslPlain
+//        smtpSession.connectionType = MCOConnectionType.TLS
+//        smtpSession.connectionLogger = {(connectionID, type, data) in
+//            if data != nil {
+//                if let string = NSString(data: data!, encoding: String.Encoding.utf8.rawValue){
+//                    NSLog("Connectionlogger: \(string)")
+//                }
+//            }
+//        }
+//
+//        var builder = MCOMessageBuilder()
+//        builder.header.to = [MCOAddress(displayName: "Rool", mailbox: "itsrool@gmail.com")]
+//        builder.header.from = MCOAddress(displayName: "Matt R", mailbox: "matt@gmail.com")
+//        builder.header.subject = "My message"
+//        builder.htmlBody = "Yo Rool, this is a test message!"
+//
+//        let rfc822Data = builder.data()
+//        let sendOperation = smtpSession.sendOperation(with: rfc822Data)
+//        sendOperation?.start { (error) -> Void in
+//            if (error != nil) {
+//                NSLog("Error sending email: \(String(describing: error))")
+//            } else {
+//                NSLog("Successfully sent email!")
+//            }
+//        }
+//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -135,12 +226,17 @@ class JobTableViewController: UITableViewController {
         let resend = UITableViewRowAction(style: .normal, title: "Resend") { (action, indexPath) in
             
             // MARK: Swipe to resend email
+            let object = self.jobs[indexPath.row]
+            let emailText = "Job date: " + object.jobDate + "\n" + "Job type: " + object.jobType + "\n" + "Engineer: " + object.engineerName + "\n" + "Address: " + object.customerAddress
+            self.sendText(text: emailText, recipient: object.customerName, email: object.customerEmail)
             tableView.reloadRows(at: [indexPath], with: UITableViewRowAnimation.right)
             tableView.setEditing(false, animated: true)
         }
-        resend.backgroundColor = UIColor.orange
+        resend.backgroundColor = UIColor.green
         return [delete, resend]
     }
+    
+    
     
     // MARK: - Navigation
     

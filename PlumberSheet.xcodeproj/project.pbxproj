@@ -22,7 +22,6 @@
 
 /* Begin PBXFileReference section */
 		2A0987E81FCFA68E00A8518A /* WorkSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkSheetViewController.swift; sourceTree = "<group>"; };
-		2A0DE7F51FD005C8003AB439 /* Project-Name-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Project-Name-Bridging-Header.h"; sourceTree = "<group>"; };
 		2A1CA13A1FB36ED7001841FE /* PlumberSheet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlumberSheet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A1CA13D1FB36ED7001841FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A1CA1441FB36ED8001841FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,7 +79,6 @@
 		2A1CA13C1FB36ED7001841FE /* PlumberSheet */ = {
 			isa = PBXGroup;
 			children = (
-				2A0DE7F51FD005C8003AB439 /* Project-Name-Bridging-Header.h */,
 				2A1CA13D1FB36ED7001841FE /* AppDelegate.swift */,
 				2A6E49301FCF12F100C9BC5B /* JobTableViewController.swift */,
 				2A6E492E1FCF0D6900C9BC5B /* JobTableViewCell.swift */,
@@ -380,7 +378,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iashchuk.PlumberSheet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Project-Name-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Project-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -398,7 +396,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iashchuk.PlumberSheet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Project-Name-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Project-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
