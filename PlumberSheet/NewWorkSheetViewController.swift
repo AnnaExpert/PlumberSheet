@@ -51,7 +51,51 @@ class NewWorkSheetViewController: FormViewController {
         
         
         let formValuesDictionary = form.values()
-        print(formValuesDictionary)
+//        print(formValuesDictionary)
+//        var formEngineerName1 = formValuesDictionary["JobDate"] as? Date
+        let formEngineerName1 = formValuesDictionary["CustomerName"] as? String
+        let formEngineerName2 = formValuesDictionary["EngineerName"] as? String
+        let rowEngineerName: TextRow? = form.rowBy(tag: "CustomerName")
+        let valueEngineerName = rowEngineerName?.value
+//        guard !customerName.isEmpty else {
+//            return nil
+//        }
+        
+        print(formEngineerName1)
+        print(formEngineerName2)
+        print(valueEngineerName)
+        
+        
+//        let formjobDate: String =
+//        let formtimeArrived: String =
+//        let formtimeLeft: String =
+//        let formtimeTravel: String =
+//        let formcustomerName: String =
+//        let formcustomerAddress: String =
+//        let formcustomerEmail: String =
+//        let formengineerName: String =
+//        let formjobType: String =
+//        let formcustomerBillingAddress: String =
+//        let formcustomerPhone: String =
+//        let formcustomerMobile: String =
+//        let formapplianceModel: String =
+//        let formapplianceMake: String =
+//        let formburnerMake: String =
+//        let formnozzleModel: String =
+//        let formpumpPressureMetric: String =
+//        let formpumpPressurePsi: Float =
+//        let formpumpPressureBar: Float =
+//        let formcarbonDioxidePercentage: Float =
+//        let formflueGasTemperature: Float =
+//        let formefficiencyPercentage: Float =
+//        let formcarbonDioxideParts: Float =
+//        let formoxygenPercentage: Float =
+//        let formjobDescription: String =
+//        let formjobUsedParts: String =
+//        let formjobNotes: String =
+        
+//        print("!!!!!!!")
+//        print(formValuesDictionary["PumpPressureMetric"])
 //        let name = formValuesDictionary["EngineerName"] as! String
 //        print(name)
 //        let lame = formValuesDictionary["EngineerName"] as? String
@@ -60,34 +104,35 @@ class NewWorkSheetViewController: FormViewController {
         
         // Set the work sheet to be passed to JobTableViewController after the unwind segue.
 //        workSheet = WorkSheet(
-//        jobDate: <#T##Date#>,
-//        timeArrived: <#T##Date#>,
-//        timeLeft: <#T##Date#>,
-//        timeTravel: <#T##String#>,
-//        customerName: <#T##String#>,
-//        customerAddress: <#T##String#>,
-//        customerBilling: <#T##Bool#>,
-//        customerBillingAddress: <#T##String?#>,
-//        customerPhone: <#T##String?#>,
-//        customerMobile: <#T##String?#>,
-//        customerEmail: <#T##String#>,
-//        engineerName: <#T##String#>,
-//        jobType: <#T##String#>,
-//        applianceModel: <#T##String#>,
-//        applianceMake: <#T##String#>,
-//        burnerMake: <#T##String#>,
-//        nozzleModel: <#T##String#>,
-//        pumpPressure: <#T##Float#>,
-//        carbonDioxidePercentage: <#T##Float#>,
-//        flueGasTemperature: <#T##Float#>,
-//        efficiencyPercentage: <#T##Float#>,
-//        carbonDioxideParts: <#T##Float#>,
-//        oxygenPercentage: <#T##Float#>,
-//        jobDescription: <#T##String#>,
-//        jobUsedParts: <#T##String#>,
-//        jobNotes: <#T##String#>,
-//        engineerSignature: <#T##UIImage#>,
-//        customerSignature: <#T##UIImage#>)
+//                              jobDate: <#T##String#>,
+//                              timeArrived: <#T##String#>,
+//                              timeLeft: <#T##String#>,
+//                              timeTravel: <#T##String#>,
+//                              customerName: <#T##String#>,
+//                              customerAddress: <#T##String#>,
+//                              customerEmail: <#T##String#>,
+//                              engineerName: <#T##String#>,
+//                              jobType: <#T##String#>,
+//                              customerBillingAddress: <#T##String#>,
+//                              customerPhone: <#T##String#>,
+//                              customerMobile: <#T##String#>,
+//                              applianceModel: <#T##String#>,
+//                              applianceMake: <#T##String#>,
+//                              burnerMake: <#T##String#>,
+//                              nozzleModel: <#T##String#>,
+//                              pumpPressureMetric: <#T##String#>,
+//                              pumpPressurePsi: <#T##Float#>,
+//                              pumpPressureBar: <#T##Float#>,
+//                              carbonDioxidePercentage: <#T##Float#>,
+//                              flueGasTemperature: <#T##Float#>,
+//                              efficiencyPercentage: <#T##Float#>,
+//                              carbonDioxideParts: <#T##Float#>,
+//                              oxygenPercentage: <#T##Float#>,
+//                              jobDescription: <#T##String#>,
+//                              jobUsedParts: <#T##String#>,
+//                              jobNotes: <#T##String#>,
+//                              engineerSignature: <#T##UIImage#>,
+//                              customerSignature: <#T##UIImage#>)
     }
     
     override func viewDidLoad() {
@@ -164,9 +209,9 @@ class NewWorkSheetViewController: FormViewController {
                 $0.steps = 170
                 $0.displayValueFor = { (rowValue: Float?) in
                     if rowValue != nil {
-                            return rowValue.map { "\($0) psi" }
-                        } else {
-                            return "Move slider to select value (psi)"
+                        return rowValue.map { "\($0) psi" }
+                    } else {
+                        return "Move slider to select value (psi)"
                     }
                 }
             }
