@@ -183,9 +183,9 @@ class JobTableViewController: UITableViewController {
 
         // Configure the cell...
         cell.nameLabel.text = job.customerName
-        cell.dateLabel.text = job.timeTravel
+        cell.dateLabel.text = job.jobDate
         cell.addressLabel.text = job.customerAddress
-        cell.emailStatusImageView.image = self.photo1
+        cell.emailStatusImageView.image = job.customerSignature
 
         return cell
     }

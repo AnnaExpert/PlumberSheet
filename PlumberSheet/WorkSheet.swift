@@ -13,9 +13,6 @@ class WorkSheet {
     
     //MARK: Job Time Properties
     
-//    var jobDate: Date
-//    var timeArrived: Date
-//    var timeLeft: Date
     var jobDate: String
     var timeArrived: String
     var timeLeft: String
@@ -58,21 +55,12 @@ class WorkSheet {
     var emaiSenderProcess: Bool
     var emailSenderSuccess: Bool
     
-//    var name: String
-//    var photo: UIImage?
-//    var rating: Int
-    
     //MARK: Initialization
     
     init?(
         
-        //        name: String, photo: UIImage?, rating: Int
+        // Initializing work sheet object
         
-        // Work sheet data
-        
-//        jobDate: Date,
-//        timeArrived: Date,
-//        timeLeft: Date,
         jobDate: String,
         timeArrived: String,
         timeLeft: String,
@@ -104,15 +92,15 @@ class WorkSheet {
         customerSignature: UIImage) {
     
         // The following fields must not be empty
-        guard !customerName.isEmpty else {
-            return nil
-        }
-        guard !customerAddress.isEmpty else {
-            return nil
-        }
-        guard !customerEmail.isEmpty else {
-            return nil
-        }
+//        guard !customerName.isEmpty else {
+//            return nil
+//        }
+//        guard !customerAddress.isEmpty else {
+//            return nil
+//        }
+//        guard !customerEmail.isEmpty else {
+//            return nil
+//        }
         
         // The value must be between 0 and 5 inclusively
 //        guard (rating >= 0) && (rating <= 5) else {
@@ -131,12 +119,12 @@ class WorkSheet {
         self.timeTravel = timeTravel
         self.customerName = customerName
         self.customerAddress = customerAddress
-        self.customerBillingAddress = customerBillingAddress
-        self.customerPhone = customerPhone
-        self.customerMobile = customerMobile
         self.customerEmail = customerEmail
         self.engineerName = engineerName
         self.jobType = jobType
+        self.customerBillingAddress = customerBillingAddress
+        self.customerPhone = customerPhone
+        self.customerMobile = customerMobile
         self.applianceModel = applianceModel
         self.applianceMake = applianceMake
         self.burnerMake = burnerMake

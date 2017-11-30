@@ -49,35 +49,16 @@ class NewWorkSheetViewController: FormViewController {
             return
         }
         
-//        let formValuesDictionary = form.values()
-//        let formEngineerName1 = formValuesDictionary["CustomerName"] as? String ?? "DEFAULT"
-//        var formEngineerName2 = formValuesDictionary["EngineerName"] as? String
-//        let rowEngineerName: TextRow? = form.rowBy(tag: "CustomerName")
-//        var valueEngineerName = rowEngineerName?.value
-//
-//        print(formEngineerName1)
-//        print(formEngineerName2)
-//        print(valueEngineerName)
-        
-        
-        // Formating dates to text strings
+        // Formating date values to text strings
         let formatterDate = DateFormatter()
         let formatterTime = DateFormatter()
-//        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         formatterDate.dateFormat = "dd.MM.yyyy"
         formatterTime.dateFormat = "HH:mm a"
-//        let formjobDateString = formatter.string(from: form.values()["JobDate"] as! Date)
         
-        let formjobDate = formatterDate.string(from: form.values()["JobDate"] as! Date) ?? "DEFAULT"
-        let formtimeArrived = formatterTime.string(from: form.values()["TimeArrived"] as! Date) ?? "DEFAULT"
-        let formtimeLeft = formatterTime.string(from: form.values()["TimeLeft"] as! Date) ?? "DEFAULT"
+        let formjobDate = formatterDate.string(from: form.values()["JobDate"] as! Date)
+        let formtimeArrived = formatterTime.string(from: form.values()["TimeArrived"] as! Date)
+        let formtimeLeft = formatterTime.string(from: form.values()["TimeLeft"] as! Date)
         let formtimeTravel = form.values()["TimeTravel"] as? String ?? "DEFAULT"
-        
-        print(formjobDate)
-        print(formtimeArrived)
-        print(formtimeLeft)
-        print(formtimeTravel)
-        
         let formcustomerName = form.values()["CustomerName"] as? String ?? "DEFAULT"
         let formcustomerAddress = form.values()["CustomerAddress"] as? String ?? "DEFAULT"
         let formcustomerEmail = form.values()["CustomerEmail"] as? String ?? "DEFAULT"
@@ -101,17 +82,6 @@ class NewWorkSheetViewController: FormViewController {
         let formjobDescription = form.values()["JobDescription"] as? String ?? "DEFAULT"
         let formjobUsedParts = form.values()["JobUsedParts"] as? String ?? "DEFAULT"
         let formjobNotes = form.values()["JobNotes"] as? String ?? "DEFAULT"
-        
-//        print(formefficiencyPercentage)
-//        print(formpumpPressureBar)
-//        if formefficiencyPercentage == 9696 {
-//            print("9696969696969696")
-//        }
-//        let name = formValuesDictionary["EngineerName"] as! String
-//        print(name)
-//        let lame = formValuesDictionary["EngineerName"] as? String
-//        print(lame!)
-        
         
         // Set the work sheet to be passed to JobTableViewController after the unwind segue.
         workSheet = WorkSheet(
