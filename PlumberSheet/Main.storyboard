@@ -57,7 +57,7 @@
                                     <outlet property="dateLabel" destination="ovF-31-U83" id="XTc-8k-dYV"/>
                                     <outlet property="emailStatusImageView" destination="LHh-bp-sc1" id="JZb-m6-Zlr"/>
                                     <outlet property="nameLabel" destination="w7v-Cv-9l1" id="0ab-R5-DA0"/>
-                                    <segue destination="GTW-RO-rvB" kind="presentation" identifier="ShowItem" modalTransitionStyle="flipHorizontal" id="cdD-0W-yvi"/>
+                                    <segue destination="LMI-3h-etM" kind="presentation" identifier="ShowItem" modalTransitionStyle="flipHorizontal" id="GWW-WM-rT9"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -192,25 +192,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GJI-cF-6K8" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Zu6-Q0-Zch" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1211.71875" y="-3447.65625"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="ZeX-QQ-TtW">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GTW-RO-rvB" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rcP-Wl-aDu">
-                        <rect key="frame" x="0.0" y="20" width="1024" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="LMI-3h-etM" kind="relationship" relationship="rootViewController" id="ixc-42-R5k"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="s0t-AV-CmQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="463" y="-3447"/>
+            <point key="canvasLocation" x="463" y="-3425"/>
         </scene>
     </scenes>
     <resources>

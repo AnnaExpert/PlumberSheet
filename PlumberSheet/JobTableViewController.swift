@@ -152,37 +152,14 @@ class JobTableViewController: UITableViewController {
     
     // MARK: - Navigation
     
+    // MARK: - Segues: Prepare the data before the segue
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        super.prepare(for: segue, sender: sender)
-        
-        switch(segue.identifier ?? "") {
-            
-        case "AddItem":
-            if #available(iOS 10.0, *) {
-                os_log("Adding a new meal.", log: OSLog.default, type: .debug)
-            } else {
-                // Fallback on earlier versions
+        if segue.identifier == "ShowItem" {
+            let destination = segue.destination as! WorkSheetViewController
+            if let pathIndex = tableView.indexPathForSelectedRow?.row {
+                destination.job = jobs[pathIndex]
             }
-            
-        case "ShowItem":
-            guard let ShowItemSheetViewController = segue.destination as? WorkSheetViewController else {
-                fatalError("Unexpected destination: \(segue.destination)")
-            }
-            
-            guard let selectedJobCell = sender as? JobTableViewCell else {
-                fatalError("Unexpected sender: \(String(describing: sender))")
-            }
-            
-            guard let indexPath = tableView.indexPath(for: selectedJobCell) else {
-                fatalError("The selected cell is not being displayed by the table")
-            }
-            
-            let selectedJob = jobs[indexPath.row]
-            ShowItemSheetViewController.job = selectedJob
-            
-        default:
-            fatalError("Unexpected Segue Identifier; \(String(describing: segue.identifier))")
         }
     }
     

@@ -11,7 +11,7 @@ import UIKit
 import Eureka
 import os.log
 
-class WorkSheetViewController: FormViewController, UINavigationControllerDelegate {
+class WorkSheetViewController: FormViewController{
     
     var job: WorkSheet?
     
@@ -20,8 +20,6 @@ class WorkSheetViewController: FormViewController, UINavigationControllerDelegat
         
         // Set up views if editing an existing Meal.
         
-        let workSheet = job
-        
         form +++ Section() {
             $0.header = HeaderFooterView<HeaderView>(.class)
             }
@@ -29,52 +27,47 @@ class WorkSheetViewController: FormViewController, UINavigationControllerDelegat
             +++ Section("General info:")
             <<< LabelRow("JobDate"){
                 $0.title = "Job date"
-                $0.value = "DATE"
+                $0.value = job?.jobDate
             }
-            <<< PickerInputRow<String>("EngineerName"){
+            <<< LabelRow("EngineerName"){
                 $0.title = "Engineer"
-                $0.options = ["Mark Whittaker", "Scott Chadwick", "Ben Reeve"]
-                $0.noValueDisplayText = "Choose engineer..."
-                } .onCellHighlightChanged {cell, row in
-                    row.value = row.options.first
+                $0.value = job?.engineerName
             }
-            <<< PickerInputRow<String>("JobType"){
+            <<< LabelRow("JobType"){
                 $0.title = "Job type"
-                $0.options = ["Install", "Service", "Commission", "Breakdown", "Maintenance", "Landlord Check"]
-                $0.noValueDisplayText = "Choose job type..."
-                } .onCellHighlightChanged {cell, row in
-                    row.value = row.options.first
+                $0.value = job?.jobType
             }
             
             +++ Section("Customer info:")
-            <<< NameRow("CustomerName"){
+            <<< LabelRow("CustomerName"){
                 $0.title = "Full name"
-                $0.placeholder = "Customer name"
+                $0.value = job?.customerName
             }
-            <<< TextAreaRow("CustomerAddress") {
-                $0.placeholder = "Job address"
+            <<< LabelRow("CustomerAddress") {
+                $0.title = "CustomerAddress"
+                $0.value = job?.customerAddress
             }
-            <<< TextAreaRow("CustomerBillingAddress"){
-                $0.hidden = Condition.function(["switchCustomerBillingAddress"], { form in
-                    return !((form.rowBy(tag: "switchCustomerBillingAddress") as? SwitchRow)?.value ?? false)
-                })
-                $0.placeholder = "Billing address"
-                $0.textAreaHeight = .dynamic(initialTextViewHeight: 66)
-            }
-            <<< SwitchRow("switchCustomerBillingAddress"){
-                $0.title = "Add billing address"
-            }
-            <<< EmailRow("CustomerEmail") {
+//            <<< LabelRow("CustomerBillingAddress"){
+//                $0.hidden = Condition.function(["switchCustomerBillingAddress"], { form in
+//                    return !((form.rowBy(tag: "switchCustomerBillingAddress") as? SwitchRow)?.value ?? false)
+//                })
+//                $0.placeholder = "Billing address"
+//                $0.textAreaHeight = .dynamic(initialTextViewHeight: 66)
+//            }
+//            <<< SwitchRow("switchCustomerBillingAddress"){
+//                $0.title = "Add billing address"
+//            }
+            <<< LabelRow("CustomerEmail") {
                 $0.title = "Email"
-                $0.placeholder = "customer@email.com"
+                $0.value = job?.customerEmail
             }
-            <<< PhoneRow("CustomerPhone") {
+            <<< LabelRow("CustomerPhone") {
                 $0.title = "Phone"
-                $0.placeholder = "+44 077 7595 3555"
+                $0.value = job?.customerPhone
             }
-            <<< PhoneRow("CustomerMobile") {
+            <<< LabelRow("CustomerMobile") {
                 $0.title = "Mobile"
-                $0.placeholder = "+44 014 4082 0267"
+                $0.value = job?.customerMobile
             }
             
             +++ Section("Equipment info:")
