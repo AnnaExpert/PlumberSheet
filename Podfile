@@ -7,7 +7,7 @@ target 'PlumberSheet' do
 
   use_frameworks!
 
-  # Pods for PlumberSheet beta
+  # Pods for PlumberSheet v.0.6.9
 
   pod 'Eureka'
   pod 'mailcore2-ios'
