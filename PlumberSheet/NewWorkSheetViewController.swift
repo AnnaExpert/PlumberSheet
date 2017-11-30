@@ -124,55 +124,91 @@ class NewWorkSheetViewController: FormViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Save button is disabled
+        saveButton.isEnabled = false
+        
         form +++ Section() {
             $0.header = HeaderFooterView<HeaderView>(.class)
             }
             
             +++ Section("General info:")
             <<< DateRow("JobDate"){
-                $0.title = "Job Date"
+                $0.title = "Job date"
                 $0.value = Date.init()
             }
             <<< PickerInputRow<String>("EngineerName"){
                 $0.title = "Engineer"
                 $0.options = ["Mark Whittaker", "Scott Chadwick", "Ben Reeve"]
                 $0.noValueDisplayText = "Choose engineer..."
+                } .onCellHighlightChanged {cell, row in
+                    row.value = row.options.first
             }
             <<< PickerInputRow<String>("JobType"){
-                $0.title = "Job Type"
+                $0.title = "Job type"
                 $0.options = ["Install", "Service", "Commission", "Breakdown", "Maintenance", "Landlord Check"]
                 $0.noValueDisplayText = "Choose job type..."
+                } .onCellHighlightChanged {cell, row in
+                    row.value = row.options.first
             }
             
             +++ Section("Customer info:")
-            <<< TextRow("CustomerName"){
+            <<< NameRow("CustomerName"){
                 $0.title = "Full name"
                 $0.placeholder = "Customer name"
-//                if $0.wasChanged {
-//                    updateSaveButtonState()
-//                }
+                $0.add(rule: RuleRequired())
+                $0.validationOptions = .validatesOnChangeAfterBlurred
+                } .onChange {_ in
+                    self.updateSaveButtonState()
+                } .cellUpdate { cell, row in
+                    if !row.isValid {
+                        cell.titleLabel?.textColor = .red
+                        cell.titleLabel?.text = "Full name required"
+                    }
             }
             <<< TextAreaRow("CustomerAddress") {
-                $0.placeholder = "Customer address"
+                $0.placeholder = "Job address"
                 $0.textAreaHeight = .dynamic(initialTextViewHeight: 66)
-//                if $0.wasChanged {
-//                    updateSaveButtonState()
-//                }
+                $0.add(rule: RuleRequired())
+                $0.validationOptions = .validatesOnChangeAfterBlurred
+                } .onChange {_ in
+                    self.updateSaveButtonState()
+                } .cellUpdate { cell, row in
+                    if !row.isValid {
+                        cell.placeholderLabel?.textColor = .red
+                        cell.placeholderLabel?.text = "Job address required"
+                    }
             }
-            <<< TextRow("CustomerPhone") {
+            <<< TextAreaRow("CustomerBillingAddress"){
+                $0.hidden = Condition.function(["switchCustomerBillingAddress"], { form in
+                    return !((form.rowBy(tag: "switchCustomerBillingAddress") as? SwitchRow)?.value ?? false)
+                })
+                $0.placeholder = "Billing address"
+                $0.textAreaHeight = .dynamic(initialTextViewHeight: 66)
+            }
+            <<< SwitchRow("switchCustomerBillingAddress"){
+                $0.title = "Add billing address"
+            }
+            <<< EmailRow("CustomerEmail") {
+                $0.title = "Email"
+                $0.placeholder = "customer@email.com"
+                $0.add(rule: RuleRequired())
+                $0.add(rule: RuleEmail())
+                $0.validationOptions = .validatesOnChangeAfterBlurred
+                } .onChange {_ in
+                    self.updateSaveButtonState()
+                } .cellUpdate { cell, row in
+                    if !row.isValid {
+                        cell.titleLabel?.textColor = .red
+                    }
+            }
+            <<< PhoneRow("CustomerPhone") {
                 $0.title = "Phone"
                 $0.placeholder = "+44 077 7595 3555"
             }
-            <<< TextRow("CustomerMobile") {
+            <<< PhoneRow("CustomerMobile") {
                 $0.title = "Mobile"
                 $0.placeholder = "+44 014 4082 0267"
-            }
-            <<< EmailRow("CustomerEmail") {
-                $0.title = "Customer email"
-                $0.placeholder = "customer@email.com"
-//                if $0.wasChanged {
-//                    updateSaveButtonState()
-//                }
             }
             
             +++ Section("Equipment info:")
@@ -180,6 +216,8 @@ class NewWorkSheetViewController: FormViewController {
                 $0.title = "Appliance make"
                 $0.options = ["Grant", "Worcester", "Firebird", "HRM", "Warmflow", "Potterton", "Thermecon/GAH", "Merlin"]
                 $0.noValueDisplayText = "Choose manufacturer..."
+                } .onCellHighlightChanged {cell, row in
+                    row.value = row.options.first
             }
             <<< TextRow("ApplianceModel") {
                 $0.title = "Appliance model"
@@ -194,8 +232,8 @@ class NewWorkSheetViewController: FormViewController {
                 $0.placeholder = "0.69/13/IA"
             }
             <<< SegmentedRow<String>("PumpPressureMetric"){
-                $0.title = "Pump pressure"
-                $0.options = ["Psi", "Bar"]
+                $0.title = "Pump pressure unit"
+                $0.options = ["Bar", "Psi"]
             }
             <<< SliderRow("PumpPressurePsi") {
                 $0.hidden = "$PumpPressureMetric != 'Psi'"
@@ -297,12 +335,24 @@ class NewWorkSheetViewController: FormViewController {
                 $0.textAreaHeight = .dynamic(initialTextViewHeight: 66)
             }
             <<< TextAreaRow("JobUsedParts") {
+                $0.hidden = Condition.function(["switchJobUsedParts"], { form in
+                    return !((form.rowBy(tag: "switchJobUsedParts") as? SwitchRow)?.value ?? false)
+                })
                 $0.placeholder = "Parts used..."
                 $0.textAreaHeight = .dynamic(initialTextViewHeight: 44)
             }
             <<< TextAreaRow("JobNotes") {
+                $0.hidden = Condition.function(["switchJobNotes"], { form in
+                    return !((form.rowBy(tag: "switchJobNotes") as? SwitchRow)?.value ?? false)
+                })
                 $0.placeholder = "Notes for office..."
                 $0.textAreaHeight = .dynamic(initialTextViewHeight: 44)
+            }
+            <<< SwitchRow("switchJobUsedParts"){
+                $0.title = "Add used parts"
+            }
+            <<< SwitchRow("switchJobNotes"){
+                $0.title = "Add job notes"
             }
             
             +++ Section("Time:")
@@ -326,6 +376,8 @@ class NewWorkSheetViewController: FormViewController {
                 }
                 $0.options.append("2 hours")
                 $0.noValueDisplayText = "Choose time..."
+                } .onCellHighlightChanged {cell, row in
+                    row.value = row.options.first
             }
             
             +++ Section("Signature:")
