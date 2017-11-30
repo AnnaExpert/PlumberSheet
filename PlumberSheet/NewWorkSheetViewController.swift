@@ -60,11 +60,24 @@ class NewWorkSheetViewController: FormViewController {
 //        print(valueEngineerName)
         
         
+        // Formating dates to text strings
+        let formatterDate = DateFormatter()
+        let formatterTime = DateFormatter()
+//        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        formatterDate.dateFormat = "dd.MM.yyyy"
+        formatterTime.dateFormat = "HH:mm a"
+//        let formjobDateString = formatter.string(from: form.values()["JobDate"] as! Date)
         
-//        let formjobDate = formValuesDictionary["JobDate"] as? Date ?? "DEFAULT"
-//        let formtimeArrived: String =
-//        let formtimeLeft: String =
-//        let formtimeTravel: String =
+        let formjobDate = formatterDate.string(from: form.values()["JobDate"] as! Date) ?? "DEFAULT"
+        let formtimeArrived = formatterTime.string(from: form.values()["TimeArrived"] as! Date) ?? "DEFAULT"
+        let formtimeLeft = formatterTime.string(from: form.values()["TimeLeft"] as! Date) ?? "DEFAULT"
+        let formtimeTravel = form.values()["TimeTravel"] as? String ?? "DEFAULT"
+        
+        print(formjobDate)
+        print(formtimeArrived)
+        print(formtimeLeft)
+        print(formtimeTravel)
+        
         let formcustomerName = form.values()["CustomerName"] as? String ?? "DEFAULT"
         let formcustomerAddress = form.values()["CustomerAddress"] as? String ?? "DEFAULT"
         let formcustomerEmail = form.values()["CustomerEmail"] as? String ?? "DEFAULT"
@@ -106,31 +119,31 @@ class NewWorkSheetViewController: FormViewController {
                               timeArrived: formtimeArrived,
                               timeLeft: formtimeLeft,
                               timeTravel: formtimeTravel,
-                              customerName: customerName,
-                              customerAddress: customerAddress,
-                              customerEmail: customerEmail,
-                              engineerName: engineerName,
-                              jobType: <#T##String#>,
-                              customerBillingAddress: <#T##String#>,
-                              customerPhone: <#T##String#>,
-                              customerMobile: <#T##String#>,
-                              applianceModel: <#T##String#>,
-                              applianceMake: <#T##String#>,
-                              burnerMake: <#T##String#>,
-                              nozzleModel: <#T##String#>,
-                              pumpPressureMetric: <#T##String#>,
-                              pumpPressurePsi: <#T##Float#>,
-                              pumpPressureBar: <#T##Float#>,
-                              carbonDioxidePercentage: <#T##Float#>,
-                              flueGasTemperature: <#T##Float#>,
-                              efficiencyPercentage: <#T##Float#>,
-                              carbonDioxideParts: <#T##Float#>,
-                              oxygenPercentage: <#T##Float#>,
-                              jobDescription: <#T##String#>,
-                              jobUsedParts: <#T##String#>,
-                              jobNotes: <#T##String#>,
-                              engineerSignature: UIImage(named: "Header"),
-                              customerSignature: UIImage(named: "Header"))
+                              customerName: formcustomerName,
+                              customerAddress: formcustomerAddress,
+                              customerEmail: formcustomerEmail,
+                              engineerName: formengineerName,
+                              jobType: formjobType,
+                              customerBillingAddress: formcustomerBillingAddress,
+                              customerPhone: formcustomerPhone,
+                              customerMobile: formcustomerMobile,
+                              applianceModel: formapplianceModel,
+                              applianceMake: formapplianceMake,
+                              burnerMake: formburnerMake,
+                              nozzleModel: formnozzleModel,
+                              pumpPressureMetric: formpumpPressureMetric,
+                              pumpPressurePsi: formpumpPressurePsi,
+                              pumpPressureBar: formpumpPressureBar,
+                              carbonDioxidePercentage: formcarbonDioxidePercentage,
+                              flueGasTemperature: formflueGasTemperature,
+                              efficiencyPercentage: formefficiencyPercentage,
+                              carbonDioxideParts: formcarbonDioxideParts,
+                              oxygenPercentage: formoxygenPercentage,
+                              jobDescription: formjobDescription,
+                              jobUsedParts: formjobUsedParts,
+                              jobNotes: formjobNotes,
+                              engineerSignature: UIImage(named: "Header")!,
+                              customerSignature: UIImage(named: "Header")!)
     }
     
     override func viewDidLoad() {
@@ -310,8 +323,7 @@ class NewWorkSheetViewController: FormViewController {
             +++ Section("Time:")
             <<< TimeRow("TimeArrived"){
                 $0.title = "Arrive"
-//                $0.value = Date.init()
-                $0.noValueDisplayText = "Choose time..."
+                $0.value = Date.init()
             }
             <<< TimeRow("TimeLeft"){
                 $0.title = "Leave"
