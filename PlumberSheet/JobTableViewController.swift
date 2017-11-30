@@ -134,29 +134,13 @@ class JobTableViewController: UITableViewController {
         }
         let resend = UITableViewRowAction(style: .normal, title: "Resend") { (action, indexPath) in
             
-            // MARK: Swipe to show the recognized text from speech
+            // MARK: Swipe to resend email
             tableView.reloadRows(at: [indexPath], with: UITableViewRowAnimation.right)
             tableView.setEditing(false, animated: true)
         }
         resend.backgroundColor = UIColor.orange
         return [delete, resend]
     }
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
     
     // MARK: - Navigation
     
