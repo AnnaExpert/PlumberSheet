@@ -17,6 +17,9 @@ class JobTableViewController: UITableViewController {
     
     //MARK: Private Methods
     
+    private func saveJobs() {
+    }
+    
     /*
     let photo1 = UIImage(named: "Header")
     private func loadSampleJobs() {
@@ -126,6 +129,8 @@ class JobTableViewController: UITableViewController {
         jobs += [job1, job2, job3]
     }
     */
+    
+    
     //MARK: Actions
     
     @IBAction func unwindToJobList(sender: UIStoryboardSegue) {
