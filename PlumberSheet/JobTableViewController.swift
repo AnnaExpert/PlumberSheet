@@ -17,8 +17,8 @@ class JobTableViewController: UITableViewController {
     
     //MARK: Private Methods
     
-    let photo1 = UIImage(named: "Header")
     /*
+    let photo1 = UIImage(named: "Header")
     private func loadSampleJobs() {
         
         let photo1 = UIImage(named: "Header")
@@ -176,7 +176,7 @@ class JobTableViewController: UITableViewController {
         let cellIdentifier = "JobTableViewCell"
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? JobTableViewCell  else {
-            fatalError("The dequeued cell is not an instance of MealTableViewCell.")
+            fatalError("The dequeued cell is not an instance of JobTableViewCell.")
         }
         // Fetches the appropriate job for the data source layout.
         let job = jobs[indexPath.row]

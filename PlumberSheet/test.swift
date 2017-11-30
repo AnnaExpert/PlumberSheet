@@ -1,5 +1,5 @@
 //
-//  LoLO.swift
+//  test.swift
 //  PlumberSheet
 //
 //  Created by Alexander Iashchuk on 30/11/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoLO: UITableView {
+class test: UITableView {
 
     /*
     // Only override draw() if you perform custom drawing.
