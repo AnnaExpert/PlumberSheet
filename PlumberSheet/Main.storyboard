@@ -57,7 +57,7 @@
                                     <outlet property="dateLabel" destination="ovF-31-U83" id="XTc-8k-dYV"/>
                                     <outlet property="emailStatusImageView" destination="LHh-bp-sc1" id="JZb-m6-Zlr"/>
                                     <outlet property="nameLabel" destination="w7v-Cv-9l1" id="0ab-R5-DA0"/>
-                                    <segue destination="LMI-3h-etM" kind="showDetail" id="HiQ-DT-m8N"/>
+                                    <segue destination="LMI-3h-etM" kind="showDetail" identifier="ShowDetail" id="HiQ-DT-m8N"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -67,6 +67,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Suffolk Oil Solutions - iPad v.0.6.9 b.13" leftItemsSupplementBackButton="YES" id="Isu-C8-gb7">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="1Ep-ba-Rlq"/>
                         <barButtonItem key="rightBarButtonItem" title="Create new work sheet" id="2Bm-sY-pEr">
                             <connections>
                                 <segue destination="5f1-fi-B9w" kind="presentation" identifier="AddItem" id="okH-3X-oYp"/>
@@ -148,23 +149,11 @@
             </objects>
             <point key="canvasLocation" x="1212" y="-4210"/>
         </scene>
-        <!--Title-->
+        <!--Work Sheet View Controller-->
         <scene sceneID="m4C-qq-Ka4">
             <objects>
                 <viewController id="LMI-3h-etM" customClass="WorkSheetViewController" customModule="PlumberSheet" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ljG-5D-suy"/>
-                        <viewControllerLayoutGuide type="bottom" id="971-Oh-475"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Vuc-8w-JYc">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Title" leftItemsSupplementBackButton="YES" id="fV2-NM-jTo">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="1d1-rA-eBD"/>
-                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GJI-cF-6K8" userLabel="First Responder" sceneMemberID="firstResponder"/>
