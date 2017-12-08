@@ -7,10 +7,12 @@
 //  Copyright © 2017 Alexander Iashchuk (iAlexander). All rights reserved.
 //
 
+
 import UIKit
 import Firebase
 
 @UIApplicationMain
+
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
