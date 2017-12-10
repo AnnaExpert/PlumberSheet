@@ -18,7 +18,7 @@ import UIKit
 
 class ViewController: UIViewController, SignatureViewDelegate {
     
-    @IBOutlet weak var signatureView: SignatureView!
+//    @IBOutlet weak var signatureView: SignatureView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,9 +26,9 @@ class ViewController: UIViewController, SignatureViewDelegate {
         signatureView.delegate = self
     }
 
-    @IBAction func CaptureSignatureButton(_ sender: Any) {
-        signatureView.captureSignature()
-    }
+//    @IBAction func CaptureSignatureButton(_ sender: Any) {
+//        signatureView.captureSignature()
+//    }
     
     func SignatureViewDidCaptureSignature(view: SignatureView, signature: Signature?) {
         if signature != nil {
