@@ -15,6 +15,8 @@
 		2A6E492F1FCF0D6900C9BC5B /* JobTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6E492E1FCF0D6900C9BC5B /* JobTableViewCell.swift */; };
 		2A6E49311FCF12F100C9BC5B /* JobTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6E49301FCF12F100C9BC5B /* JobTableViewController.swift */; };
 		2A98C1721FBB02EF00FEF1DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A98C16E1FBB02EF00FEF1DB /* Main.storyboard */; };
+		2A9F53801FDDFA7800F32EE9 /* ClientSignatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9F537E1FDDFA7800F32EE9 /* ClientSignatureView.swift */; };
+		2A9F53811FDDFA7800F32EE9 /* SignatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9F537F1FDDFA7800F32EE9 /* SignatureViewController.swift */; };
 		2AD3DCF31FC246DF00DD012D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AD3DCF21FC246DF00DD012D /* LaunchScreen.storyboard */; };
 		2AD3DCF51FC2473600DD012D /* NewWorkSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD3DCF41FC2473600DD012D /* NewWorkSheetViewController.swift */; };
 		2AE1F7CB1FDCD11900A6811C /* email.html in Resources */ = {isa = PBXBuildFile; fileRef = 2AE1F7CA1FDCD11900A6811C /* email.html */; };
@@ -33,6 +35,8 @@
 		2A6E492E1FCF0D6900C9BC5B /* JobTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTableViewCell.swift; sourceTree = "<group>"; };
 		2A6E49301FCF12F100C9BC5B /* JobTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTableViewController.swift; sourceTree = "<group>"; };
 		2A98C16E1FBB02EF00FEF1DB /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		2A9F537E1FDDFA7800F32EE9 /* ClientSignatureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientSignatureView.swift; sourceTree = "<group>"; };
+		2A9F537F1FDDFA7800F32EE9 /* SignatureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignatureViewController.swift; sourceTree = "<group>"; };
 		2AD3DCF21FC246DF00DD012D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2AD3DCF41FC2473600DD012D /* NewWorkSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWorkSheetViewController.swift; sourceTree = "<group>"; };
 		2AE1F7CA1FDCD11900A6811C /* email.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = email.html; sourceTree = "<group>"; };
@@ -90,6 +94,8 @@
 				2AD3DCF41FC2473600DD012D /* NewWorkSheetViewController.swift */,
 				2A0987E81FCFA68E00A8518A /* WorkSheetViewController.swift */,
 				2A6E492C1FCF06CE00C9BC5B /* WorkSheet.swift */,
+				2A9F537F1FDDFA7800F32EE9 /* SignatureViewController.swift */,
+				2A9F537E1FDDFA7800F32EE9 /* ClientSignatureView.swift */,
 				2A98C16E1FBB02EF00FEF1DB /* Main.storyboard */,
 				2AD3DCF21FC246DF00DD012D /* LaunchScreen.storyboard */,
 				2A1CA1441FB36ED8001841FE /* Assets.xcassets */,
@@ -256,11 +262,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A1CA13E1FB36ED7001841FE /* AppDelegate.swift in Sources */,
+				2A9F53811FDDFA7800F32EE9 /* SignatureViewController.swift in Sources */,
 				2A6E492D1FCF06CE00C9BC5B /* WorkSheet.swift in Sources */,
 				2AD3DCF51FC2473600DD012D /* NewWorkSheetViewController.swift in Sources */,
 				2A6E492F1FCF0D6900C9BC5B /* JobTableViewCell.swift in Sources */,
 				2A6E49311FCF12F100C9BC5B /* JobTableViewController.swift in Sources */,
 				2A0987E91FCFA68E00A8518A /* WorkSheetViewController.swift in Sources */,
+				2A9F53801FDDFA7800F32EE9 /* ClientSignatureView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
