@@ -78,19 +78,9 @@ class JobTableViewController: UITableViewController {
         
         //MARK: HTML EMAIL SAMPLE SOURCE
         
-        let fileName = "email.html"
-        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-            let fileURL = dir.appendingPathComponent(fileName)
-            //reading
-            do {
-                let htmlCode = try String(contentsOf: fileURL, encoding: .utf8)
-                print("HTML Success")
-                messageBuilder.htmlBody = htmlCode
-            }
-            catch {/* error handling here */}
-            print("HTML Failure")
-            messageBuilder.textBody = text
-        }
+        let htmlFile = Bundle.main.path(forResource: "email", ofType: "html")
+        let htmlString = try? String(contentsOfFile: htmlFile!, encoding: String.Encoding.utf8)
+        messageBuilder.htmlBody = htmlString
         let sendOperation = self.smtpSession.sendOperation(with: messageBuilder.data())
         
         sendOperation?.start { (error) in
