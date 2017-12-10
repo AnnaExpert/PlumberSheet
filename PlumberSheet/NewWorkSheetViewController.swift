@@ -6,7 +6,7 @@
 //  Application version 0.7.1, build 1
 //  Last modification on 2017.12.11
 //
-//   App Precisely handcrafted in KyivApp Development Studio
+//   App precisely handcrafted in KyivApp Development Studio
 //  File created by Alexander Iashchuk on 3/11/17
 //  Copyright © 2017 iashchuk.com
 //  Alexander Iashchuk (iAlexander)
