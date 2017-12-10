@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Suffolk Oil Solutions (version 0.7.1 build 1)-->
+        <!--Suffolk Oil Solutions (version 0.7.1 build 3)-->
         <scene sceneID="wCj-Gw-vz2">
             <objects>
                 <tableViewController id="u0y-NW-mmn" customClass="JobTableViewController" customModule="PlumberSheet" customModuleProvider="target" sceneMemberID="viewController">
@@ -70,7 +70,7 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Suffolk Oil Solutions (version 0.7.1 build 1)" leftItemsSupplementBackButton="YES" id="Isu-C8-gb7">
+                    <navigationItem key="navigationItem" title="Suffolk Oil Solutions (version 0.7.1 build 3)" leftItemsSupplementBackButton="YES" id="Isu-C8-gb7">
                         <barButtonItem key="backBarButtonItem" title="Back" id="1Ep-ba-Rlq"/>
                         <barButtonItem key="rightBarButtonItem" title="Create new work sheet" id="2Bm-sY-pEr">
                             <connections>

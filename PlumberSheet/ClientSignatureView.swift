@@ -15,7 +15,7 @@
 
 
 import UIKit
-//Finished the signature view class
+
 public struct Signature {
     
     private(set) public var image : UIImage
@@ -188,7 +188,7 @@ open class SignatureView: UIView {
         }
     }
     
-    /********************************** Private Functions **********************************/
+    // MARK: - Private Functions
     
     private func captureSignatureFromView() -> UIImage? {
         UIGraphicsBeginImageContextWithOptions(bounds.size, signatureIsOpaque, 0.0)
@@ -246,7 +246,3 @@ open class SignatureView: UIView {
         return subpath
     }
 }
-
-
-
-
