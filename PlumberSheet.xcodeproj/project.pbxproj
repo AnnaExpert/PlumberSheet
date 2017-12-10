@@ -17,7 +17,7 @@
 		2A98C1721FBB02EF00FEF1DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A98C16E1FBB02EF00FEF1DB /* Main.storyboard */; };
 		2AD3DCF31FC246DF00DD012D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AD3DCF21FC246DF00DD012D /* LaunchScreen.storyboard */; };
 		2AD3DCF51FC2473600DD012D /* NewWorkSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD3DCF41FC2473600DD012D /* NewWorkSheetViewController.swift */; };
-		2AE1F7C91FDCBFD100A6811C /* email.html in Resources */ = {isa = PBXBuildFile; fileRef = 2AE1F7C81FDCBFD100A6811C /* email.html */; };
+		2AE1F7CB1FDCD11900A6811C /* email.html in Resources */ = {isa = PBXBuildFile; fileRef = 2AE1F7CA1FDCD11900A6811C /* email.html */; };
 		EFEA937C89E869DC4B8653B0 /* Pods_PlumberSheet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303EB5EB9E3FDD38CD322174 /* Pods_PlumberSheet.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,7 +34,7 @@
 		2A98C16E1FBB02EF00FEF1DB /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2AD3DCF21FC246DF00DD012D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2AD3DCF41FC2473600DD012D /* NewWorkSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWorkSheetViewController.swift; sourceTree = "<group>"; };
-		2AE1F7C81FDCBFD100A6811C /* email.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = email.html; sourceTree = "<group>"; };
+		2AE1F7CA1FDCD11900A6811C /* email.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = email.html; sourceTree = "<group>"; };
 		303EB5EB9E3FDD38CD322174 /* Pods_PlumberSheet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlumberSheet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC84827C504922B27C3D9F60 /* Pods-PlumberSheet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlumberSheet.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlumberSheet/Pods-PlumberSheet.release.xcconfig"; sourceTree = "<group>"; };
 		CF199F01BEC3C42C33F4643D /* Pods-PlumberSheet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlumberSheet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlumberSheet/Pods-PlumberSheet.debug.xcconfig"; sourceTree = "<group>"; };
@@ -90,7 +90,7 @@
 				2A98C16E1FBB02EF00FEF1DB /* Main.storyboard */,
 				2AD3DCF21FC246DF00DD012D /* LaunchScreen.storyboard */,
 				2A1CA1441FB36ED8001841FE /* Assets.xcassets */,
-				2AE1F7C81FDCBFD100A6811C /* email.html */,
+				2AE1F7CA1FDCD11900A6811C /* email.html */,
 				2A1CA16B1FB373A6001841FE /* GoogleService-Info.plist */,
 				2A1CA1491FB36ED8001841FE /* Info.plist */,
 			);
@@ -174,7 +174,7 @@
 			files = (
 				2A1CA16C1FB373A6001841FE /* GoogleService-Info.plist in Resources */,
 				2AD3DCF31FC246DF00DD012D /* LaunchScreen.storyboard in Resources */,
-				2AE1F7C91FDCBFD100A6811C /* email.html in Resources */,
+				2AE1F7CB1FDCD11900A6811C /* email.html in Resources */,
 				2A98C1721FBB02EF00FEF1DB /* Main.storyboard in Resources */,
 				2A1CA1451FB36ED8001841FE /* Assets.xcassets in Resources */,
 			);
