@@ -7,7 +7,9 @@
 //
 //   App developed by KyivApp Development Studio.
 //  File created by Alexander Iashchuk on 29/11/17.
-//  Copyright © 2017 Alexander Iashchuk (iAlexander). All rights reserved.
+//  Copyright © 2017 iashchuk.com
+//  Alexander Iashchuk (iAlexander)
+//  All rights reserved
 //
 
 
