@@ -2,6 +2,8 @@
 //  http://iashchuk.com
 //  JobTableViewCell.swift
 //  PlumberSheet - Work sheet app for in-house plumber engineers
+//  Application version 0.6.9, build 18
+//  Last modidification on 2017.12.10
 //
 //   App developed by KyivApp Development Studio.
 //  File created by Alexander Iashchuk on 28/11/17.
