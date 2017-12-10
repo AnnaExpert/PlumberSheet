@@ -5,8 +5,8 @@
 //  Application version 0.6.9, build 18
 //  Last modidification on 2017.12.10
 //
-//   App developed by KyivApp Development Studio.
-//  File created by Alexander Iashchuk on 28/11/17.
+//   App Precisely handcrafted in KyivApp Development Studio
+//  File created by Alexander Iashchuk on 28/11/17
 //  Copyright © 2017 iashchuk.com
 //  Alexander Iashchuk (iAlexander)
 //  All rights reserved
