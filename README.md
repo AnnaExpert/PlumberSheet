@@ -10,8 +10,7 @@
 
 ## <a name="description">Description:</a>
 
-```PlumberSheet``` - Work sheet application for in-house plumber engineers in Suffolk Oil Solutions Ltd.
-Restructured project structure and removed all unused source files
+```PlumberSheet``` - Work sheet application for in-house plumber engineers in Suffolk Oil Solutions Ltd...
 
 ## <a name="copyright">Copyright:</a>
 
