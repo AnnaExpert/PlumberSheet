@@ -14,8 +14,8 @@
 
 ## <a name="copyright">Copyright:</a>
 
-Copyright © 2017 by <a href="http://suffolkoilsolutions.co.uk">Tom Veal</a> & <a href="http://iashchuk.com">Alexander Iashchuk</a>.  
- App precisely handcrafted in <a href="http://kyivapp.com">KyivApp Development Studio</a>.
+ App precisely handcrafted in <a href="http://kyivapp.com">KyivApp Development Studio</a>. 
+Copyright © 2017 by <a href="http://suffolkoilsolutions.co.uk">Tom Veal</a> & <a href="http://iashchuk.com">Alexander Iashchuk</a>.   
 
 ## <a name="contact">Contact:</a>
 
