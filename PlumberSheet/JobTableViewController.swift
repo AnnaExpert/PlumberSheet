@@ -73,9 +73,24 @@ class JobTableViewController: UITableViewController {
         let messageBuilder = MCOMessageBuilder()
         messageBuilder.header.from = MCOAddress(displayName: "iRoboPlumber", mailbox: "robot@iashchuk.com")
         messageBuilder.header.subject = "Suffolk Oil Solutions - Work Sheet"
-        
+
         messageBuilder.header.to =  [MCOAddress(displayName: recipient, mailbox: email)]
-        messageBuilder.textBody = text
+        
+        //MARK: HTML EMAIL SAMPLE SOURCE
+        
+        let fileName = "email.html"
+        var htmlSource = ""
+        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            let fileURL = dir.appendingPathComponent(fileName)
+            //reading
+            do {
+                htmlSource = try String(contentsOf: fileURL, encoding: .utf8)
+            }
+            catch {/* error handling here */}
+        }
+        
+        messageBuilder.htmlBody = htmlSource
+//        messageBuilder.textBody = text
         let sendOperation = self.smtpSession.sendOperation(with: messageBuilder.data())
         
         sendOperation?.start { (error) in
