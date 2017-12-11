@@ -46,7 +46,7 @@ class NewWorkSheetViewController: FormViewController, SignatureViewDelegate {
     func SignatureViewIsDrawing(view: SignatureView) {
         print("Is drawing Signature")
     }
-    
+ 
     func SignatureViewDidFinishDrawing(view: SignatureView) {
         print("Did finish drawing Signature")
     }

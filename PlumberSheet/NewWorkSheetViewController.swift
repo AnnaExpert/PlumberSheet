@@ -19,7 +19,7 @@ import Eureka
 import SwiftySignature
 import os.log
 
-class NewWorkSheetViewController: FormViewController {
+class NewWorkSheetViewController: FormViewController, SignatureViewDelegate {
     
     var workSheet: WorkSheet?
     
@@ -35,6 +35,28 @@ class NewWorkSheetViewController: FormViewController {
         let value2 = form.values()["CustomerAddress"] as? String ?? ""
         let value3 = form.values()["CustomerEmail"] as? String ?? ""
         saveButton.isEnabled = !value1.isEmpty && !value2.isEmpty && !value3.isEmpty
+    }
+    
+    //MARK: Signature delegatye protocol functions
+    
+    func SignatureViewDidCaptureSignature(view: SignatureView, signature: Signature?) {
+        <#code#>
+    }
+    
+    func SignatureViewDidBeginDrawing(view: SignatureView) {
+        <#code#>
+    }
+    
+    func SignatureViewIsDrawing(view: SignatureView) {
+        <#code#>
+    }
+    
+    func SignatureViewDidFinishDrawing(view: SignatureView) {
+        <#code#>
+    }
+    
+    func SignatureViewDidCancelDrawing(view: SignatureView) {
+        <#code#>
     }
     
     //MARK: Navigation
@@ -385,19 +407,39 @@ class NewWorkSheetViewController: FormViewController {
             }
             
             +++ Section("Customer signature:")
-            
-            <<< ViewRow<UIView>() { (row) in
-                row.title = "Title for customer signature row"
+            <<< ViewRow<SignatureView>("Signature") .cellSetup { (cell, row) in
+                cell.view = SignatureView()
+                cell.view.delegate = self
+                cell.backgroundColor = UIColor.lightGray
+                cell.contentView.addSubview(cell.view!)
+                
+                cell.viewLeftMargin = 5.0
+                cell.viewRightMargin = 5.0
+                cell.height = { return CGFloat(200) }
+                
+                
                 }
+                /*
                 .cellSetup { (cell, row) in
-                    //  Construct the view - in this instance the a rudimentry view created here
-                    cell.view = self.signatureView
-                    cell.view?.backgroundColor = UIColor.darkGray
+                    cell.view = SignatureView()
+                    
+                    cell.viewLeftMargin = 5.0
+                    cell.viewRightMargin = 5.0
+                    cell.height = { return CGFloat(UIDevice.current.userInterfaceIdiom == .pad ? 280 : 210) }
+                    cell.preservesSuperviewLayoutMargins = false
                     cell.contentView.addSubview(cell.view!)
+                    */
+//                    var frame = { return cell.contentView.bounds. }
+//                    var customerSignature = SignatureView(frame: frame())
+//                    var customerSignature = SignatureView(frame: { return cell.frame })
+                    //  Construct the view - in this instance the a rudimentry view created here
+//                    cell.view = customerSignature
+//                    cell.view?.backgroundColor = UIColor.darkGray
+//                    cell.contentView.addSubview(customerSignature)
                     
                     //  Define the cell's height
-                    cell.height = { return CGFloat(200) }
-            }
+//                    cell.height = { return CGFloat(200) }
+//            }
             
 //            +++ Section("ViewRow Demo")
 //            <<< ViewRow<SignatureView>("view") { (row) in
