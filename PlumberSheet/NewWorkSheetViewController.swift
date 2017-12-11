@@ -16,6 +16,7 @@
 
 import UIKit
 import Eureka
+import SwiftySignature
 import os.log
 
 class NewWorkSheetViewController: FormViewController {
@@ -390,7 +391,7 @@ class NewWorkSheetViewController: FormViewController {
                 }
                 .cellSetup { (cell, row) in
                     //  Construct the view - in this instance the a rudimentry view created here
-                    cell.view = UIView()
+                    cell.view = self.signatureView
                     cell.view?.backgroundColor = UIColor.darkGray
                     cell.contentView.addSubview(cell.view!)
                     

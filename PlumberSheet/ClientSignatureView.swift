@@ -13,7 +13,45 @@
 //  All rights reserved
 //
 
-
-import UIKit
-
-
+/*
+class NewWorkSheetViewController: FormViewController, SignatureViewDelegate {
+    
+    var workSheet: WorkSheet?
+    
+    var signatureView: SignatureView
+    
+    @IBAction func CaptureSignatureButton(_ sender: Any) {
+        signatureView.captureSignature()
+    }
+    
+    //MARK: Signature view delegate settings
+    
+    func SignatureViewDidCaptureSignature(view: SignatureView, signature: Signature?) {
+        if signature != nil {
+            print(signature!)
+            signatureView.clearCanvas()
+        } else {
+            if signatureView.signaturePresent == false {
+                print("Signature is blank")
+            } else {
+                print("Failed to Capture Signature")
+            }
+        }
+    }
+    
+    func SignatureViewDidBeginDrawing(view: SignatureView) {
+        print("Began drawing Signature")
+    }
+    
+    func SignatureViewIsDrawing(view: SignatureView) {
+        print("Is drawing Signature")
+    }
+    
+    func SignatureViewDidFinishDrawing(view: SignatureView) {
+        print("Did finish drawing Signature")
+    }
+    
+    func SignatureViewDidCancelDrawing(view: SignatureView) {
+        print("Did cancel drawing signature")
+}
+*/
