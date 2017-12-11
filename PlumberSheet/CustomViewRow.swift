@@ -17,7 +17,6 @@
 import UIKit
 import Eureka
 
-
 public class ViewCell<ViewType : UIView> : Cell<String>, CellType {
     
     public var view : ViewType?

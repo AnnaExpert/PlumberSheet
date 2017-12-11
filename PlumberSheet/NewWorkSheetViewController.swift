@@ -386,6 +386,7 @@ class NewWorkSheetViewController: FormViewController {
             +++ Section("Customer signature:")
             
             <<< ViewRow<UIView>() { (row) in
+                row.title = "Title for customer signature row"
                 }
                 .cellSetup { (cell, row) in
                     //  Construct the view - in this instance the a rudimentry view created here
