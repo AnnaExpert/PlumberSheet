@@ -16,8 +16,6 @@
 
 import UIKit
 
-// MARK: - Public structure
-
 public struct Signature {
     
     private(set) public var image : UIImage
@@ -29,7 +27,6 @@ public struct Signature {
     }
 }
 
-// MARK: - Protocol
 
 public protocol SignatureViewDelegate: class {
     func SignatureViewDidCaptureSignature(view: SignatureView, signature: Signature?)
@@ -38,8 +35,6 @@ public protocol SignatureViewDelegate: class {
     func SignatureViewDidFinishDrawing(view: SignatureView)
     func SignatureViewDidCancelDrawing(view: SignatureView)
 }
-
-// MARK: - Delegate extension
 
 extension SignatureViewDelegate {
     
@@ -63,6 +58,8 @@ extension SignatureViewDelegate {
         //optional
     }
 }
+
+// MARK: - Class Decleration
 
 @IBDesignable
 open class SignatureView: UIView {
@@ -191,7 +188,7 @@ open class SignatureView: UIView {
         }
     }
     
-    // MARK: - Private functions
+    /********************************** Private Functions **********************************/
     
     private func captureSignatureFromView() -> UIImage? {
         UIGraphicsBeginImageContextWithOptions(bounds.size, signatureIsOpaque, 0.0)
