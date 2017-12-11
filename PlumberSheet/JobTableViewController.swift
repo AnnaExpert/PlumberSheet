@@ -3,7 +3,7 @@
 //  http://iashchuk.com
 //  JobTableViewController.swift
 //  PlumberSheet - Work sheet app for in-house plumber engineers
-//  Application version 0.7.2, build 1
+//  Application version 0.8.0, build 1
 //  Last modification on 2017.12.11
 //
 //   App precisely handcrafted in KyivApp Development Studio
@@ -82,7 +82,7 @@ class JobTableViewController: UITableViewController {
 
         messageBuilder.header.to =  [MCOAddress(displayName: recipient, mailbox: email)]
         
-        messageBuilder.htmlBody = text
+        messageBuilder.textBody = text
         //MARK: HTML EMAIL SAMPLE SOURCE
         /*
         let htmlFile = Bundle.main.path(forResource: "email", ofType: "html")
@@ -169,7 +169,39 @@ class JobTableViewController: UITableViewController {
             
             // MARK: Swipe to resend email
             let object = self.jobs[indexPath.row]
-            let emailText = "Job date: " + object.jobDate + "\n" + "Job type: " + object.jobType + "\n" + "Engineer: " + object.engineerName + "\n" + "Address: " + object.customerAddress
+            let partOne =
+            "jobDate: " + object.jobDate + "\n" + //String
+                "jobType: " + object.jobType + "\n" + //String
+                "customerName: " + object.customerName + "\n" + //String
+                "customerAddress: " + object.customerAddress + "\n" + //String
+                "customerPhone: " + object.customerPhone + "\n" + //String
+                "customerMobile: " + object.customerMobile + "\n" + //String
+                "customerEmail: " + object.customerEmail + "\n" //String
+            let partTwo =
+                "applianceMake: " + object.applianceMake + "\n" + //String
+                "applianceModel: " + object.applianceModel + "\n" + //String
+                "burnerMake: " + object.burnerMake + "\n" + //String
+                "nozzleModel: " + object.nozzleModel + "\n" + //String
+                "pumpPressureMetric: " + object.pumpPressureMetric + "\n" + //String
+                "pumpPressurePsi: " + object.pumpPressurePsi + "\n" + //Float
+                "pumpPressureBar: " + object.pumpPressureBar + "\n" //Float
+            let partThree =
+                "carbonDioxidePercentage: " + object.carbonDioxidePercentage + "\n" + //Float
+                "flueGasTemperature: " + object.flueGasTemperature + "\n" + //Float
+                "efficiencyPercentage: " + object.efficiencyPercentage + "\n" + //Float
+                "carbonDioxideParts: " + object.carbonDioxideParts + "\n" + //Float
+                "oxygenPercentage: " + object.oxygenPercentage + "\n" //Float
+            let partFour =
+                "engineerName: " + object.engineerName + "\n" + //String
+                "jobDescription: " + object.jobDescription + "\n" + //String
+                "jobUsedParts: " + object.jobUsedParts + "\n" + //String
+                "jobNotes: " + object.jobNotes + "\n" + //String
+                "customerBillingAddress: " + object.customerBillingAddress + "\n" + //String
+                "timeArrived: " + object.timeArrived + "\n" + //String
+                "timeLeft: " + object.timeLeft + "\n" + //String
+                "timeTravel: " + object.timeTravel //String
+            let emailText = partOne + partTwo + partThree + partFour
+            
             self.sendText(text: emailText, recipient: object.customerName, email: object.customerEmail)
             tableView.reloadRows(at: [indexPath], with: UITableViewRowAnimation.right)
             tableView.setEditing(false, animated: true)

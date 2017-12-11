@@ -32,6 +32,7 @@
 		2A1CA1441FB36ED8001841FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A1CA1491FB36ED8001841FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A1CA16B1FB373A6001841FE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2A512BD71FDE875D007EF77F /* Project-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Project-Bridging-Header.h"; sourceTree = "<group>"; };
 		2A6E492C1FCF06CE00C9BC5B /* WorkSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkSheet.swift; sourceTree = "<group>"; };
 		2A6E492E1FCF0D6900C9BC5B /* JobTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTableViewCell.swift; sourceTree = "<group>"; };
 		2A6E49301FCF12F100C9BC5B /* JobTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTableViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +96,7 @@
 				2A98C16E1FBB02EF00FEF1DB /* Main.storyboard */,
 				2A1CA1441FB36ED8001841FE /* Assets.xcassets */,
 				2AE1F7CA1FDCD11900A6811C /* email.html */,
+				2A512BD71FDE875D007EF77F /* Project-Bridging-Header.h */,
 				2A1CA16B1FB373A6001841FE /* GoogleService-Info.plist */,
 				2A1CA1491FB36ED8001841FE /* Info.plist */,
 			);
