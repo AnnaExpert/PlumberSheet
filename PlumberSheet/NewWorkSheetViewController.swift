@@ -40,23 +40,27 @@ class NewWorkSheetViewController: FormViewController, SignatureViewDelegate {
     //MARK: Signature delegatye protocol functions
     
     func SignatureViewDidCaptureSignature(view: SignatureView, signature: Signature?) {
-        <#code#>
+        print("SignatureViewDidCaptureSignature")
+        return
     }
     
     func SignatureViewDidBeginDrawing(view: SignatureView) {
-        <#code#>
+        print("SignatureViewDidBeginDrawing")
+        self.tableView.isScrollEnabled = false
     }
     
     func SignatureViewIsDrawing(view: SignatureView) {
-        <#code#>
+        print("SignatureViewIsDrawing")
     }
     
     func SignatureViewDidFinishDrawing(view: SignatureView) {
-        <#code#>
+        print("SignatureViewDidFinishDrawing")
+        self.tableView.isScrollEnabled = true
     }
     
     func SignatureViewDidCancelDrawing(view: SignatureView) {
-        <#code#>
+        print("SignatureViewDidCancelDrawing")
+        return
     }
     
     //MARK: Navigation
@@ -409,7 +413,7 @@ class NewWorkSheetViewController: FormViewController, SignatureViewDelegate {
             +++ Section("Customer signature:")
             <<< ViewRow<SignatureView>("Signature") .cellSetup { (cell, row) in
                 cell.view = SignatureView()
-                cell.view.delegate = self
+                cell.view!.delegate = self
                 cell.backgroundColor = UIColor.lightGray
                 cell.contentView.addSubview(cell.view!)
                 
