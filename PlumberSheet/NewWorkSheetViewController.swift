@@ -46,9 +46,8 @@ class NewWorkSheetViewController: FormViewController, SignatureViewDelegate {
     
     func SignatureViewDidBeginDrawing(view: SignatureView) {
         print("SignatureViewDidBeginDrawing")
-        print(view.bounds)
-//        let row: TextRow? = form.rowBy(tag: "MyRowTag")
-//        let value = row.value
+        print("W \(view.bounds.width)")
+        print("H \(view.bounds.height)")
         self.tableView.isScrollEnabled = false
     }
     
@@ -64,6 +63,17 @@ class NewWorkSheetViewController: FormViewController, SignatureViewDelegate {
     func SignatureViewDidCancelDrawing(view: SignatureView) {
         print("SignatureViewDidCancelDrawing")
         return
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        if UIDevice.current.orientation.isLandscape {
+            print("Landscape")
+            self.form.rowBy(tag: "Signature")!.updateCell()
+        }
+        else {
+            print("Portrait")
+            self.form.rowBy(tag: "Signature")!.updateCell()
+        }
     }
     
     //MARK: Navigation
@@ -420,19 +430,32 @@ class NewWorkSheetViewController: FormViewController, SignatureViewDelegate {
                 cell.backgroundColor = UIColor.lightGray
                 cell.contentView.addSubview(cell.view!)
                 
-                cell.viewLeftMargin = 8.0
-                cell.viewRightMargin = 8.0
-                cell.viewTopMargin = 8.0
-                cell.viewBottomMargin = 8.0
-                cell.view!.layoutMargins = UIEdgeInsets(top: 8.0, left: 8.0, bottom: 8.0, right: 8.0)
-//                cell.height = { return CGFloat(200.0) }
-//                cell.frame = CGRect(x: 0, y: 0, width: 748, height: 200)
+                cell.viewLeftMargin = 9.0
+                cell.viewRightMargin = 9.0
+                cell.viewTopMargin = 5.0
+                cell.viewBottomMargin = 5.0
+                cell.view!.layoutMargins.left = 8.0
+                cell.view!.layoutMargins.right = 8.0
+                cell.view!.layoutMargins.top = 8.0
+                cell.view!.layoutMargins.bottom = 8.0
+                cell.height = {
+                    
+                    if UIDevice.current.orientation.isLandscape {
+                        print("Landscape")
+                        return CGFloat(332.5)
+                    }
+                    else {
+                        print("Portrait")
+                        return CGFloat(250.5)
+                    }
+                }
+                
                 print("CELL VIEW FRAME \(cell.view!.frame) CELL VIEW MARGINS \(cell.view!.layoutMargins)")
                 print("CELL FRAME \(cell.frame) CELL BOUNDS \(cell.bounds) CELL MARGINS \(cell.layoutMargins)")
-                cell.view!.bounds = CGRect(x: 0, y: 0, width: 748, height: 200)
-                
-                
-                }
+                } .cellUpdate { cell, row in
+                    cell.view!.clearCanvas()
+            }
+            
                 /*
                 .cellSetup { (cell, row) in
                     cell.view = SignatureView()
@@ -443,34 +466,6 @@ class NewWorkSheetViewController: FormViewController, SignatureViewDelegate {
                     cell.preservesSuperviewLayoutMargins = false
                     cell.contentView.addSubview(cell.view!)
                     */
-//                    var frame = { return cell.contentView.bounds. }
-//                    var customerSignature = SignatureView(frame: frame())
-//                    var customerSignature = SignatureView(frame: { return cell.frame })
-                    //  Construct the view - in this instance the a rudimentry view created here
-//                    cell.view = customerSignature
-//                    cell.view?.backgroundColor = UIColor.darkGray
-//                    cell.contentView.addSubview(customerSignature)
-                    
-                    //  Define the cell's height
-//                    cell.height = { return CGFloat(200) }
-//            }
-            
-//            +++ Section("ViewRow Demo")
-//            <<< ViewRow<SignatureView>("view") { (row) in
-//                row.title = "My View Title" // optional
-//                }
-//                .cellSetup { (cell, row) in
-//                    //  Construct the view
-//                    let bundle = Bundle.main
-//                    let nib = UINib(nibName: "SignatureView", bundle: bundle)
-//
-//                    cell.view = nib.instantiate(withOwner: self, options: nil)[0] as? SignatureView
-//                    cell.view?.backgroundColor = cell.backgroundColor
-//                    cell.contentView.addSubview(cell.view!)
-//
-//                    //  Define the cell's height
-//                    cell.height = { return CGFloat(200) }
-//            }
             
             +++ Section("Signature:")
             <<< ButtonRow() { (row: ButtonRow) -> Void in
