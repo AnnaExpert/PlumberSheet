@@ -68,11 +68,11 @@ class NewWorkSheetViewController: FormViewController, SignatureViewDelegate {
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         if UIDevice.current.orientation.isLandscape {
             print("Landscape")
-            self.form.rowBy(tag: "Signature")!.updateCell()
+            form.rowBy(tag: "Signature")?.updateCell()
         }
         else {
             print("Portrait")
-            self.form.rowBy(tag: "Signature")!.updateCell()
+            form.rowBy(tag: "Signature")?.updateCell()
         }
     }
     
@@ -441,19 +441,23 @@ class NewWorkSheetViewController: FormViewController, SignatureViewDelegate {
                 cell.height = {
                     
                     if UIDevice.current.orientation.isLandscape {
-                        print("Landscape")
+                        print("!!!!!Landscape")
+                        cell.view?.clearCanvas()
                         return CGFloat(332.5)
                     }
                     else {
-                        print("Portrait")
+                        print("!!!!!Portrait")
+                        cell.view?.clearCanvas()
                         return CGFloat(250.5)
                     }
                 }
                 
                 print("CELL VIEW FRAME \(cell.view!.frame) CELL VIEW MARGINS \(cell.view!.layoutMargins)")
                 print("CELL FRAME \(cell.frame) CELL BOUNDS \(cell.bounds) CELL MARGINS \(cell.layoutMargins)")
-                } .cellUpdate { cell, row in
-                    cell.view!.clearCanvas()
+                }.cellUpdate { cell, row in
+                    if row.isValid {
+                        cell.view!.clearCanvas()
+                    }
             }
             
                 /*
