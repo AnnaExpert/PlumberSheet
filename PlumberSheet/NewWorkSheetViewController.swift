@@ -46,11 +46,12 @@ class NewWorkSheetViewController: FormViewController, SignatureViewDelegate {
     
     func SignatureViewDidBeginDrawing(view: SignatureView) {
         print("SignatureViewDidBeginDrawing")
+        print(view.bounds)
         self.tableView.isScrollEnabled = false
     }
     
     func SignatureViewIsDrawing(view: SignatureView) {
-        print("SignatureViewIsDrawing")
+//        print("SignatureViewIsDrawing")
     }
     
     func SignatureViewDidFinishDrawing(view: SignatureView) {
@@ -419,7 +420,9 @@ class NewWorkSheetViewController: FormViewController, SignatureViewDelegate {
                 
                 cell.viewLeftMargin = 5.0
                 cell.viewRightMargin = 5.0
-                cell.height = { return CGFloat(200) }
+//                cell.height = { return CGFloat(200) }
+                
+                cell.height = { return CGFloat(UIDevice.current.userInterfaceIdiom == .pad ? 280 : 210) }
                 
                 
                 }
@@ -427,8 +430,8 @@ class NewWorkSheetViewController: FormViewController, SignatureViewDelegate {
                 .cellSetup { (cell, row) in
                     cell.view = SignatureView()
                     
-                    cell.viewLeftMargin = 5.0
-                    cell.viewRightMargin = 5.0
+                    cell.viewLeftMargin = 5.5
+                    cell.viewRightMargin = 5.5
                     cell.height = { return CGFloat(UIDevice.current.userInterfaceIdiom == .pad ? 280 : 210) }
                     cell.preservesSuperviewLayoutMargins = false
                     cell.contentView.addSubview(cell.view!)
