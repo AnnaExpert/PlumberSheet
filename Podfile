@@ -19,13 +19,14 @@ target 'PlumberSheet' do
 
   use_frameworks!
 
-  # Pods for PlumberSheet v.0.7.1
+  # Pods for PlumberSheet v.0.7.2
 
-  pod 'Eureka'
-  pod 'mailcore2-ios'
-  pod 'Firebase/Core'
-  pod 'Firebase/Crash'
-  pod 'Firebase/Database'
-  pod 'Firebase/Performance'
+    pod 'Eureka'
+    pod 'mailcore2-ios'
+    pod 'Firebase/Core'
+    pod 'Firebase/Crash'
+    pod 'SwiftySignature'
+    pod 'Firebase/Database'
+    pod 'Firebase/Performance'
 
 end
