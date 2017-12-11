@@ -16,8 +16,55 @@
 
 import UIKit
 
-@IBDesignable
+    // MARK: - Public structure
 
+public struct Signature {
+    
+    private(set) public var image : UIImage
+    private(set) public var date  : Date
+    
+    init(signature: UIImage) {
+        self.image = signature
+        self.date = Date()
+    }
+}
+
+    // MARK: - Protocol
+
+public protocol SignatureViewDelegate: class {
+    func SignatureViewDidCaptureSignature(view: SignatureView, signature: Signature?)
+    func SignatureViewDidBeginDrawing(view: SignatureView)
+    func SignatureViewIsDrawing(view: SignatureView)
+    func SignatureViewDidFinishDrawing(view: SignatureView)
+    func SignatureViewDidCancelDrawing(view: SignatureView)
+}
+
+    // MARK: - Delegate extension
+
+extension SignatureViewDelegate {
+    
+    func SignatureViewDidCaptureSignature(view: SignatureView, signature: Signature?) {
+        //optional
+    }
+    
+    func SignatureViewDidBeginDrawing(view: SignatureView) {
+        //optional
+    }
+    
+    func SignatureViewIsDrawing(view: SignatureView) {
+        //optional
+    }
+    
+    func SignatureViewDidFinishDrawing(view: SignatureView) {
+        //optional
+    }
+    
+    func SignatureViewDidCancelDrawing(view: SignatureView) {
+        //optional
+    }
+}
+
+@IBDesignable
 open class SignatureView: UIView {
     
     // MARK: - Public properties
@@ -200,53 +247,5 @@ open class SignatureView: UIView {
         let drawBox : CGRect = bounds.insetBy(dx: -2.0 * lineWidth, dy: -2.0 * lineWidth)
         setNeedsDisplay(drawBox)
         return subpath
-    }
-}
-
-// MARK: - Public structure
-
-public struct Signature {
-    
-    private(set) public var image : UIImage
-    private(set) public var date  : Date
-    
-    init(signature: UIImage) {
-        self.image = signature
-        self.date = Date()
-    }
-}
-
-// MARK: - Protocol
-
-public protocol SignatureViewDelegate: class {
-    func SignatureViewDidCaptureSignature(view: SignatureView, signature: Signature?)
-    func SignatureViewDidBeginDrawing(view: SignatureView)
-    func SignatureViewIsDrawing(view: SignatureView)
-    func SignatureViewDidFinishDrawing(view: SignatureView)
-    func SignatureViewDidCancelDrawing(view: SignatureView)
-}
-
-// MARK: - Delegate extension
-
-extension SignatureViewDelegate {
-    
-    func SignatureViewDidCaptureSignature(view: SignatureView, signature: Signature?) {
-        //optional
-    }
-    
-    func SignatureViewDidBeginDrawing(view: SignatureView) {
-        //optional
-    }
-    
-    func SignatureViewIsDrawing(view: SignatureView) {
-        //optional
-    }
-    
-    func SignatureViewDidFinishDrawing(view: SignatureView) {
-        //optional
-    }
-    
-    func SignatureViewDidCancelDrawing(view: SignatureView) {
-        //optional
     }
 }
