@@ -3,7 +3,7 @@
 //  http://iashchuk.com
 //  NewWorkSheetViewController.swift
 //  PlumberSheet - Work sheet app for in-house plumber engineers
-//  Application version 0.7.1, build 3
+//  Application version 0.7.2, build 1
 //  Last modification on 2017.12.11
 //
 //   App precisely handcrafted in KyivApp Development Studio
@@ -41,18 +41,17 @@ class NewWorkSheetViewController: FormViewController, SignatureViewDelegate {
     
     func SignatureViewDidCaptureSignature(view: SignatureView, signature: Signature?) {
         print("SignatureViewDidCaptureSignature")
+        self.tableView.isScrollEnabled = true
         return
     }
     
     func SignatureViewDidBeginDrawing(view: SignatureView) {
         print("SignatureViewDidBeginDrawing")
-        print("W \(view.bounds.width)")
-        print("H \(view.bounds.height)")
         self.tableView.isScrollEnabled = false
     }
     
     func SignatureViewIsDrawing(view: SignatureView) {
-//        print("SignatureViewIsDrawing")
+        self.tableView.isScrollEnabled = false
     }
     
     func SignatureViewDidFinishDrawing(view: SignatureView) {
@@ -62,18 +61,19 @@ class NewWorkSheetViewController: FormViewController, SignatureViewDelegate {
     
     func SignatureViewDidCancelDrawing(view: SignatureView) {
         print("SignatureViewDidCancelDrawing")
+        self.tableView.isScrollEnabled = true
         return
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        if UIDevice.current.orientation.isLandscape {
-            print("Landscape")
-            form.rowBy(tag: "Signature")?.updateCell()
-        }
-        else {
-            print("Portrait")
-            form.rowBy(tag: "Signature")?.updateCell()
-        }
+//        if UIDevice.current.orientation.isLandscape {
+//            print("Landscape")
+//            form.rowBy(tag: "Signature")?.updateCell()
+//        }
+//        else {
+//            print("Portrait")
+//            form.rowBy(tag: "Signature")?.updateCell()
+//        }
     }
     
     //MARK: Navigation
@@ -434,30 +434,30 @@ class NewWorkSheetViewController: FormViewController, SignatureViewDelegate {
                 cell.viewRightMargin = 9.0
                 cell.viewTopMargin = 5.0
                 cell.viewBottomMargin = 5.0
-                cell.view!.layoutMargins.left = 8.0
-                cell.view!.layoutMargins.right = 8.0
-                cell.view!.layoutMargins.top = 8.0
-                cell.view!.layoutMargins.bottom = 8.0
                 cell.height = {
-                    
                     if UIDevice.current.orientation.isLandscape {
                         print("!!!!!Landscape")
-                        cell.view?.clearCanvas()
                         return CGFloat(332.5)
                     }
                     else {
                         print("!!!!!Portrait")
-                        cell.view?.clearCanvas()
                         return CGFloat(250.5)
                     }
                 }
                 
-                print("CELL VIEW FRAME \(cell.view!.frame) CELL VIEW MARGINS \(cell.view!.layoutMargins)")
-                print("CELL FRAME \(cell.frame) CELL BOUNDS \(cell.bounds) CELL MARGINS \(cell.layoutMargins)")
-                }.cellUpdate { cell, row in
-                    if row.isValid {
-                        cell.view!.clearCanvas()
-                    }
+                cell.view!.frame = cell.frame
+//                    {
+//                    if UIDevice.current.orientation.isLandscape {
+//                        print("!!!!!Landscape")
+//                        //                        cell.view?.clearCanvas()
+//                        return CGRect(x: 0, y: 0, width: cell.height, height: cell.width)
+//                    }
+//                    else {
+//                        print("!!!!!Portrait")
+//                        //                        cell.view?.clearCanvas()
+//                        return CGRect(x: 0, y: 0, width: cell.height, height: cell.width)
+//                    }
+//                }
             }
             
                 /*
