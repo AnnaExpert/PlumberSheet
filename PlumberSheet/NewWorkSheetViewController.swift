@@ -383,6 +383,23 @@ class NewWorkSheetViewController: FormViewController {
                     row.value = row.options.first
             }
             
+            +++ Section("ViewRow Demo")
+            <<< ViewRow<SignatureView>("view") { (row) in
+                row.title = "My View Title" // optional
+                }
+                .cellSetup { (cell, row) in
+                    //  Construct the view
+                    let bundle = Bundle.main
+                    let nib = UINib(nibName: "SignatureView", bundle: bundle)
+                    
+                    cell.view = nib.instantiate(withOwner: self, options: nil)[0] as? SignatureView
+                    cell.view?.backgroundColor = cell.backgroundColor
+                    cell.contentView.addSubview(cell.view!)
+                    
+                    //  Define the cell's height
+                    cell.height = { return CGFloat(200) }
+            }
+            
             +++ Section("Signature:")
             <<< ButtonRow() { (row: ButtonRow) -> Void in
                 row.title = "... customer signature will be here soon ..."

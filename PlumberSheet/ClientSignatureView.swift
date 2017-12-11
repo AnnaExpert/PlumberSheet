@@ -64,6 +64,14 @@ extension SignatureViewDelegate {
 @IBDesignable
 open class SignatureView: UIView {
     
+    @IBOutlet weak var signatureView: UIView!
+    
+    @IBAction func SaveSignatureButton(_ sender: Any) {
+    }
+    
+    @IBAction func ClearSignatureButton(_ sender: Any) {
+    }
+    
     // MARK: - Public properties
     
     @IBInspectable public var lineColor              : UIColor   = UIColor.black

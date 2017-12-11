@@ -18,7 +18,7 @@ import UIKit
 
 class SignatureViewController: UIViewController, SignatureViewDelegate {
     
-    @IBOutlet weak var signatureView: SignatureView!
+//    @IBOutlet weak var signatureView: SignatureView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +26,7 @@ class SignatureViewController: UIViewController, SignatureViewDelegate {
         signatureView.delegate = self
     }
     
-    @IBAction func CaptureSignatureButton(_ sender: Any) {
+//    @IBAction func CaptureSignatureButton(_ sender: Any) {
         signatureView.captureSignature()
     }
     
@@ -59,3 +59,4 @@ class SignatureViewController: UIViewController, SignatureViewDelegate {
         print("Did cancel drawing signature")
     }
 }
+ 
