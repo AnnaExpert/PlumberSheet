@@ -18,46 +18,11 @@ import UIKit
 import Eureka
 import os.log
 
-class NewWorkSheetViewController: FormViewController, SignatureViewDelegate  {
+class NewWorkSheetViewController: FormViewController {
     
     var workSheet: WorkSheet?
     
     //MARK: Save Work Sheet Button
-    
-    @IBOutlet weak var signatureView: SignatureView!
-    
-    @IBAction func CaptureSignatureButton(_ sender: Any) {
-        signatureView.captureSignature()
-    }
-    
-    func SignatureViewDidCaptureSignature(view: SignatureView, signature: Signature?) {
-        if signature != nil {
-            print(signature!)
-            signatureView.clearCanvas()
-        } else {
-            if signatureView.signaturePresent == false {
-                print("Signature is blank")
-            } else {
-                print("Failed to Capture Signature")
-            }
-        }
-    }
-    
-    func SignatureViewDidBeginDrawing(view: SignatureView) {
-        print("Began drawing Signature")
-    }
-    
-    func SignatureViewIsDrawing(view: SignatureView) {
-        print("Is drawing Signature")
-    }
-    
-    func SignatureViewDidFinishDrawing(view: SignatureView) {
-        print("Did finish drawing Signature")
-    }
-    
-    func SignatureViewDidCancelDrawing(view: SignatureView) {
-        print("Did cancel drawing signature")
-    }
     
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
@@ -162,8 +127,6 @@ class NewWorkSheetViewController: FormViewController, SignatureViewDelegate  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        self.signatureView.delegate = self
         
         // Save button is disabled
         saveButton.isEnabled = false
@@ -420,22 +383,46 @@ class NewWorkSheetViewController: FormViewController, SignatureViewDelegate  {
                     row.value = row.options.first
             }
             
-            +++ Section("ViewRow Demo")
-            <<< ViewRow<SignatureView>("view") { (row) in
-                row.title = "My View Title" // optional
+            +++ Section("Custom View from code")
+            
+            <<< LabelRow() { (row) in
+                row.title = "A Row"
+                row.value = "Hello World"
+            }
+            
+            <<< ViewRow<UIView>() { (row) in
                 }
                 .cellSetup { (cell, row) in
-                    //  Construct the view
-                    let bundle = Bundle.main
-                    let nib = UINib(nibName: "SignatureView", bundle: bundle)
-                    
-                    cell.view = nib.instantiate(withOwner: self, options: nil)[0] as? SignatureView
-                    cell.view?.backgroundColor = cell.backgroundColor
+                    //  Construct the view - in this instance the a rudimentry view created here
+                    cell.view = UIView()
+                    cell.view?.backgroundColor = UIColor.orange
                     cell.contentView.addSubview(cell.view!)
                     
                     //  Define the cell's height
                     cell.height = { return CGFloat(200) }
             }
+            
+            <<< LabelRow() { (row) in
+                row.title = "Another Row"
+                row.value = "Hello Again"
+            }
+            
+//            +++ Section("ViewRow Demo")
+//            <<< ViewRow<SignatureView>("view") { (row) in
+//                row.title = "My View Title" // optional
+//                }
+//                .cellSetup { (cell, row) in
+//                    //  Construct the view
+//                    let bundle = Bundle.main
+//                    let nib = UINib(nibName: "SignatureView", bundle: bundle)
+//
+//                    cell.view = nib.instantiate(withOwner: self, options: nil)[0] as? SignatureView
+//                    cell.view?.backgroundColor = cell.backgroundColor
+//                    cell.contentView.addSubview(cell.view!)
+//
+//                    //  Define the cell's height
+//                    cell.height = { return CGFloat(200) }
+//            }
             
             +++ Section("Signature:")
             <<< ButtonRow() { (row: ButtonRow) -> Void in
