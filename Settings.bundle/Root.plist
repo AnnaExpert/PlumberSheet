@@ -10,7 +10,7 @@
 			<key>Type</key>
 			<string>PSTitleValueSpecifier</string>
 			<key>Title</key>
-			<string>Version</string>
+			<string>App version</string>
 			<key>DefaultValue</key>
 			<string>0.8.0</string>
 			<key>Key</key>
@@ -20,7 +20,7 @@
 			<key>Type</key>
 			<string>PSTitleValueSpecifier</string>
 			<key>Title</key>
-			<string>Build</string>
+			<string>Build number</string>
 			<key>DefaultValue</key>
 			<string>1</string>
 			<key>Key</key>
@@ -30,7 +30,7 @@
 			<key>Type</key>
 			<string>PSTitleValueSpecifier</string>
 			<key>Title</key>
-			<string>Date</string>
+			<string>Release date</string>
 			<key>DefaultValue</key>
 			<string>2017.12.11</string>
 			<key>Key</key>
