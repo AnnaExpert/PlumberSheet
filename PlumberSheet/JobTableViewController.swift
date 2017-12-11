@@ -165,7 +165,7 @@ class JobTableViewController: UITableViewController {
             self.saveJobs()
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
-        let resend = UITableViewRowAction(style: .normal, title: "Resend") { (action, indexPath) in
+        let resend = UITableViewRowAction(style: .normal, title: "Send copy to client") { (action, indexPath) in
             
             // MARK: Swipe to resend email
             let object = self.jobs[indexPath.row]

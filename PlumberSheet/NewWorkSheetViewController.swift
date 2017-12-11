@@ -67,14 +67,13 @@ class NewWorkSheetViewController: FormViewController, SignatureViewDelegate {
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
 //        if UIDevice.current.orientation.isLandscape {
 //            print("Landscape")
-//            form.rowBy(tag: "Signature")?.updateCell()
+//
 //        }
 //        else {
 //            print("Portrait")
-//            form.rowBy(tag: "Signature")?.updateCell()
 //        }
     }
-    
+
     //MARK: Navigation
     
     @IBAction func cancel(_ sender: UIBarButtonItem) {
@@ -166,6 +165,9 @@ class NewWorkSheetViewController: FormViewController, SignatureViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var signBox = SignatureView()
+        signBox.delegate = self
         
         // Save button is disabled
         saveButton.isEnabled = false
@@ -416,10 +418,10 @@ class NewWorkSheetViewController: FormViewController, SignatureViewDelegate {
             
             +++ Section("Customer signature:")
             <<< ViewRow<SignatureView>("Signature") .cellSetup { (cell, row) in
-                cell.view = SignatureView()
+                cell.view = signBox
                 cell.view!.delegate = self
-                cell.backgroundColor = UIColor.lightGray
-                cell.contentView.addSubview(cell.view!)
+                cell.backgroundColor = UIColor.white
+                cell.contentView.addSubview(signBox)
                 
                 cell.viewLeftMargin = 9.0
                 cell.viewRightMargin = 9.0
@@ -427,16 +429,24 @@ class NewWorkSheetViewController: FormViewController, SignatureViewDelegate {
                 cell.viewBottomMargin = 5.0
                 cell.height = {
                     if UIDevice.current.orientation.isLandscape {
-                        print("!!!!!Landscape")
+//                        print("Landscape")
+//                        signBox.clearCanvas()
                         return CGFloat(332.5)
                     }
                     else {
-                        print("!!!!!Portrait")
+//                        print("Portrait")
+//                        signBox.clearCanvas()
                         return CGFloat(250.5)
                     }
                 }
-                
-                cell.view!.frame = cell.frame
+//                cell.view!.frame = cell.frame
+            }
+            <<< ButtonRow() { (row: ButtonRow) -> Void in
+                row.title = "Clear signature box (if needed)"
+                }
+                .onCellSelection { (cell, row) in
+                    signBox.clearCanvas()
+        }
 //                    {
 //                    if UIDevice.current.orientation.isLandscape {
 //                        print("!!!!!Landscape")
@@ -449,10 +459,7 @@ class NewWorkSheetViewController: FormViewController, SignatureViewDelegate {
 //                        return CGRect(x: 0, y: 0, width: cell.height, height: cell.width)
 //                    }
 //                }
-            }
-            <<< ButtonRow() { //(row: ButtonRow) -> Void in
-                row.title = "Clean signature box"
-        }
+//            }
                 /*
                 .cellSetup { (cell, row) in
                     cell.view = SignatureView()
