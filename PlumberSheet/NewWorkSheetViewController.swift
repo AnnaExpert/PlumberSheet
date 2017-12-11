@@ -420,12 +420,15 @@ class NewWorkSheetViewController: FormViewController, SignatureViewDelegate {
                 cell.backgroundColor = UIColor.lightGray
                 cell.contentView.addSubview(cell.view!)
                 
-                cell.viewLeftMargin = 10.0
-                cell.viewRightMargin = 10.0
+                cell.viewLeftMargin = 8.0
+                cell.viewRightMargin = 8.0
+                cell.viewTopMargin = 8.0
+                cell.viewBottomMargin = 8.0
+                cell.view!.layoutMargins = UIEdgeInsets(top: 8.0, left: 8.0, bottom: 8.0, right: 8.0)
 //                cell.height = { return CGFloat(200.0) }
 //                cell.frame = CGRect(x: 0, y: 0, width: 748, height: 200)
-                print("CELL VIEW FRAME \(cell.view!.frame)")
-                print("CELL FRAME \(cell.frame) CELL BOUNDS \(cell.bounds)")
+                print("CELL VIEW FRAME \(cell.view!.frame) CELL VIEW MARGINS \(cell.view!.layoutMargins)")
+                print("CELL FRAME \(cell.frame) CELL BOUNDS \(cell.bounds) CELL MARGINS \(cell.layoutMargins)")
                 cell.view!.bounds = CGRect(x: 0, y: 0, width: 748, height: 200)
                 
                 
