@@ -16,7 +16,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, SignatureViewDelegate {
+class SignatureViewController: UIViewController, SignatureViewDelegate {
     
     @IBOutlet weak var signatureView: SignatureView!
     
