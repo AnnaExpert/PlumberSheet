@@ -47,6 +47,8 @@ class NewWorkSheetViewController: FormViewController, SignatureViewDelegate {
     func SignatureViewDidBeginDrawing(view: SignatureView) {
         print("SignatureViewDidBeginDrawing")
         print(view.bounds)
+//        let row: TextRow? = form.rowBy(tag: "MyRowTag")
+//        let value = row.value
         self.tableView.isScrollEnabled = false
     }
     
@@ -418,9 +420,13 @@ class NewWorkSheetViewController: FormViewController, SignatureViewDelegate {
                 cell.backgroundColor = UIColor.lightGray
                 cell.contentView.addSubview(cell.view!)
                 
-                cell.viewLeftMargin = 5.0
-                cell.viewRightMargin = 5.0
-                cell.height = { return CGFloat(200) }
+                cell.viewLeftMargin = 10.0
+                cell.viewRightMargin = 10.0
+//                cell.height = { return CGFloat(200.0) }
+//                cell.frame = CGRect(x: 0, y: 0, width: 748, height: 200)
+                print("CELL VIEW FRAME \(cell.view!.frame)")
+                print("CELL FRAME \(cell.frame) CELL BOUNDS \(cell.bounds)")
+                cell.view!.bounds = CGRect(x: 0, y: 0, width: 748, height: 200)
                 
                 
                 }
