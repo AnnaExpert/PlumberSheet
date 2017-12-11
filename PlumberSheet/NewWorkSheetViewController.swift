@@ -383,28 +383,18 @@ class NewWorkSheetViewController: FormViewController {
                     row.value = row.options.first
             }
             
-            +++ Section("Custom View from code")
-            
-            <<< LabelRow() { (row) in
-                row.title = "A Row"
-                row.value = "Hello World"
-            }
+            +++ Section("Customer signature:")
             
             <<< ViewRow<UIView>() { (row) in
                 }
                 .cellSetup { (cell, row) in
                     //  Construct the view - in this instance the a rudimentry view created here
                     cell.view = UIView()
-                    cell.view?.backgroundColor = UIColor.orange
+                    cell.view?.backgroundColor = UIColor.darkGray
                     cell.contentView.addSubview(cell.view!)
                     
                     //  Define the cell's height
                     cell.height = { return CGFloat(200) }
-            }
-            
-            <<< LabelRow() { (row) in
-                row.title = "Another Row"
-                row.value = "Hello Again"
             }
             
 //            +++ Section("ViewRow Demo")
