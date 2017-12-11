@@ -15,3 +15,8 @@
 
 
 import UIKit
+
+
+let floFlo: Float = 124.85
+
+let strStr = String(format: "%.2f", floFlo)

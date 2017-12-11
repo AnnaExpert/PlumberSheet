@@ -183,14 +183,14 @@ class JobTableViewController: UITableViewController {
                 "burnerMake: " + object.burnerMake + "\n" + //String
                 "nozzleModel: " + object.nozzleModel + "\n" + //String
                 "pumpPressureMetric: " + object.pumpPressureMetric + "\n" + //String
-                "pumpPressurePsi: " + object.pumpPressurePsi + "\n" + //Float
-                "pumpPressureBar: " + object.pumpPressureBar + "\n" //Float
+                "pumpPressurePsi: " + String(format: "%.2f", object.pumpPressurePsi) + "\n" + //Float
+                "pumpPressureBar: " + String(format: "%.2f", object.pumpPressureBar) + "\n" //Float
             let partThree =
-                "carbonDioxidePercentage: " + object.carbonDioxidePercentage + "\n" + //Float
-                "flueGasTemperature: " + object.flueGasTemperature + "\n" + //Float
-                "efficiencyPercentage: " + object.efficiencyPercentage + "\n" + //Float
-                "carbonDioxideParts: " + object.carbonDioxideParts + "\n" + //Float
-                "oxygenPercentage: " + object.oxygenPercentage + "\n" //Float
+                "carbonDioxidePercentage: " + String(format: "%.2f", object.carbonDioxidePercentage) + "\n" + //Float
+                "flueGasTemperature: " + String(format: "%.2f", object.flueGasTemperature) + "\n" + //Float
+                "efficiencyPercentage: " + String(format: "%.2f", object.efficiencyPercentage) + "\n" + //Float
+                "carbonDioxideParts: " + String(format: "%.2f", object.carbonDioxideParts) + "\n" + //Float
+                "oxygenPercentage: " + String(format: "%.2f", object.oxygenPercentage) + "\n" //Float
             let partFour =
                 "engineerName: " + object.engineerName + "\n" + //String
                 "jobDescription: " + object.jobDescription + "\n" + //String
