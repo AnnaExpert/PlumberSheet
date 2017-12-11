@@ -82,11 +82,13 @@ class JobTableViewController: UITableViewController {
 
         messageBuilder.header.to =  [MCOAddress(displayName: recipient, mailbox: email)]
         
+        messageBuilder.htmlBody = text
         //MARK: HTML EMAIL SAMPLE SOURCE
-        
+        /*
         let htmlFile = Bundle.main.path(forResource: "email", ofType: "html")
         let htmlString = try? String(contentsOfFile: htmlFile!, encoding: String.Encoding.utf8)
         messageBuilder.htmlBody = htmlString
+        */
         let sendOperation = self.smtpSession.sendOperation(with: messageBuilder.data())
         
         sendOperation?.start { (error) in
