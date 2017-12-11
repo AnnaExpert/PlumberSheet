@@ -420,9 +420,7 @@ class NewWorkSheetViewController: FormViewController, SignatureViewDelegate {
                 
                 cell.viewLeftMargin = 5.0
                 cell.viewRightMargin = 5.0
-//                cell.height = { return CGFloat(200) }
-                
-                cell.height = { return CGFloat(UIDevice.current.userInterfaceIdiom == .pad ? 280 : 210) }
+                cell.height = { return CGFloat(200) }
                 
                 
                 }
