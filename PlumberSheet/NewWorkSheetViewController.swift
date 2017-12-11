@@ -32,9 +32,8 @@ class NewWorkSheetViewController: FormViewController, SignatureViewDelegate {
         // Disable the Save button if the text field is empty.
         
         let value1 = form.values()["CustomerName"] as? String ?? ""
-        let value2 = form.values()["CustomerAddress"] as? String ?? ""
-        let value3 = form.values()["CustomerEmail"] as? String ?? ""
-        saveButton.isEnabled = !value1.isEmpty && !value2.isEmpty && !value3.isEmpty
+        let value2 = form.values()["CustomerEmail"] as? String ?? ""
+        saveButton.isEnabled = !value1.isEmpty && !value2.isEmpty
     }
     
     //MARK: Signature delegatye protocol functions
@@ -184,15 +183,11 @@ class NewWorkSheetViewController: FormViewController, SignatureViewDelegate {
                 $0.title = "Engineer"
                 $0.options = ["Mark Whittaker", "Scott Chadwick", "Ben Reeve"]
                 $0.noValueDisplayText = "Choose engineer..."
-                } .onCellHighlightChanged {cell, row in
-                    row.value = row.options.first
             }
             <<< PickerInputRow<String>("JobType"){
                 $0.title = "Job type"
                 $0.options = ["Install", "Service", "Commission", "Breakdown", "Maintenance", "Landlord Check"]
                 $0.noValueDisplayText = "Choose job type..."
-                } .onCellHighlightChanged {cell, row in
-                    row.value = row.options.first
             }
             
             +++ Section("Customer info:")
@@ -259,8 +254,6 @@ class NewWorkSheetViewController: FormViewController, SignatureViewDelegate {
                 $0.title = "Appliance make"
                 $0.options = ["Grant", "Worcester", "Firebird", "HRM", "Warmflow", "Potterton", "Thermecon/GAH", "Merlin"]
                 $0.noValueDisplayText = "Choose manufacturer..."
-                } .onCellHighlightChanged {cell, row in
-                    row.value = row.options.first
             }
             <<< TextRow("ApplianceModel") {
                 $0.title = "Appliance model"
@@ -419,8 +412,6 @@ class NewWorkSheetViewController: FormViewController, SignatureViewDelegate {
                 }
                 $0.options.append("2 hours")
                 $0.noValueDisplayText = "Choose time..."
-                } .onCellHighlightChanged {cell, row in
-                    row.value = row.options.first
             }
             
             +++ Section("Customer signature:")
@@ -459,7 +450,9 @@ class NewWorkSheetViewController: FormViewController, SignatureViewDelegate {
 //                    }
 //                }
             }
-            
+            <<< ButtonRow() { //(row: ButtonRow) -> Void in
+                row.title = "Clean signature box"
+        }
                 /*
                 .cellSetup { (cell, row) in
                     cell.view = SignatureView()
@@ -471,10 +464,10 @@ class NewWorkSheetViewController: FormViewController, SignatureViewDelegate {
                     cell.contentView.addSubview(cell.view!)
                     */
             
-            +++ Section("Signature:")
-            <<< ButtonRow() { (row: ButtonRow) -> Void in
-                row.title = "... customer signature will be here soon ..."
-        }
+//            +++ Section("Signature:")
+//            <<< ButtonRow() { (row: ButtonRow) -> Void in
+//                row.title = "... customer signature will be here soon ..."
+//        }
     }
     
 }
